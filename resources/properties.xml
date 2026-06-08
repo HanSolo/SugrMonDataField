@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<properties>
+  <property id="NightscoutUrl" type="String"></property>
+  <property id="NightscoutToken" type="String"></property>
+  <property id="FetchIntervalMin" type="Number">5</property>
+  <property id="CriticalMin" type="Number">55</property>
+  <property id="AcceptableMin" type="Number">70</property>
+  <property id="NormalMin" type="Number">80</property>
+  <property id="NormalMax" type="Number">140</property>
+  <property id="AcceptableMax" type="Number">180</property>
+  <property id="CriticalMax" type="Number">250</property>
+  <property id="UseMmol" type="Boolean">false</property>
+  <property id="UseMonochrome" type="Boolean">false</property>
+</properties>

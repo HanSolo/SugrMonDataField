@@ -1,0 +1,1007 @@
+[ @file = "/Users/hansolo/MonkeyC Projects/SugrMonDataField/source/SugrMonView.mc"; @line = 1; @symbol_importdef<0> = [Toybox,1,7,13]; @symbol_importdef<1> = [Graphics,1,14,22]; ]
+import Toybox.Graphics;
+[ @file = "/Users/hansolo/MonkeyC Projects/SugrMonDataField/source/SugrMonView.mc"; @line = 2; @symbol_importdef<0> = [Toybox,2,7,13]; @symbol_importdef<1> = [Lang,2,14,18]; ]
+import Toybox.Lang;
+[ @file = "/Users/hansolo/MonkeyC Projects/SugrMonDataField/source/SugrMonView.mc"; @line = 3; @symbol_importdef<0> = [Toybox,3,7,13]; @symbol_importdef<1> = [System,3,14,20]; ]
+import Toybox.System;
+[ @file = "/Users/hansolo/MonkeyC Projects/SugrMonDataField/source/SugrMonView.mc"; @line = 4; @symbol_importdef<0> = [Toybox,4,7,13]; @symbol_importdef<1> = [Time,4,14,18]; ]
+import Toybox.Time;
+[ @file = "/Users/hansolo/MonkeyC Projects/SugrMonDataField/source/SugrMonView.mc"; @line = 5; @symbol_importdef<0> = [Toybox,5,7,13]; @symbol_importdef<1> = [WatchUi,5,14,21]; ]
+import Toybox.WatchUi;
+[ @file = "/Users/hansolo/MonkeyC Projects/SugrMonDataField/source/SugrMonView.mc"; @line = 6; @symbol_importdef<0> = [Toybox,6,7,13]; @symbol_importdef<1> = [Activity,6,14,22]; ]
+import Toybox.Activity;
+[ @file = "/Users/hansolo/MonkeyC Projects/SugrMonDataField/source/SugrMonView.mc"; @line = 9; @symbol_classdef = [SugrMonView,9,6,17]; @symbol_extends<0> = [WatchUi,9,26,33]; @symbol_extends<1> = [DataField,9,34,43]; ]
+class SugrMonView extends WatchUi.DataField {
+    [ @file = "/Users/hansolo/MonkeyC Projects/SugrMonDataField/source/SugrMonView.mc"; @line = 9; ]
+    <init> {
+    }
+    [ @file = "/Users/hansolo/MonkeyC Projects/SugrMonDataField/source/SugrMonView.mc"; @line = 9; ]
+    static
+    <init> {
+    }
+    [ @file = "/Users/hansolo/MonkeyC Projects/SugrMonDataField/source/SugrMonView.mc"; @line = 10; @position = 18; @symbol_constdef = [GRAY,10,18,22]; ]
+    private
+    const GRAY = 0xAAAAAA;
+    [ @file = "/Users/hansolo/MonkeyC Projects/SugrMonDataField/source/SugrMonView.mc"; @line = 12; @position = 16; @symbol_vardef = [_model,12,16,22]; @symbol_type<0> = [BgModel,12,34,41]; ]
+    private
+    var _model as BgModel;
+    [ @file = "/Users/hansolo/MonkeyC Projects/SugrMonDataField/source/SugrMonView.mc"; @line = 13; @position = 16; @symbol_vardef = [_fetcher,13,16,24]; @symbol_type<0> = [NightscoutFetcher,13,34,51]; ]
+    private
+    var _fetcher as NightscoutFetcher;
+    [ @file = "/Users/hansolo/MonkeyC Projects/SugrMonDataField/source/SugrMonView.mc"; @line = 14; @position = 16; @symbol_vardef = [_lastFetchSec,14,16,29]; @symbol_type<0> = [Number,14,34,40]; ]
+    private
+    var _lastFetchSec as Number = 0;
+    [ @file = "/Users/hansolo/MonkeyC Projects/SugrMonDataField/source/SugrMonView.mc"; @line = 15; @position = 16; @symbol_vardef = [_fetchInFlight,15,16,30]; @symbol_type<0> = [Boolean,15,34,41]; ]
+    private
+    var _fetchInFlight as Boolean = false;
+    [ @file = "/Users/hansolo/MonkeyC Projects/SugrMonDataField/source/SugrMonView.mc"; @line = 16; @position = 16; @symbol_vardef = [_noUrl,16,16,22]; @symbol_type<0> = [Boolean,16,34,41]; ]
+    private
+    var _noUrl as Boolean = false;
+    [ @file = "/Users/hansolo/MonkeyC Projects/SugrMonDataField/source/SugrMonView.mc"; @line = 22; @position = 16; @symbol_vardef = [_fontSuperMini,22,16,30]; @symbol_type<0> = [Graphics,22,34,42]; @symbol_type<1> = [FontType,22,43,51]; ]
+    private
+    var _fontSuperMini as Graphics.FontType or Null;
+    [ @file = "/Users/hansolo/MonkeyC Projects/SugrMonDataField/source/SugrMonView.mc"; @line = 23; @position = 16; @symbol_vardef = [_fontXTiny,23,16,26]; @symbol_type<0> = [Graphics,23,34,42]; @symbol_type<1> = [FontType,23,43,51]; ]
+    private
+    var _fontXTiny as Graphics.FontType or Null;
+    [ @file = "/Users/hansolo/MonkeyC Projects/SugrMonDataField/source/SugrMonView.mc"; @line = 30; @symbol_functiondef = [initialize,30,13,23]; ]
+    function initialize() as Void {
+_Users_hansolo_MonkeyC_Projects_SugrMonDataField_source_SugrMonView_mc_30_26_48_4_start:
+[ "/Users/hansolo/MonkeyC Projects/SugrMonDataField/source/SugrMonView.mc" 31 8 ]
+        symbol [ DataField %tmp.2 31 8 17 ];
+        %tmp.2 = getv ? :DataField;
+        symbol [ initialize %tmp.3 31 18 28 ];
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+[ "/Users/hansolo/MonkeyC Projects/SugrMonDataField/source/SugrMonView.mc" 33 8 ]
+        symbol [ BgModel %tmp.7 33 23 30 ];
+        %tmp.7 = getv ? :BgModel;
+        %tmp.4 = newc %tmp.7 ();
+        symbol [ _model ? 33 8 14 ];
+        putv self :_model %tmp.4;
+[ "/Users/hansolo/MonkeyC Projects/SugrMonDataField/source/SugrMonView.mc" 34 8 ]
+        symbol [ _model %tmp.9 34 8 14 ];
+        %tmp.9 = getv ? :_model;
+        symbol [ loadSettings %tmp.10 34 15 27 ];
+        %tmp.10 = getv function %tmp.9 :loadSettings;
+        invoke %tmp.9 %tmp.10();
+[ "/Users/hansolo/MonkeyC Projects/SugrMonDataField/source/SugrMonView.mc" 36 8 ]
+        symbol [ NightscoutFetcher %tmp.14 36 23 40 ];
+        %tmp.14 = getv ? :NightscoutFetcher;
+        symbol [ _model %tmp.16 36 41 47 ];
+        %tmp.16 = getv ? :_model;
+        %tmp.17 = self;
+        symbol [ self %tmp.17 36 49 53 ];
+        %tmp.11 = newc %tmp.14 (%tmp.16, %tmp.17);
+        symbol [ _fetcher ? 36 8 16 ];
+        putv self :_fetcher %tmp.11;
+[ "/Users/hansolo/MonkeyC Projects/SugrMonDataField/source/SugrMonView.mc" 43 8 ]
+        symbol [ WatchUi %tmp.18 43 25 32 ];
+        %tmp.18 = getm $.Toybox.WatchUi;
+        symbol [ loadResource %tmp.19 43 33 45 ];
+        %tmp.19 = getv function %tmp.18 :loadResource;
+        symbol [ Rez %tmp.21 43 46 49 ];
+        %tmp.21 = getv ? :Rez;
+        symbol [ Fonts %tmp.22 43 50 55 ];
+        %tmp.22 = getv %tmp.21 :Fonts;
+        symbol [ SugrFontSuperMini %tmp.23 43 56 73 ];
+        %tmp.23 = getv %tmp.22 :SugrFontSuperMini;
+        %tmp.24 = invoke %tmp.18 %tmp.19(%tmp.23);
+        %tmp.25 = as %tmp.24 Graphics.FontType;
+        symbol [ Graphics %tmp.25 43 78 86 ];
+        symbol [ FontType %tmp.25 43 87 95 ];
+        symbol [ _fontSuperMini ? 43 8 22 ];
+        putv self :_fontSuperMini %tmp.25;
+[ "/Users/hansolo/MonkeyC Projects/SugrMonDataField/source/SugrMonView.mc" 44 8 ]
+        symbol [ WatchUi %tmp.26 44 25 32 ];
+        %tmp.26 = getm $.Toybox.WatchUi;
+        symbol [ loadResource %tmp.27 44 33 45 ];
+        %tmp.27 = getv function %tmp.26 :loadResource;
+        symbol [ Rez %tmp.29 44 46 49 ];
+        %tmp.29 = getv ? :Rez;
+        symbol [ Fonts %tmp.30 44 50 55 ];
+        %tmp.30 = getv %tmp.29 :Fonts;
+        symbol [ SugrFontXTiny %tmp.31 44 56 69 ];
+        %tmp.31 = getv %tmp.30 :SugrFontXTiny;
+        %tmp.32 = invoke %tmp.26 %tmp.27(%tmp.31);
+        %tmp.33 = as %tmp.32 Graphics.FontType;
+        symbol [ Graphics %tmp.33 44 78 86 ];
+        symbol [ FontType %tmp.33 44 87 95 ];
+        symbol [ _fontXTiny ? 44 8 18 ];
+        putv self :_fontXTiny %tmp.33;
+_Users_hansolo_MonkeyC_Projects_SugrMonDataField_source_SugrMonView_mc_30_26_48_4_stop:
+    }
+    [ @file = "/Users/hansolo/MonkeyC Projects/SugrMonDataField/source/SugrMonView.mc"; @line = 51; @symbol_functiondef = [onShow,51,13,19]; ]
+    function onShow() as Void {
+_Users_hansolo_MonkeyC_Projects_SugrMonDataField_source_SugrMonView_mc_51_30_53_4_start:
+[ "/Users/hansolo/MonkeyC Projects/SugrMonDataField/source/SugrMonView.mc" 52 8 ]
+        symbol [ _model %tmp.2 52 8 14 ];
+        %tmp.2 = getv ? :_model;
+        symbol [ loadSettings %tmp.3 52 15 27 ];
+        %tmp.3 = getv function %tmp.2 :loadSettings;
+        invoke %tmp.2 %tmp.3();
+_Users_hansolo_MonkeyC_Projects_SugrMonDataField_source_SugrMonView_mc_51_30_53_4_stop:
+    }
+    [ @file = "/Users/hansolo/MonkeyC Projects/SugrMonDataField/source/SugrMonView.mc"; @line = 55; @symbol_functiondef = [onData,55,13,19]; @symbol_param<0> = [data,55,20,24]; @symbol_param<0>_type<0> = [BgData,55,28,34]; ]
+    function onData(data as BgData) as Void {
+_Users_hansolo_MonkeyC_Projects_SugrMonDataField_source_SugrMonView_mc_55_44_63_4_start:
+[ "/Users/hansolo/MonkeyC Projects/SugrMonDataField/source/SugrMonView.mc" 56 8 ]
+        %tmp.1 = false;
+        symbol [ _noUrl ? 56 8 14 ];
+        putv self :_noUrl %tmp.1;
+[ "/Users/hansolo/MonkeyC Projects/SugrMonDataField/source/SugrMonView.mc" 57 8 ]
+        %tmp.2 = false;
+        symbol [ _fetchInFlight ? 57 8 22 ];
+        putv self :_fetchInFlight %tmp.2;
+[ "/Users/hansolo/MonkeyC Projects/SugrMonDataField/source/SugrMonView.mc" 58 8 ]
+        symbol [ _model %tmp.3 58 8 14 ];
+        %tmp.3 = getv self :_model;
+        %tmp.4 = lgetv %data;
+        symbol [ data %tmp.4 58 26 30 ];
+        symbol [ current ? 58 15 22 ];
+        putv %tmp.3 :current %tmp.4;
+[ "/Users/hansolo/MonkeyC Projects/SugrMonDataField/source/SugrMonView.mc" 59 8 ]
+        symbol [ _model %tmp.5 59 8 14 ];
+        %tmp.5 = getv self :_model;
+        %tmp.6 = false;
+        symbol [ hasError ? 59 15 23 ];
+        putv %tmp.5 :hasError %tmp.6;
+[ "/Users/hansolo/MonkeyC Projects/SugrMonDataField/source/SugrMonView.mc" 60 8 ]
+        symbol [ _model %tmp.7 60 8 14 ];
+        %tmp.7 = getv self :_model;
+        %tmp.8 = "";
+        symbol [ errorMsg ? 60 15 23 ];
+        putv %tmp.7 :errorMsg %tmp.8;
+[ "/Users/hansolo/MonkeyC Projects/SugrMonDataField/source/SugrMonView.mc" 61 8 ]
+        symbol [ Time %tmp.9 61 26 30 ];
+        %tmp.9 = getm $.Toybox.Time;
+        symbol [ now %tmp.10 61 31 34 ];
+        %tmp.10 = getv function %tmp.9 :now;
+        %tmp.11 = invoke %tmp.9 %tmp.10();
+        symbol [ value %tmp.12 61 37 42 ];
+        %tmp.12 = getv function %tmp.11 :value;
+        %tmp.13 = invoke %tmp.11 %tmp.12();
+        symbol [ toNumber %tmp.14 61 45 53 ];
+        %tmp.14 = getv function %tmp.13 :toNumber;
+        %tmp.15 = invoke %tmp.13 %tmp.14();
+        symbol [ _lastFetchSec ? 61 8 21 ];
+        putv self :_lastFetchSec %tmp.15;
+[ "/Users/hansolo/MonkeyC Projects/SugrMonDataField/source/SugrMonView.mc" 62 8 ]
+        symbol [ WatchUi %tmp.16 62 8 15 ];
+        %tmp.16 = getm $.Toybox.WatchUi;
+        symbol [ requestUpdate %tmp.17 62 16 29 ];
+        %tmp.17 = getv function %tmp.16 :requestUpdate;
+        invoke %tmp.16 %tmp.17();
+_Users_hansolo_MonkeyC_Projects_SugrMonDataField_source_SugrMonView_mc_55_44_63_4_stop:
+    }
+    [ @file = "/Users/hansolo/MonkeyC Projects/SugrMonDataField/source/SugrMonView.mc"; @line = 65; @symbol_functiondef = [onError,65,13,20]; @symbol_param<0> = [msg,65,21,24]; @symbol_param<0>_type<0> = [String,65,28,34]; ]
+    function onError(msg as String) as Void {
+_Users_hansolo_MonkeyC_Projects_SugrMonDataField_source_SugrMonView_mc_65_44_71_4_start:
+[ "/Users/hansolo/MonkeyC Projects/SugrMonDataField/source/SugrMonView.mc" 66 8 ]
+        %tmp.1 = false;
+        symbol [ _noUrl ? 66 8 14 ];
+        putv self :_noUrl %tmp.1;
+[ "/Users/hansolo/MonkeyC Projects/SugrMonDataField/source/SugrMonView.mc" 67 8 ]
+        %tmp.2 = false;
+        symbol [ _fetchInFlight ? 67 8 22 ];
+        putv self :_fetchInFlight %tmp.2;
+[ "/Users/hansolo/MonkeyC Projects/SugrMonDataField/source/SugrMonView.mc" 68 8 ]
+        symbol [ _model %tmp.3 68 8 14 ];
+        %tmp.3 = getv self :_model;
+        %tmp.4 = true;
+        symbol [ hasError ? 68 15 23 ];
+        putv %tmp.3 :hasError %tmp.4;
+[ "/Users/hansolo/MonkeyC Projects/SugrMonDataField/source/SugrMonView.mc" 69 8 ]
+        symbol [ _model %tmp.5 69 8 14 ];
+        %tmp.5 = getv self :_model;
+        %tmp.6 = lgetv %msg;
+        symbol [ msg %tmp.6 69 26 29 ];
+        symbol [ errorMsg ? 69 15 23 ];
+        putv %tmp.5 :errorMsg %tmp.6;
+[ "/Users/hansolo/MonkeyC Projects/SugrMonDataField/source/SugrMonView.mc" 70 8 ]
+        symbol [ WatchUi %tmp.7 70 8 15 ];
+        %tmp.7 = getm $.Toybox.WatchUi;
+        symbol [ requestUpdate %tmp.8 70 16 29 ];
+        %tmp.8 = getv function %tmp.7 :requestUpdate;
+        invoke %tmp.7 %tmp.8();
+_Users_hansolo_MonkeyC_Projects_SugrMonDataField_source_SugrMonView_mc_65_44_71_4_stop:
+    }
+    [ @file = "/Users/hansolo/MonkeyC Projects/SugrMonDataField/source/SugrMonView.mc"; @line = 73; @symbol_functiondef = [onNoUrl,73,13,20]; ]
+    function onNoUrl() as Void {
+_Users_hansolo_MonkeyC_Projects_SugrMonDataField_source_SugrMonView_mc_73_31_78_4_start:
+[ "/Users/hansolo/MonkeyC Projects/SugrMonDataField/source/SugrMonView.mc" 74 8 ]
+        %tmp.1 = true;
+        symbol [ _noUrl ? 74 8 14 ];
+        putv self :_noUrl %tmp.1;
+[ "/Users/hansolo/MonkeyC Projects/SugrMonDataField/source/SugrMonView.mc" 75 8 ]
+        %tmp.2 = false;
+        symbol [ _fetchInFlight ? 75 8 22 ];
+        putv self :_fetchInFlight %tmp.2;
+[ "/Users/hansolo/MonkeyC Projects/SugrMonDataField/source/SugrMonView.mc" 76 8 ]
+        symbol [ _model %tmp.3 76 8 14 ];
+        %tmp.3 = getv self :_model;
+        %tmp.4 = false;
+        symbol [ hasError ? 76 15 23 ];
+        putv %tmp.3 :hasError %tmp.4;
+[ "/Users/hansolo/MonkeyC Projects/SugrMonDataField/source/SugrMonView.mc" 77 8 ]
+        symbol [ WatchUi %tmp.5 77 8 15 ];
+        %tmp.5 = getm $.Toybox.WatchUi;
+        symbol [ requestUpdate %tmp.6 77 16 29 ];
+        %tmp.6 = getv function %tmp.5 :requestUpdate;
+        invoke %tmp.5 %tmp.6();
+_Users_hansolo_MonkeyC_Projects_SugrMonDataField_source_SugrMonView_mc_73_31_78_4_stop:
+    }
+    [ @file = "/Users/hansolo/MonkeyC Projects/SugrMonDataField/source/SugrMonView.mc"; @line = 80; @symbol_functiondef = [compute,80,13,20]; @symbol_param<0> = [info,80,21,25]; @symbol_param<0>_type<0> = [Activity,80,29,37]; @symbol_param<0>_type<1> = [Info,80,38,42]; @symbol_return<0> = [Numeric,80,47,54]; @symbol_return<1> = [Duration,80,58,66]; @symbol_return<2> = [String,80,70,76]; ]
+    function compute(info as Activity.Info) as Numeric or Duration or String or Null {
+_Users_hansolo_MonkeyC_Projects_SugrMonDataField_source_SugrMonView_mc_80_85_94_4_start:
+[ "/Users/hansolo/MonkeyC Projects/SugrMonDataField/source/SugrMonView.mc" 81 8 ]
+_Users_hansolo_MonkeyC_Projects_SugrMonDataField_source_SugrMonView_mc_81_8_92_8_if_stmt:
+        symbol [ _fetchInFlight %tmp.2 81 13 27 ];
+        %tmp.2 = getv ? :_fetchInFlight;
+        %tmp.3 = not %tmp.2;
+        bf %tmp.3 @_Users_hansolo_MonkeyC_Projects_SugrMonDataField_source_SugrMonView_mc_81_8_92_8_if_end;
+_Users_hansolo_MonkeyC_Projects_SugrMonDataField_source_SugrMonView_mc_81_8_92_8_if_true:
+_Users_hansolo_MonkeyC_Projects_SugrMonDataField_source_SugrMonView_mc_81_29_92_8_start:
+[ "/Users/hansolo/MonkeyC Projects/SugrMonDataField/source/SugrMonView.mc" 82 12 ]
+        [ "_Users_hansolo_MonkeyC_Projects_SugrMonDataField_source_SugrMonView_mc_81_29_92_8_start" "_Users_hansolo_MonkeyC_Projects_SugrMonDataField_source_SugrMonView_mc_81_29_92_8_stop" ]
+        %nowSec.1 = local;
+        symbol [ nowSec %nowSec.1 82 16 22 ];
+        symbol [ Time %tmp.4 82 30 34 ];
+        %tmp.4 = getm $.Toybox.Time;
+        symbol [ now %tmp.5 82 35 38 ];
+        %tmp.5 = getv function %tmp.4 :now;
+        %tmp.6 = invoke %tmp.4 %tmp.5();
+        symbol [ value %tmp.7 82 41 46 ];
+        %tmp.7 = getv function %tmp.6 :value;
+        %tmp.8 = invoke %tmp.6 %tmp.7();
+        symbol [ toNumber %tmp.9 82 49 57 ];
+        %tmp.9 = getv function %tmp.8 :toNumber;
+        %tmp.10 = invoke %tmp.8 %tmp.9();
+        lputv %nowSec.1 %tmp.10;
+        symbol [ nowSec %nowSec.1 82 16 22 ];
+[ "/Users/hansolo/MonkeyC Projects/SugrMonDataField/source/SugrMonView.mc" 83 12 ]
+        [ "_Users_hansolo_MonkeyC_Projects_SugrMonDataField_source_SugrMonView_mc_81_29_92_8_start" "_Users_hansolo_MonkeyC_Projects_SugrMonDataField_source_SugrMonView_mc_81_29_92_8_stop" ]
+        %intervalSec.2 = local;
+        symbol [ intervalSec %intervalSec.2 83 16 27 ];
+        symbol [ _model %tmp.12 83 30 36 ];
+        %tmp.12 = getv ? :_model;
+        symbol [ fetchIntervalMin %tmp.13 83 37 53 ];
+        %tmp.13 = getv %tmp.12 :fetchIntervalMin;
+        %tmp.14 = 60;
+        %tmp.15 = mul %tmp.13 %tmp.14;
+        lputv %intervalSec.2 %tmp.15;
+        symbol [ intervalSec %intervalSec.2 83 16 27 ];
+[ "/Users/hansolo/MonkeyC Projects/SugrMonDataField/source/SugrMonView.mc" 84 12 ]
+        [ "_Users_hansolo_MonkeyC_Projects_SugrMonDataField_source_SugrMonView_mc_81_29_92_8_start" "_Users_hansolo_MonkeyC_Projects_SugrMonDataField_source_SugrMonView_mc_81_29_92_8_stop" ]
+        %firstFetch.3 = local;
+        symbol [ firstFetch %firstFetch.3 84 16 26 ];
+        symbol [ _lastFetchSec %tmp.17 84 31 44 ];
+        %tmp.17 = getv ? :_lastFetchSec;
+        %tmp.18 = 0;
+        %tmp.19 = eq %tmp.17 %tmp.18;
+        lputv %firstFetch.3 %tmp.19;
+        symbol [ firstFetch %firstFetch.3 84 16 26 ];
+[ "/Users/hansolo/MonkeyC Projects/SugrMonDataField/source/SugrMonView.mc" 85 12 ]
+        [ "_Users_hansolo_MonkeyC_Projects_SugrMonDataField_source_SugrMonView_mc_81_29_92_8_start" "_Users_hansolo_MonkeyC_Projects_SugrMonDataField_source_SugrMonView_mc_81_29_92_8_stop" ]
+        %due.4 = local;
+        symbol [ due %due.4 85 16 19 ];
+        %tmp.20 = lgetv %nowSec.1;
+        symbol [ nowSec %tmp.20 85 31 37 ];
+        symbol [ _lastFetchSec %tmp.22 85 40 53 ];
+        %tmp.22 = getv ? :_lastFetchSec;
+        %tmp.23 = sub %tmp.20 %tmp.22;
+        %tmp.24 = lgetv %intervalSec.2;
+        symbol [ intervalSec %tmp.24 85 58 69 ];
+        %tmp.25 = gte %tmp.23 %tmp.24;
+        lputv %due.4 %tmp.25;
+        symbol [ due %due.4 85 16 19 ];
+[ "/Users/hansolo/MonkeyC Projects/SugrMonDataField/source/SugrMonView.mc" 87 12 ]
+_Users_hansolo_MonkeyC_Projects_SugrMonDataField_source_SugrMonView_mc_87_12_91_12_if_stmt:
+_Users_hansolo_MonkeyC_Projects_SugrMonDataField_source_SugrMonView_mc_87_16_87_30_begin:
+        %tmp.26 = lgetv %firstFetch.3;
+        symbol [ firstFetch %tmp.26 87 16 26 ];
+        bt %tmp.26 @_Users_hansolo_MonkeyC_Projects_SugrMonDataField_source_SugrMonView_mc_87_12_91_12_if_true;
+_Users_hansolo_MonkeyC_Projects_SugrMonDataField_source_SugrMonView_mc_87_30_87_30_false:
+        %tmp.27 = lgetv %due.4;
+        symbol [ due %tmp.27 87 30 33 ];
+        push %tmp.27;
+_Users_hansolo_MonkeyC_Projects_SugrMonDataField_source_SugrMonView_mc_87_30_87_30_end:
+        %tmp.28 = phi [%tmp.26 @_Users_hansolo_MonkeyC_Projects_SugrMonDataField_source_SugrMonView_mc_87_16_87_30_begin] [%tmp.27 @_Users_hansolo_MonkeyC_Projects_SugrMonDataField_source_SugrMonView_mc_87_30_87_30_false] [%tmp.28 @_Users_hansolo_MonkeyC_Projects_SugrMonDataField_source_SugrMonView_mc_87_30_87_30_end];
+        bf %tmp.28 @_Users_hansolo_MonkeyC_Projects_SugrMonDataField_source_SugrMonView_mc_87_12_91_12_if_end;
+_Users_hansolo_MonkeyC_Projects_SugrMonDataField_source_SugrMonView_mc_87_12_91_12_if_true:
+_Users_hansolo_MonkeyC_Projects_SugrMonDataField_source_SugrMonView_mc_87_35_91_12_start:
+[ "/Users/hansolo/MonkeyC Projects/SugrMonDataField/source/SugrMonView.mc" 88 16 ]
+        symbol [ _model %tmp.30 88 16 22 ];
+        %tmp.30 = getv ? :_model;
+        symbol [ loadSettings %tmp.31 88 23 35 ];
+        %tmp.31 = getv function %tmp.30 :loadSettings;
+        invoke %tmp.30 %tmp.31();
+[ "/Users/hansolo/MonkeyC Projects/SugrMonDataField/source/SugrMonView.mc" 89 16 ]
+        %tmp.32 = true;
+        symbol [ _fetchInFlight ? 89 16 30 ];
+        putv self :_fetchInFlight %tmp.32;
+[ "/Users/hansolo/MonkeyC Projects/SugrMonDataField/source/SugrMonView.mc" 90 16 ]
+        symbol [ _fetcher %tmp.34 90 16 24 ];
+        %tmp.34 = getv ? :_fetcher;
+        symbol [ fetch %tmp.35 90 25 30 ];
+        %tmp.35 = getv function %tmp.34 :fetch;
+        invoke %tmp.34 %tmp.35();
+_Users_hansolo_MonkeyC_Projects_SugrMonDataField_source_SugrMonView_mc_87_35_91_12_stop:
+        goto @_Users_hansolo_MonkeyC_Projects_SugrMonDataField_source_SugrMonView_mc_87_12_91_12_if_end;
+_Users_hansolo_MonkeyC_Projects_SugrMonDataField_source_SugrMonView_mc_87_12_91_12_if_end:
+_Users_hansolo_MonkeyC_Projects_SugrMonDataField_source_SugrMonView_mc_81_29_92_8_stop:
+        goto @_Users_hansolo_MonkeyC_Projects_SugrMonDataField_source_SugrMonView_mc_81_8_92_8_if_end;
+_Users_hansolo_MonkeyC_Projects_SugrMonDataField_source_SugrMonView_mc_81_8_92_8_if_end:
+[ "/Users/hansolo/MonkeyC Projects/SugrMonDataField/source/SugrMonView.mc" 93 8 ]
+        %tmp.36 = null;
+        ret %tmp.36;
+_Users_hansolo_MonkeyC_Projects_SugrMonDataField_source_SugrMonView_mc_80_85_94_4_stop:
+    }
+    [ @file = "/Users/hansolo/MonkeyC Projects/SugrMonDataField/source/SugrMonView.mc"; @line = 96; @symbol_functiondef = [onUpdate,96,13,21]; @symbol_param<0> = [dc,96,22,24]; @symbol_param<0>_type<0> = [Dc,96,28,30]; ]
+    function onUpdate(dc as Dc) as Void {
+_Users_hansolo_MonkeyC_Projects_SugrMonDataField_source_SugrMonView_mc_96_40_168_4_start:
+[ "/Users/hansolo/MonkeyC Projects/SugrMonDataField/source/SugrMonView.mc" 97 8 ]
+        [ "_Users_hansolo_MonkeyC_Projects_SugrMonDataField_source_SugrMonView_mc_96_40_168_4_start" "_Users_hansolo_MonkeyC_Projects_SugrMonDataField_source_SugrMonView_mc_96_40_168_4_stop" ]
+        %w.1 = local;
+        symbol [ w %w.1 97 12 13 ];
+        %tmp.1 = lgetv %dc;
+        symbol [ dc %tmp.1 97 16 18 ];
+        symbol [ getWidth %tmp.2 97 19 27 ];
+        %tmp.2 = getv function %tmp.1 :getWidth;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        lputv %w.1 %tmp.3;
+        symbol [ w %w.1 97 12 13 ];
+[ "/Users/hansolo/MonkeyC Projects/SugrMonDataField/source/SugrMonView.mc" 98 8 ]
+        [ "_Users_hansolo_MonkeyC_Projects_SugrMonDataField_source_SugrMonView_mc_96_40_168_4_start" "_Users_hansolo_MonkeyC_Projects_SugrMonDataField_source_SugrMonView_mc_96_40_168_4_stop" ]
+        %h.2 = local;
+        symbol [ h %h.2 98 12 13 ];
+        %tmp.4 = lgetv %dc;
+        symbol [ dc %tmp.4 98 16 18 ];
+        symbol [ getHeight %tmp.5 98 19 28 ];
+        %tmp.5 = getv function %tmp.4 :getHeight;
+        %tmp.6 = invoke %tmp.4 %tmp.5();
+        lputv %h.2 %tmp.6;
+        symbol [ h %h.2 98 12 13 ];
+[ "/Users/hansolo/MonkeyC Projects/SugrMonDataField/source/SugrMonView.mc" 101 8 ]
+        %tmp.7 = lgetv %dc;
+        symbol [ dc %tmp.7 101 8 10 ];
+        symbol [ setColor %tmp.8 101 11 19 ];
+        %tmp.8 = getv function %tmp.7 :setColor;
+        symbol [ Graphics %tmp.9 101 20 28 ];
+        %tmp.9 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.10 101 29 46 ];
+        %tmp.10 = getv %tmp.9 :COLOR_TRANSPARENT;
+        symbol [ Graphics %tmp.11 101 48 56 ];
+        %tmp.11 = getm $.Toybox.Graphics;
+        symbol [ COLOR_BLACK %tmp.12 101 57 68 ];
+        %tmp.12 = getv %tmp.11 :COLOR_BLACK;
+        invoke %tmp.7 %tmp.8(%tmp.10, %tmp.12);
+[ "/Users/hansolo/MonkeyC Projects/SugrMonDataField/source/SugrMonView.mc" 102 8 ]
+        %tmp.13 = lgetv %dc;
+        symbol [ dc %tmp.13 102 8 10 ];
+        symbol [ clear %tmp.14 102 11 16 ];
+        %tmp.14 = getv function %tmp.13 :clear;
+        invoke %tmp.13 %tmp.14();
+[ "/Users/hansolo/MonkeyC Projects/SugrMonDataField/source/SugrMonView.mc" 105 8 ]
+_Users_hansolo_MonkeyC_Projects_SugrMonDataField_source_SugrMonView_mc_105_8_108_8_if_stmt:
+        symbol [ _noUrl %tmp.16 105 12 18 ];
+        %tmp.16 = getv ? :_noUrl;
+        bf %tmp.16 @_Users_hansolo_MonkeyC_Projects_SugrMonDataField_source_SugrMonView_mc_105_8_108_8_if_end;
+_Users_hansolo_MonkeyC_Projects_SugrMonDataField_source_SugrMonView_mc_105_8_108_8_if_true:
+_Users_hansolo_MonkeyC_Projects_SugrMonDataField_source_SugrMonView_mc_105_20_108_8_start:
+[ "/Users/hansolo/MonkeyC Projects/SugrMonDataField/source/SugrMonView.mc" 106 12 ]
+        %tmp.17 = self;
+        symbol [ drawCentred %tmp.18 106 12 23 ];
+        %tmp.18 = getv function %tmp.17 :drawCentred;
+        %tmp.19 = lgetv %dc;
+        symbol [ dc %tmp.19 106 24 26 ];
+        %tmp.20 = lgetv %w.1;
+        symbol [ w %tmp.20 106 28 29 ];
+        %tmp.21 = lgetv %h.2;
+        symbol [ h %tmp.21 106 31 32 ];
+        %tmp.22 = 2;
+        %tmp.23 = div %tmp.21 %tmp.22;
+        %tmp.24 = "Set NS URL";
+        symbol [ Graphics %tmp.25 106 52 60 ];
+        %tmp.25 = getm $.Toybox.Graphics;
+        symbol [ COLOR_LT_GRAY %tmp.26 106 61 74 ];
+        %tmp.26 = getv %tmp.25 :COLOR_LT_GRAY;
+        symbol [ Graphics %tmp.27 106 76 84 ];
+        %tmp.27 = getm $.Toybox.Graphics;
+        symbol [ FONT_XTINY %tmp.28 106 85 95 ];
+        %tmp.28 = getv %tmp.27 :FONT_XTINY;
+        invoke %tmp.17 %tmp.18(%tmp.19, %tmp.20, %tmp.23, %tmp.24, %tmp.26, %tmp.28);
+[ "/Users/hansolo/MonkeyC Projects/SugrMonDataField/source/SugrMonView.mc" 107 12 ]
+        ret ?;
+_Users_hansolo_MonkeyC_Projects_SugrMonDataField_source_SugrMonView_mc_105_20_108_8_stop:
+        goto @_Users_hansolo_MonkeyC_Projects_SugrMonDataField_source_SugrMonView_mc_105_8_108_8_if_end;
+_Users_hansolo_MonkeyC_Projects_SugrMonDataField_source_SugrMonView_mc_105_8_108_8_if_end:
+[ "/Users/hansolo/MonkeyC Projects/SugrMonDataField/source/SugrMonView.mc" 110 8 ]
+_Users_hansolo_MonkeyC_Projects_SugrMonDataField_source_SugrMonView_mc_110_8_113_8_if_stmt:
+_Users_hansolo_MonkeyC_Projects_SugrMonDataField_source_SugrMonView_mc_110_12_110_50_begin:
+        symbol [ _model %tmp.30 110 12 18 ];
+        %tmp.30 = getv ? :_model;
+        symbol [ isLoading %tmp.31 110 19 28 ];
+        %tmp.31 = getv %tmp.30 :isLoading;
+        bf %tmp.31 @_Users_hansolo_MonkeyC_Projects_SugrMonDataField_source_SugrMonView_mc_110_8_113_8_if_end;
+_Users_hansolo_MonkeyC_Projects_SugrMonDataField_source_SugrMonView_mc_110_32_110_50_true:
+        symbol [ _model %tmp.33 110 32 38 ];
+        %tmp.33 = getv ? :_model;
+        symbol [ current %tmp.34 110 39 46 ];
+        %tmp.34 = getv %tmp.33 :current;
+        %tmp.35 = null;
+        %tmp.36 = eq %tmp.34 %tmp.35;
+        push %tmp.36;
+_Users_hansolo_MonkeyC_Projects_SugrMonDataField_source_SugrMonView_mc_110_32_110_50_end:
+        %tmp.37 = phi [%tmp.31 @_Users_hansolo_MonkeyC_Projects_SugrMonDataField_source_SugrMonView_mc_110_12_110_50_begin] [%tmp.36 @_Users_hansolo_MonkeyC_Projects_SugrMonDataField_source_SugrMonView_mc_110_32_110_50_true] [%tmp.37 @_Users_hansolo_MonkeyC_Projects_SugrMonDataField_source_SugrMonView_mc_110_32_110_50_end];
+        bf %tmp.37 @_Users_hansolo_MonkeyC_Projects_SugrMonDataField_source_SugrMonView_mc_110_8_113_8_if_end;
+_Users_hansolo_MonkeyC_Projects_SugrMonDataField_source_SugrMonView_mc_110_8_113_8_if_true:
+_Users_hansolo_MonkeyC_Projects_SugrMonDataField_source_SugrMonView_mc_110_56_113_8_start:
+[ "/Users/hansolo/MonkeyC Projects/SugrMonDataField/source/SugrMonView.mc" 111 12 ]
+        %tmp.38 = self;
+        symbol [ drawCentred %tmp.39 111 12 23 ];
+        %tmp.39 = getv function %tmp.38 :drawCentred;
+        %tmp.40 = lgetv %dc;
+        symbol [ dc %tmp.40 111 24 26 ];
+        %tmp.41 = lgetv %w.1;
+        symbol [ w %tmp.41 111 28 29 ];
+        %tmp.42 = lgetv %h.2;
+        symbol [ h %tmp.42 111 31 32 ];
+        %tmp.43 = 2;
+        %tmp.44 = div %tmp.42 %tmp.43;
+        %tmp.45 = "Loading...";
+        symbol [ Graphics %tmp.46 111 52 60 ];
+        %tmp.46 = getm $.Toybox.Graphics;
+        symbol [ COLOR_LT_GRAY %tmp.47 111 61 74 ];
+        %tmp.47 = getv %tmp.46 :COLOR_LT_GRAY;
+        symbol [ Graphics %tmp.48 111 76 84 ];
+        %tmp.48 = getm $.Toybox.Graphics;
+        symbol [ FONT_XTINY %tmp.49 111 85 95 ];
+        %tmp.49 = getv %tmp.48 :FONT_XTINY;
+        invoke %tmp.38 %tmp.39(%tmp.40, %tmp.41, %tmp.44, %tmp.45, %tmp.47, %tmp.49);
+[ "/Users/hansolo/MonkeyC Projects/SugrMonDataField/source/SugrMonView.mc" 112 12 ]
+        ret ?;
+_Users_hansolo_MonkeyC_Projects_SugrMonDataField_source_SugrMonView_mc_110_56_113_8_stop:
+        goto @_Users_hansolo_MonkeyC_Projects_SugrMonDataField_source_SugrMonView_mc_110_8_113_8_if_end;
+_Users_hansolo_MonkeyC_Projects_SugrMonDataField_source_SugrMonView_mc_110_8_113_8_if_end:
+[ "/Users/hansolo/MonkeyC Projects/SugrMonDataField/source/SugrMonView.mc" 115 8 ]
+_Users_hansolo_MonkeyC_Projects_SugrMonDataField_source_SugrMonView_mc_115_8_118_8_if_stmt:
+_Users_hansolo_MonkeyC_Projects_SugrMonDataField_source_SugrMonView_mc_115_12_115_49_begin:
+        symbol [ _model %tmp.51 115 12 18 ];
+        %tmp.51 = getv ? :_model;
+        symbol [ hasError %tmp.52 115 19 27 ];
+        %tmp.52 = getv %tmp.51 :hasError;
+        bf %tmp.52 @_Users_hansolo_MonkeyC_Projects_SugrMonDataField_source_SugrMonView_mc_115_8_118_8_if_end;
+_Users_hansolo_MonkeyC_Projects_SugrMonDataField_source_SugrMonView_mc_115_31_115_49_true:
+        symbol [ _model %tmp.54 115 31 37 ];
+        %tmp.54 = getv ? :_model;
+        symbol [ current %tmp.55 115 38 45 ];
+        %tmp.55 = getv %tmp.54 :current;
+        %tmp.56 = null;
+        %tmp.57 = eq %tmp.55 %tmp.56;
+        push %tmp.57;
+_Users_hansolo_MonkeyC_Projects_SugrMonDataField_source_SugrMonView_mc_115_31_115_49_end:
+        %tmp.58 = phi [%tmp.52 @_Users_hansolo_MonkeyC_Projects_SugrMonDataField_source_SugrMonView_mc_115_12_115_49_begin] [%tmp.57 @_Users_hansolo_MonkeyC_Projects_SugrMonDataField_source_SugrMonView_mc_115_31_115_49_true] [%tmp.58 @_Users_hansolo_MonkeyC_Projects_SugrMonDataField_source_SugrMonView_mc_115_31_115_49_end];
+        bf %tmp.58 @_Users_hansolo_MonkeyC_Projects_SugrMonDataField_source_SugrMonView_mc_115_8_118_8_if_end;
+_Users_hansolo_MonkeyC_Projects_SugrMonDataField_source_SugrMonView_mc_115_8_118_8_if_true:
+_Users_hansolo_MonkeyC_Projects_SugrMonDataField_source_SugrMonView_mc_115_55_118_8_start:
+[ "/Users/hansolo/MonkeyC Projects/SugrMonDataField/source/SugrMonView.mc" 116 12 ]
+        %tmp.59 = self;
+        symbol [ drawCentred %tmp.60 116 12 23 ];
+        %tmp.60 = getv function %tmp.59 :drawCentred;
+        %tmp.61 = lgetv %dc;
+        symbol [ dc %tmp.61 116 24 26 ];
+        %tmp.62 = lgetv %w.1;
+        symbol [ w %tmp.62 116 28 29 ];
+        %tmp.63 = lgetv %h.2;
+        symbol [ h %tmp.63 116 31 32 ];
+        %tmp.64 = 2;
+        %tmp.65 = div %tmp.63 %tmp.64;
+        symbol [ _model %tmp.67 116 38 44 ];
+        %tmp.67 = getv ? :_model;
+        symbol [ errorMsg %tmp.68 116 45 53 ];
+        %tmp.68 = getv %tmp.67 :errorMsg;
+        symbol [ Graphics %tmp.69 116 55 63 ];
+        %tmp.69 = getm $.Toybox.Graphics;
+        symbol [ COLOR_RED %tmp.70 116 64 73 ];
+        %tmp.70 = getv %tmp.69 :COLOR_RED;
+        symbol [ Graphics %tmp.71 116 75 83 ];
+        %tmp.71 = getm $.Toybox.Graphics;
+        symbol [ FONT_XTINY %tmp.72 116 84 94 ];
+        %tmp.72 = getv %tmp.71 :FONT_XTINY;
+        invoke %tmp.59 %tmp.60(%tmp.61, %tmp.62, %tmp.65, %tmp.68, %tmp.70, %tmp.72);
+[ "/Users/hansolo/MonkeyC Projects/SugrMonDataField/source/SugrMonView.mc" 117 12 ]
+        ret ?;
+_Users_hansolo_MonkeyC_Projects_SugrMonDataField_source_SugrMonView_mc_115_55_118_8_stop:
+        goto @_Users_hansolo_MonkeyC_Projects_SugrMonDataField_source_SugrMonView_mc_115_8_118_8_if_end;
+_Users_hansolo_MonkeyC_Projects_SugrMonDataField_source_SugrMonView_mc_115_8_118_8_if_end:
+[ "/Users/hansolo/MonkeyC Projects/SugrMonDataField/source/SugrMonView.mc" 120 8 ]
+        [ "_Users_hansolo_MonkeyC_Projects_SugrMonDataField_source_SugrMonView_mc_96_40_168_4_start" "_Users_hansolo_MonkeyC_Projects_SugrMonDataField_source_SugrMonView_mc_96_40_168_4_stop" ]
+        %bg.3 = local;
+        symbol [ bg %bg.3 120 12 14 ];
+        symbol [ _model %tmp.74 120 17 23 ];
+        %tmp.74 = getv ? :_model;
+        symbol [ current %tmp.75 120 24 31 ];
+        %tmp.75 = getv %tmp.74 :current;
+        lputv %bg.3 %tmp.75;
+        symbol [ bg %bg.3 120 12 14 ];
+[ "/Users/hansolo/MonkeyC Projects/SugrMonDataField/source/SugrMonView.mc" 121 8 ]
+_Users_hansolo_MonkeyC_Projects_SugrMonDataField_source_SugrMonView_mc_121_8_124_8_if_stmt:
+        %tmp.76 = lgetv %bg.3;
+        symbol [ bg %tmp.76 121 12 14 ];
+        %tmp.77 = null;
+        %tmp.78 = eq %tmp.76 %tmp.77;
+        bf %tmp.78 @_Users_hansolo_MonkeyC_Projects_SugrMonDataField_source_SugrMonView_mc_121_8_124_8_if_end;
+_Users_hansolo_MonkeyC_Projects_SugrMonDataField_source_SugrMonView_mc_121_8_124_8_if_true:
+_Users_hansolo_MonkeyC_Projects_SugrMonDataField_source_SugrMonView_mc_121_24_124_8_start:
+[ "/Users/hansolo/MonkeyC Projects/SugrMonDataField/source/SugrMonView.mc" 122 12 ]
+        %tmp.79 = self;
+        symbol [ drawCentred %tmp.80 122 12 23 ];
+        %tmp.80 = getv function %tmp.79 :drawCentred;
+        %tmp.81 = lgetv %dc;
+        symbol [ dc %tmp.81 122 24 26 ];
+        %tmp.82 = lgetv %w.1;
+        symbol [ w %tmp.82 122 28 29 ];
+        %tmp.83 = lgetv %h.2;
+        symbol [ h %tmp.83 122 31 32 ];
+        %tmp.84 = 2;
+        %tmp.85 = div %tmp.83 %tmp.84;
+        %tmp.86 = "---";
+        symbol [ Graphics %tmp.87 122 45 53 ];
+        %tmp.87 = getm $.Toybox.Graphics;
+        symbol [ COLOR_LT_GRAY %tmp.88 122 54 67 ];
+        %tmp.88 = getv %tmp.87 :COLOR_LT_GRAY;
+        symbol [ Graphics %tmp.89 122 69 77 ];
+        %tmp.89 = getm $.Toybox.Graphics;
+        symbol [ FONT_XTINY %tmp.90 122 78 88 ];
+        %tmp.90 = getv %tmp.89 :FONT_XTINY;
+        invoke %tmp.79 %tmp.80(%tmp.81, %tmp.82, %tmp.85, %tmp.86, %tmp.88, %tmp.90);
+[ "/Users/hansolo/MonkeyC Projects/SugrMonDataField/source/SugrMonView.mc" 123 12 ]
+        ret ?;
+_Users_hansolo_MonkeyC_Projects_SugrMonDataField_source_SugrMonView_mc_121_24_124_8_stop:
+        goto @_Users_hansolo_MonkeyC_Projects_SugrMonDataField_source_SugrMonView_mc_121_8_124_8_if_end;
+_Users_hansolo_MonkeyC_Projects_SugrMonDataField_source_SugrMonView_mc_121_8_124_8_if_end:
+[ "/Users/hansolo/MonkeyC Projects/SugrMonDataField/source/SugrMonView.mc" 126 8 ]
+        [ "_Users_hansolo_MonkeyC_Projects_SugrMonDataField_source_SugrMonView_mc_96_40_168_4_start" "_Users_hansolo_MonkeyC_Projects_SugrMonDataField_source_SugrMonView_mc_96_40_168_4_stop" ]
+        %level.4 = local;
+        symbol [ level %level.4 126 12 17 ];
+        symbol [ _model %tmp.92 126 22 28 ];
+        %tmp.92 = getv ? :_model;
+        symbol [ getLevel %tmp.93 126 29 37 ];
+        %tmp.93 = getv function %tmp.92 :getLevel;
+        %tmp.94 = lgetv %bg.3;
+        symbol [ bg %tmp.94 126 38 40 ];
+        symbol [ value %tmp.95 126 41 46 ];
+        %tmp.95 = getv %tmp.94 :value;
+        %tmp.96 = invoke %tmp.92 %tmp.93(%tmp.95);
+        lputv %level.4 %tmp.96;
+        symbol [ level %level.4 126 12 17 ];
+[ "/Users/hansolo/MonkeyC Projects/SugrMonDataField/source/SugrMonView.mc" 127 8 ]
+        [ "_Users_hansolo_MonkeyC_Projects_SugrMonDataField_source_SugrMonView_mc_96_40_168_4_start" "_Users_hansolo_MonkeyC_Projects_SugrMonDataField_source_SugrMonView_mc_96_40_168_4_stop" ]
+        %fgColor.5 = local;
+        symbol [ fgColor %fgColor.5 127 12 19 ];
+        symbol [ _model %tmp.98 127 22 28 ];
+        %tmp.98 = getv ? :_model;
+        symbol [ getColorForLevel %tmp.99 127 29 45 ];
+        %tmp.99 = getv function %tmp.98 :getColorForLevel;
+        %tmp.100 = lgetv %level.4;
+        symbol [ level %tmp.100 127 46 51 ];
+        %tmp.101 = invoke %tmp.98 %tmp.99(%tmp.100);
+        lputv %fgColor.5 %tmp.101;
+        symbol [ fgColor %fgColor.5 127 12 19 ];
+[ "/Users/hansolo/MonkeyC Projects/SugrMonDataField/source/SugrMonView.mc" 129 8 ]
+        [ "_Users_hansolo_MonkeyC_Projects_SugrMonDataField_source_SugrMonView_mc_96_40_168_4_start" "_Users_hansolo_MonkeyC_Projects_SugrMonDataField_source_SugrMonView_mc_96_40_168_4_stop" ]
+        %row0Y.6 = local;
+        symbol [ row0Y %row0Y.6 129 12 17 ];
+        %tmp.102 = lgetv %h.2;
+        symbol [ h %tmp.102 129 21 22 ];
+        %tmp.103 = 0.45;
+        %tmp.104 = mul %tmp.102 %tmp.103;
+        symbol [ toNumber %tmp.105 129 31 39 ];
+        %tmp.105 = getv function %tmp.104 :toNumber;
+        %tmp.106 = invoke %tmp.104 %tmp.105();
+        lputv %row0Y.6 %tmp.106;
+        symbol [ row0Y %row0Y.6 129 12 17 ];
+[ "/Users/hansolo/MonkeyC Projects/SugrMonDataField/source/SugrMonView.mc" 130 8 ]
+        [ "_Users_hansolo_MonkeyC_Projects_SugrMonDataField_source_SugrMonView_mc_96_40_168_4_start" "_Users_hansolo_MonkeyC_Projects_SugrMonDataField_source_SugrMonView_mc_96_40_168_4_stop" ]
+        %row1Y.7 = local;
+        symbol [ row1Y %row1Y.7 130 12 17 ];
+        %tmp.107 = lgetv %h.2;
+        symbol [ h %tmp.107 130 21 22 ];
+        %tmp.108 = 0.54;
+        %tmp.109 = mul %tmp.107 %tmp.108;
+        symbol [ toNumber %tmp.110 130 31 39 ];
+        %tmp.110 = getv function %tmp.109 :toNumber;
+        %tmp.111 = invoke %tmp.109 %tmp.110();
+        lputv %row1Y.7 %tmp.111;
+        symbol [ row1Y %row1Y.7 130 12 17 ];
+[ "/Users/hansolo/MonkeyC Projects/SugrMonDataField/source/SugrMonView.mc" 133 8 ]
+        [ "_Users_hansolo_MonkeyC_Projects_SugrMonDataField_source_SugrMonView_mc_96_40_168_4_start" "_Users_hansolo_MonkeyC_Projects_SugrMonDataField_source_SugrMonView_mc_96_40_168_4_stop" ]
+        %valueStr.8 = local;
+        symbol [ valueStr %valueStr.8 133 12 20 ];
+        symbol [ _model %tmp.113 133 23 29 ];
+        %tmp.113 = getv ? :_model;
+        symbol [ formatValue %tmp.114 133 30 41 ];
+        %tmp.114 = getv function %tmp.113 :formatValue;
+        %tmp.115 = lgetv %bg.3;
+        symbol [ bg %tmp.115 133 42 44 ];
+        symbol [ value %tmp.116 133 45 50 ];
+        %tmp.116 = getv %tmp.115 :value;
+        %tmp.117 = invoke %tmp.113 %tmp.114(%tmp.116);
+        lputv %valueStr.8 %tmp.117;
+        symbol [ valueStr %valueStr.8 133 12 20 ];
+[ "/Users/hansolo/MonkeyC Projects/SugrMonDataField/source/SugrMonView.mc" 134 8 ]
+        [ "_Users_hansolo_MonkeyC_Projects_SugrMonDataField_source_SugrMonView_mc_96_40_168_4_start" "_Users_hansolo_MonkeyC_Projects_SugrMonDataField_source_SugrMonView_mc_96_40_168_4_stop" ]
+        %arrowStr.9 = local;
+        symbol [ arrowStr %arrowStr.9 134 12 20 ];
+        symbol [ _model %tmp.119 134 23 29 ];
+        %tmp.119 = getv ? :_model;
+        symbol [ directionToArrow %tmp.120 134 30 46 ];
+        %tmp.120 = getv function %tmp.119 :directionToArrow;
+        %tmp.121 = lgetv %bg.3;
+        symbol [ bg %tmp.121 134 47 49 ];
+        symbol [ direction %tmp.122 134 50 59 ];
+        %tmp.122 = getv %tmp.121 :direction;
+        %tmp.123 = invoke %tmp.119 %tmp.120(%tmp.122);
+        lputv %arrowStr.9 %tmp.123;
+        symbol [ arrowStr %arrowStr.9 134 12 20 ];
+[ "/Users/hansolo/MonkeyC Projects/SugrMonDataField/source/SugrMonView.mc" 135 8 ]
+        [ "_Users_hansolo_MonkeyC_Projects_SugrMonDataField_source_SugrMonView_mc_96_40_168_4_start" "_Users_hansolo_MonkeyC_Projects_SugrMonDataField_source_SugrMonView_mc_96_40_168_4_stop" ]
+        %mainStr.10 = local;
+        symbol [ mainStr %mainStr.10 135 12 19 ];
+        %tmp.124 = lgetv %valueStr.8;
+        symbol [ valueStr %tmp.124 135 23 31 ];
+        %tmp.125 = " ";
+        %tmp.126 = add %tmp.124 %tmp.125;
+        %tmp.127 = lgetv %arrowStr.9;
+        symbol [ arrowStr %tmp.127 135 40 48 ];
+        %tmp.128 = add %tmp.126 %tmp.127;
+        lputv %mainStr.10 %tmp.128;
+        symbol [ mainStr %mainStr.10 135 12 19 ];
+[ "/Users/hansolo/MonkeyC Projects/SugrMonDataField/source/SugrMonView.mc" 137 8 ]
+        %tmp.129 = lgetv %dc;
+        symbol [ dc %tmp.129 137 8 10 ];
+        symbol [ setColor %tmp.130 137 11 19 ];
+        %tmp.130 = getv function %tmp.129 :setColor;
+        %tmp.131 = lgetv %fgColor.5;
+        symbol [ fgColor %tmp.131 137 20 27 ];
+        symbol [ Graphics %tmp.132 137 29 37 ];
+        %tmp.132 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.133 137 38 55 ];
+        %tmp.133 = getv %tmp.132 :COLOR_TRANSPARENT;
+        invoke %tmp.129 %tmp.130(%tmp.131, %tmp.133);
+[ "/Users/hansolo/MonkeyC Projects/SugrMonDataField/source/SugrMonView.mc" 138 8 ]
+        %tmp.134 = lgetv %dc;
+        symbol [ dc %tmp.134 138 8 10 ];
+        symbol [ drawText %tmp.135 138 11 19 ];
+        %tmp.135 = getv function %tmp.134 :drawText;
+        %tmp.136 = lgetv %w.1;
+        symbol [ w %tmp.136 138 20 21 ];
+        %tmp.137 = 2;
+        %tmp.138 = div %tmp.136 %tmp.137;
+        %tmp.139 = lgetv %row0Y.6;
+        symbol [ row0Y %tmp.139 138 27 32 ];
+        symbol [ _fontXTiny %tmp.141 138 34 44 ];
+        %tmp.141 = getv ? :_fontXTiny;
+        %tmp.142 = lgetv %mainStr.10;
+        symbol [ mainStr %tmp.142 138 46 53 ];
+        symbol [ Graphics %tmp.143 138 55 63 ];
+        %tmp.143 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.144 138 64 83 ];
+        %tmp.144 = getv %tmp.143 :TEXT_JUSTIFY_CENTER;
+        symbol [ Graphics %tmp.145 138 86 94 ];
+        %tmp.145 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_VCENTER %tmp.146 138 95 115 ];
+        %tmp.146 = getv %tmp.145 :TEXT_JUSTIFY_VCENTER;
+        %tmp.147 = bitor %tmp.144 %tmp.146;
+        invoke %tmp.134 %tmp.135(%tmp.138, %tmp.139, %tmp.141, %tmp.142, %tmp.147);
+[ "/Users/hansolo/MonkeyC Projects/SugrMonDataField/source/SugrMonView.mc" 140 8 ]
+        [ "_Users_hansolo_MonkeyC_Projects_SugrMonDataField_source_SugrMonView_mc_96_40_168_4_start" "_Users_hansolo_MonkeyC_Projects_SugrMonDataField_source_SugrMonView_mc_96_40_168_4_stop" ]
+        %deltaStr.11 = local;
+        symbol [ deltaStr %deltaStr.11 140 12 20 ];
+        symbol [ _model %tmp.149 140 23 29 ];
+        %tmp.149 = getv ? :_model;
+        symbol [ formatDelta %tmp.150 140 30 41 ];
+        %tmp.150 = getv function %tmp.149 :formatDelta;
+        %tmp.151 = lgetv %bg.3;
+        symbol [ bg %tmp.151 140 42 44 ];
+        symbol [ delta %tmp.152 140 45 50 ];
+        %tmp.152 = getv %tmp.151 :delta;
+        %tmp.153 = invoke %tmp.149 %tmp.150(%tmp.152);
+        lputv %deltaStr.11 %tmp.153;
+        symbol [ deltaStr %deltaStr.11 140 12 20 ];
+[ "/Users/hansolo/MonkeyC Projects/SugrMonDataField/source/SugrMonView.mc" 141 8 ]
+_Users_hansolo_MonkeyC_Projects_SugrMonDataField_source_SugrMonView_mc_141_8_145_8_if_stmt:
+        symbol [ _model %tmp.155 141 12 18 ];
+        %tmp.155 = getv ? :_model;
+        symbol [ useMmol %tmp.156 141 19 26 ];
+        %tmp.156 = getv %tmp.155 :useMmol;
+        bf %tmp.156 @_Users_hansolo_MonkeyC_Projects_SugrMonDataField_source_SugrMonView_mc_141_8_145_8_if_else_false;
+_Users_hansolo_MonkeyC_Projects_SugrMonDataField_source_SugrMonView_mc_141_8_145_8_if_true:
+_Users_hansolo_MonkeyC_Projects_SugrMonDataField_source_SugrMonView_mc_141_28_143_8_start:
+[ "/Users/hansolo/MonkeyC Projects/SugrMonDataField/source/SugrMonView.mc" 142 12 ]
+        %tmp.157 = lgetv %deltaStr.11;
+        symbol [ deltaStr %tmp.157 142 23 31 ];
+        %tmp.158 = " mmol";
+        %tmp.159 = add %tmp.157 %tmp.158;
+        lputv %deltaStr.11 %tmp.159;
+        symbol [ deltaStr %deltaStr.11 142 12 20 ];
+_Users_hansolo_MonkeyC_Projects_SugrMonDataField_source_SugrMonView_mc_141_28_143_8_stop:
+        goto @_Users_hansolo_MonkeyC_Projects_SugrMonDataField_source_SugrMonView_mc_141_8_145_8_if_end;
+_Users_hansolo_MonkeyC_Projects_SugrMonDataField_source_SugrMonView_mc_141_8_145_8_if_else_false:
+_Users_hansolo_MonkeyC_Projects_SugrMonDataField_source_SugrMonView_mc_143_15_145_8_start:
+[ "/Users/hansolo/MonkeyC Projects/SugrMonDataField/source/SugrMonView.mc" 144 12 ]
+        %tmp.160 = lgetv %deltaStr.11;
+        symbol [ deltaStr %tmp.160 144 23 31 ];
+        %tmp.161 = " mg/dL";
+        %tmp.162 = add %tmp.160 %tmp.161;
+        lputv %deltaStr.11 %tmp.162;
+        symbol [ deltaStr %deltaStr.11 144 12 20 ];
+_Users_hansolo_MonkeyC_Projects_SugrMonDataField_source_SugrMonView_mc_143_15_145_8_stop:
+_Users_hansolo_MonkeyC_Projects_SugrMonDataField_source_SugrMonView_mc_141_8_145_8_if_end:
+[ "/Users/hansolo/MonkeyC Projects/SugrMonDataField/source/SugrMonView.mc" 146 8 ]
+        %tmp.163 = lgetv %dc;
+        symbol [ dc %tmp.163 146 8 10 ];
+        symbol [ setColor %tmp.164 146 11 19 ];
+        %tmp.164 = getv function %tmp.163 :setColor;
+        symbol [ GRAY %tmp.166 146 20 24 ];
+        %tmp.166 = getv ? :GRAY;
+        symbol [ Graphics %tmp.167 146 26 34 ];
+        %tmp.167 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.168 146 35 52 ];
+        %tmp.168 = getv %tmp.167 :COLOR_TRANSPARENT;
+        invoke %tmp.163 %tmp.164(%tmp.166, %tmp.168);
+[ "/Users/hansolo/MonkeyC Projects/SugrMonDataField/source/SugrMonView.mc" 149 8 ]
+        [ "_Users_hansolo_MonkeyC_Projects_SugrMonDataField_source_SugrMonView_mc_96_40_168_4_start" "_Users_hansolo_MonkeyC_Projects_SugrMonDataField_source_SugrMonView_mc_96_40_168_4_stop" ]
+        %ageColor.12 = local;
+        symbol [ ageColor %ageColor.12 149 12 20 ];
+        symbol [ GRAY %tmp.170 149 23 27 ];
+        %tmp.170 = getv ? :GRAY;
+        lputv %ageColor.12 %tmp.170;
+        symbol [ ageColor %ageColor.12 149 12 20 ];
+[ "/Users/hansolo/MonkeyC Projects/SugrMonDataField/source/SugrMonView.mc" 150 8 ]
+        [ "_Users_hansolo_MonkeyC_Projects_SugrMonDataField_source_SugrMonView_mc_96_40_168_4_start" "_Users_hansolo_MonkeyC_Projects_SugrMonDataField_source_SugrMonView_mc_96_40_168_4_stop" ]
+        %ageStr.13 = local;
+        symbol [ ageStr %ageStr.13 150 12 18 ];
+        %tmp.171 = self;
+        symbol [ formatAge %tmp.172 150 23 32 ];
+        %tmp.172 = getv function %tmp.171 :formatAge;
+        %tmp.173 = lgetv %bg.3;
+        symbol [ bg %tmp.173 150 33 35 ];
+        symbol [ age %tmp.174 150 36 39 ];
+        %tmp.174 = getv %tmp.173 :age;
+        %tmp.175 = invoke %tmp.171 %tmp.172(%tmp.174);
+        lputv %ageStr.13 %tmp.175;
+        symbol [ ageStr %ageStr.13 150 12 18 ];
+[ "/Users/hansolo/MonkeyC Projects/SugrMonDataField/source/SugrMonView.mc" 152 8 ]
+_Users_hansolo_MonkeyC_Projects_SugrMonDataField_source_SugrMonView_mc_152_8_155_8_if_stmt:
+        %tmp.176 = lgetv %bg.3;
+        symbol [ bg %tmp.176 152 12 14 ];
+        symbol [ age %tmp.177 152 15 18 ];
+        %tmp.177 = getv %tmp.176 :age;
+        %tmp.178 = 900;
+        %tmp.179 = gt %tmp.177 %tmp.178;
+        bf %tmp.179 @_Users_hansolo_MonkeyC_Projects_SugrMonDataField_source_SugrMonView_mc_152_8_155_8_if_end;
+_Users_hansolo_MonkeyC_Projects_SugrMonDataField_source_SugrMonView_mc_152_8_155_8_if_true:
+_Users_hansolo_MonkeyC_Projects_SugrMonDataField_source_SugrMonView_mc_152_26_155_8_start:
+[ "/Users/hansolo/MonkeyC Projects/SugrMonDataField/source/SugrMonView.mc" 153 12 ]
+        %tmp.180 = 0xFF8800;
+        lputv %ageColor.12 %tmp.180;
+        symbol [ ageColor %ageColor.12 153 12 20 ];
+[ "/Users/hansolo/MonkeyC Projects/SugrMonDataField/source/SugrMonView.mc" 154 12 ]
+        %tmp.181 = "!";
+        %tmp.182 = lgetv %ageStr.13;
+        symbol [ ageStr %tmp.182 154 29 35 ];
+        %tmp.183 = add %tmp.181 %tmp.182;
+        lputv %ageStr.13 %tmp.183;
+        symbol [ ageStr %ageStr.13 154 12 18 ];
+_Users_hansolo_MonkeyC_Projects_SugrMonDataField_source_SugrMonView_mc_152_26_155_8_stop:
+        goto @_Users_hansolo_MonkeyC_Projects_SugrMonDataField_source_SugrMonView_mc_152_8_155_8_if_end;
+_Users_hansolo_MonkeyC_Projects_SugrMonDataField_source_SugrMonView_mc_152_8_155_8_if_end:
+[ "/Users/hansolo/MonkeyC Projects/SugrMonDataField/source/SugrMonView.mc" 157 8 ]
+_Users_hansolo_MonkeyC_Projects_SugrMonDataField_source_SugrMonView_mc_157_8_160_8_if_stmt:
+        symbol [ _model %tmp.185 157 12 18 ];
+        %tmp.185 = getv ? :_model;
+        symbol [ hasError %tmp.186 157 19 27 ];
+        %tmp.186 = getv %tmp.185 :hasError;
+        bf %tmp.186 @_Users_hansolo_MonkeyC_Projects_SugrMonDataField_source_SugrMonView_mc_157_8_160_8_if_end;
+_Users_hansolo_MonkeyC_Projects_SugrMonDataField_source_SugrMonView_mc_157_8_160_8_if_true:
+_Users_hansolo_MonkeyC_Projects_SugrMonDataField_source_SugrMonView_mc_157_29_160_8_start:
+[ "/Users/hansolo/MonkeyC Projects/SugrMonDataField/source/SugrMonView.mc" 158 12 ]
+        %tmp.187 = lgetv %ageStr.13;
+        symbol [ ageStr %tmp.187 158 23 29 ];
+        %tmp.188 = " ERR";
+        %tmp.189 = add %tmp.187 %tmp.188;
+        lputv %ageStr.13 %tmp.189;
+        symbol [ ageStr %ageStr.13 158 12 18 ];
+[ "/Users/hansolo/MonkeyC Projects/SugrMonDataField/source/SugrMonView.mc" 159 12 ]
+        symbol [ Graphics %tmp.190 159 23 31 ];
+        %tmp.190 = getm $.Toybox.Graphics;
+        symbol [ COLOR_RED %tmp.191 159 32 41 ];
+        %tmp.191 = getv %tmp.190 :COLOR_RED;
+        lputv %ageColor.12 %tmp.191;
+        symbol [ ageColor %ageColor.12 159 12 20 ];
+_Users_hansolo_MonkeyC_Projects_SugrMonDataField_source_SugrMonView_mc_157_29_160_8_stop:
+        goto @_Users_hansolo_MonkeyC_Projects_SugrMonDataField_source_SugrMonView_mc_157_8_160_8_if_end;
+_Users_hansolo_MonkeyC_Projects_SugrMonDataField_source_SugrMonView_mc_157_8_160_8_if_end:
+[ "/Users/hansolo/MonkeyC Projects/SugrMonDataField/source/SugrMonView.mc" 162 8 ]
+        %tmp.192 = lgetv %dc;
+        symbol [ dc %tmp.192 162 8 10 ];
+        symbol [ setColor %tmp.193 162 11 19 ];
+        %tmp.193 = getv function %tmp.192 :setColor;
+        %tmp.194 = lgetv %ageColor.12;
+        symbol [ ageColor %tmp.194 162 20 28 ];
+        symbol [ Graphics %tmp.195 162 30 38 ];
+        %tmp.195 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.196 162 39 56 ];
+        %tmp.196 = getv %tmp.195 :COLOR_TRANSPARENT;
+        invoke %tmp.192 %tmp.193(%tmp.194, %tmp.196);
+[ "/Users/hansolo/MonkeyC Projects/SugrMonDataField/source/SugrMonView.mc" 165 8 ]
+        [ "_Users_hansolo_MonkeyC_Projects_SugrMonDataField_source_SugrMonView_mc_96_40_168_4_start" "_Users_hansolo_MonkeyC_Projects_SugrMonDataField_source_SugrMonView_mc_96_40_168_4_stop" ]
+        %infoStr.14 = local;
+        symbol [ infoStr %infoStr.14 165 12 19 ];
+        %tmp.197 = lgetv %deltaStr.11;
+        symbol [ deltaStr %tmp.197 165 22 30 ];
+        %tmp.198 = " ";
+        %tmp.199 = add %tmp.197 %tmp.198;
+        %tmp.200 = lgetv %ageStr.13;
+        symbol [ ageStr %tmp.200 165 39 45 ];
+        %tmp.201 = add %tmp.199 %tmp.200;
+        lputv %infoStr.14 %tmp.201;
+        symbol [ infoStr %infoStr.14 165 12 19 ];
+[ "/Users/hansolo/MonkeyC Projects/SugrMonDataField/source/SugrMonView.mc" 167 8 ]
+        %tmp.202 = lgetv %dc;
+        symbol [ dc %tmp.202 167 8 10 ];
+        symbol [ drawText %tmp.203 167 11 19 ];
+        %tmp.203 = getv function %tmp.202 :drawText;
+        %tmp.204 = lgetv %w.1;
+        symbol [ w %tmp.204 167 20 21 ];
+        %tmp.205 = 2;
+        %tmp.206 = div %tmp.204 %tmp.205;
+        %tmp.207 = lgetv %row1Y.7;
+        symbol [ row1Y %tmp.207 167 27 32 ];
+        symbol [ _fontSuperMini %tmp.209 167 34 48 ];
+        %tmp.209 = getv ? :_fontSuperMini;
+        %tmp.210 = lgetv %infoStr.14;
+        symbol [ infoStr %tmp.210 167 50 57 ];
+        symbol [ Graphics %tmp.211 167 59 67 ];
+        %tmp.211 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.212 167 68 87 ];
+        %tmp.212 = getv %tmp.211 :TEXT_JUSTIFY_CENTER;
+        symbol [ Graphics %tmp.213 167 90 98 ];
+        %tmp.213 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_VCENTER %tmp.214 167 99 119 ];
+        %tmp.214 = getv %tmp.213 :TEXT_JUSTIFY_VCENTER;
+        %tmp.215 = bitor %tmp.212 %tmp.214;
+        invoke %tmp.202 %tmp.203(%tmp.206, %tmp.207, %tmp.209, %tmp.210, %tmp.215);
+_Users_hansolo_MonkeyC_Projects_SugrMonDataField_source_SugrMonView_mc_96_40_168_4_stop:
+    }
+    [ @file = "/Users/hansolo/MonkeyC Projects/SugrMonDataField/source/SugrMonView.mc"; @line = 171; @symbol_functiondef = [drawCentred,171,21,32]; @symbol_param<0> = [dc,171,33,35]; @symbol_param<0>_type<0> = [Dc,171,39,41]; @symbol_param<1> = [w,171,43,44]; @symbol_param<1>_type<0> = [Number,171,48,54]; @symbol_param<2> = [y,171,56,57]; @symbol_param<2>_type<0> = [Number,171,61,67]; @symbol_param<3> = [text,171,69,73]; @symbol_param<3>_type<0> = [String,171,77,83]; @symbol_param<4> = [color,171,85,90]; @symbol_param<4>_type<0> = [Number,171,94,100]; @symbol_param<5> = [font,171,102,106]; @symbol_param<5>_type<0> = [Graphics,171,110,118]; @symbol_param<5>_type<1> = [FontType,171,119,127]; ]
+    private
+    function drawCentred(dc as Dc, w as Number, y as Number, text as String, color as Number, font as Graphics.FontType) as Void {
+_Users_hansolo_MonkeyC_Projects_SugrMonDataField_source_SugrMonView_mc_171_137_174_4_start:
+[ "/Users/hansolo/MonkeyC Projects/SugrMonDataField/source/SugrMonView.mc" 172 8 ]
+        %tmp.1 = lgetv %dc;
+        symbol [ dc %tmp.1 172 8 10 ];
+        symbol [ setColor %tmp.2 172 11 19 ];
+        %tmp.2 = getv function %tmp.1 :setColor;
+        %tmp.3 = lgetv %color;
+        symbol [ color %tmp.3 172 20 25 ];
+        symbol [ Graphics %tmp.4 172 27 35 ];
+        %tmp.4 = getm $.Toybox.Graphics;
+        symbol [ COLOR_TRANSPARENT %tmp.5 172 36 53 ];
+        %tmp.5 = getv %tmp.4 :COLOR_TRANSPARENT;
+        invoke %tmp.1 %tmp.2(%tmp.3, %tmp.5);
+[ "/Users/hansolo/MonkeyC Projects/SugrMonDataField/source/SugrMonView.mc" 173 8 ]
+        %tmp.6 = lgetv %dc;
+        symbol [ dc %tmp.6 173 8 10 ];
+        symbol [ drawText %tmp.7 173 11 19 ];
+        %tmp.7 = getv function %tmp.6 :drawText;
+        %tmp.8 = lgetv %w;
+        symbol [ w %tmp.8 173 20 21 ];
+        %tmp.9 = 2;
+        %tmp.10 = div %tmp.8 %tmp.9;
+        %tmp.11 = lgetv %y;
+        symbol [ y %tmp.11 173 27 28 ];
+        %tmp.12 = lgetv %font;
+        symbol [ font %tmp.12 173 30 34 ];
+        %tmp.13 = lgetv %text;
+        symbol [ text %tmp.13 173 36 40 ];
+        symbol [ Graphics %tmp.14 173 42 50 ];
+        %tmp.14 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.15 173 51 70 ];
+        %tmp.15 = getv %tmp.14 :TEXT_JUSTIFY_CENTER;
+        symbol [ Graphics %tmp.16 173 73 81 ];
+        %tmp.16 = getm $.Toybox.Graphics;
+        symbol [ TEXT_JUSTIFY_VCENTER %tmp.17 173 82 102 ];
+        %tmp.17 = getv %tmp.16 :TEXT_JUSTIFY_VCENTER;
+        %tmp.18 = bitor %tmp.15 %tmp.17;
+        invoke %tmp.6 %tmp.7(%tmp.10, %tmp.11, %tmp.12, %tmp.13, %tmp.18);
+_Users_hansolo_MonkeyC_Projects_SugrMonDataField_source_SugrMonView_mc_171_137_174_4_stop:
+    }
+    [ @file = "/Users/hansolo/MonkeyC Projects/SugrMonDataField/source/SugrMonView.mc"; @line = 178; @symbol_functiondef = [formatAge,178,21,30]; @symbol_param<0> = [ageSeconds,178,31,41]; @symbol_param<0>_type<0> = [Number,178,45,51]; @symbol_return<0> = [String,178,56,62]; ]
+    private
+    function formatAge(ageSeconds as Number) as String {
+_Users_hansolo_MonkeyC_Projects_SugrMonDataField_source_SugrMonView_mc_178_63_186_4_start:
+[ "/Users/hansolo/MonkeyC Projects/SugrMonDataField/source/SugrMonView.mc" 179 8 ]
+_Users_hansolo_MonkeyC_Projects_SugrMonDataField_source_SugrMonView_mc_179_8_179_67_if_stmt:
+        %tmp.1 = lgetv %ageSeconds;
+        symbol [ ageSeconds %tmp.1 179 12 22 ];
+        %tmp.2 = 60;
+        %tmp.3 = lt %tmp.1 %tmp.2;
+        bf %tmp.3 @_Users_hansolo_MonkeyC_Projects_SugrMonDataField_source_SugrMonView_mc_179_8_179_67_if_end;
+_Users_hansolo_MonkeyC_Projects_SugrMonDataField_source_SugrMonView_mc_179_8_179_67_if_true:
+_Users_hansolo_MonkeyC_Projects_SugrMonDataField_source_SugrMonView_mc_179_29_179_67_start:
+[ "/Users/hansolo/MonkeyC Projects/SugrMonDataField/source/SugrMonView.mc" 179 31 ]
+        %tmp.4 = lgetv %ageSeconds;
+        symbol [ ageSeconds %tmp.4 179 38 48 ];
+        symbol [ toString %tmp.5 179 49 57 ];
+        %tmp.5 = getv function %tmp.4 :toString;
+        %tmp.6 = invoke %tmp.4 %tmp.5();
+        %tmp.7 = "s";
+        %tmp.8 = add %tmp.6 %tmp.7;
+        ret %tmp.8;
+_Users_hansolo_MonkeyC_Projects_SugrMonDataField_source_SugrMonView_mc_179_29_179_67_stop:
+        goto @_Users_hansolo_MonkeyC_Projects_SugrMonDataField_source_SugrMonView_mc_179_8_179_67_if_end;
+_Users_hansolo_MonkeyC_Projects_SugrMonDataField_source_SugrMonView_mc_179_8_179_67_if_end:
+[ "/Users/hansolo/MonkeyC Projects/SugrMonDataField/source/SugrMonView.mc" 181 8 ]
+        [ "_Users_hansolo_MonkeyC_Projects_SugrMonDataField_source_SugrMonView_mc_178_63_186_4_start" "_Users_hansolo_MonkeyC_Projects_SugrMonDataField_source_SugrMonView_mc_178_63_186_4_stop" ]
+        %mins.1 = local;
+        symbol [ mins %mins.1 181 12 16 ];
+        %tmp.9 = lgetv %ageSeconds;
+        symbol [ ageSeconds %tmp.9 181 20 30 ];
+        %tmp.10 = 60;
+        %tmp.11 = div %tmp.9 %tmp.10;
+        symbol [ toNumber %tmp.12 181 37 45 ];
+        %tmp.12 = getv function %tmp.11 :toNumber;
+        %tmp.13 = invoke %tmp.11 %tmp.12();
+        lputv %mins.1 %tmp.13;
+        symbol [ mins %mins.1 181 12 16 ];
+[ "/Users/hansolo/MonkeyC Projects/SugrMonDataField/source/SugrMonView.mc" 182 8 ]
+_Users_hansolo_MonkeyC_Projects_SugrMonDataField_source_SugrMonView_mc_182_8_182_55_if_stmt:
+        %tmp.14 = lgetv %mins.1;
+        symbol [ mins %tmp.14 182 12 16 ];
+        %tmp.15 = 60;
+        %tmp.16 = lt %tmp.14 %tmp.15;
+        bf %tmp.16 @_Users_hansolo_MonkeyC_Projects_SugrMonDataField_source_SugrMonView_mc_182_8_182_55_if_end;
+_Users_hansolo_MonkeyC_Projects_SugrMonDataField_source_SugrMonView_mc_182_8_182_55_if_true:
+_Users_hansolo_MonkeyC_Projects_SugrMonDataField_source_SugrMonView_mc_182_23_182_55_start:
+[ "/Users/hansolo/MonkeyC Projects/SugrMonDataField/source/SugrMonView.mc" 182 25 ]
+        %tmp.17 = lgetv %mins.1;
+        symbol [ mins %tmp.17 182 32 36 ];
+        symbol [ toString %tmp.18 182 37 45 ];
+        %tmp.18 = getv function %tmp.17 :toString;
+        %tmp.19 = invoke %tmp.17 %tmp.18();
+        %tmp.20 = "m";
+        %tmp.21 = add %tmp.19 %tmp.20;
+        ret %tmp.21;
+_Users_hansolo_MonkeyC_Projects_SugrMonDataField_source_SugrMonView_mc_182_23_182_55_stop:
+        goto @_Users_hansolo_MonkeyC_Projects_SugrMonDataField_source_SugrMonView_mc_182_8_182_55_if_end;
+_Users_hansolo_MonkeyC_Projects_SugrMonDataField_source_SugrMonView_mc_182_8_182_55_if_end:
+[ "/Users/hansolo/MonkeyC Projects/SugrMonDataField/source/SugrMonView.mc" 184 8 ]
+        [ "_Users_hansolo_MonkeyC_Projects_SugrMonDataField_source_SugrMonView_mc_178_63_186_4_start" "_Users_hansolo_MonkeyC_Projects_SugrMonDataField_source_SugrMonView_mc_178_63_186_4_stop" ]
+        %hrs.2 = local;
+        symbol [ hrs %hrs.2 184 12 15 ];
+        %tmp.22 = lgetv %mins.1;
+        symbol [ mins %tmp.22 184 19 23 ];
+        %tmp.23 = 60;
+        %tmp.24 = div %tmp.22 %tmp.23;
+        symbol [ toNumber %tmp.25 184 30 38 ];
+        %tmp.25 = getv function %tmp.24 :toNumber;
+        %tmp.26 = invoke %tmp.24 %tmp.25();
+        lputv %hrs.2 %tmp.26;
+        symbol [ hrs %hrs.2 184 12 15 ];
+[ "/Users/hansolo/MonkeyC Projects/SugrMonDataField/source/SugrMonView.mc" 185 8 ]
+        %tmp.27 = lgetv %hrs.2;
+        symbol [ hrs %tmp.27 185 15 18 ];
+        symbol [ toString %tmp.28 185 19 27 ];
+        %tmp.28 = getv function %tmp.27 :toString;
+        %tmp.29 = invoke %tmp.27 %tmp.28();
+        %tmp.30 = "h";
+        %tmp.31 = add %tmp.29 %tmp.30;
+        ret %tmp.31;
+_Users_hansolo_MonkeyC_Projects_SugrMonDataField_source_SugrMonView_mc_178_63_186_4_stop:
+    }
+}
+[ @file = "/Users/hansolo/MonkeyC Projects/SugrMonDataField/source/SugrMonView.mc"; @line = 1; ]
+<init> {
+}

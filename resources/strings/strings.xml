@@ -1,0 +1,31 @@
+<strings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://developer.garmin.com/downloads/connect-iq/resources.xsd">
+    <string id="AppName">SugrMon</string>
+
+    <!-- Settings labels -->
+    <string id="SettingNightscoutUrl">Nightscout URL</string>
+    <string id="SettingNightscoutToken">Nightscout Token</string>
+    <string id="SettingFetchInterval">Fetch Interval (min)</string>
+    <string id="SettingCriticalMin">Critical Low (mg/dL)</string>
+    <string id="SettingAcceptableMin">Acceptable Low (mg/dL)</string>
+    <string id="SettingNormalMin">Normal Low (mg/dL)</string>
+    <string id="SettingNormalMax">Normal High (mg/dL)</string>
+    <string id="SettingAcceptableMax">Acceptable High (mg/dL)</string>
+    <string id="SettingCriticalMax">Critical High (mg/dL)</string>
+    <string id="SettingUseMmol">Use mmol/L</string>
+    <string id="SettingUseMonochrome">Monochrome text</string>
+
+    <!-- Display strings -->
+    <string id="NoData">---</string>
+    <string id="Loading">...</string>
+    <string id="ErrorShort">ERR</string>
+    <string id="NoUrl">No URL</string>
+
+    <!-- Trend arrows -->
+    <string id="DoubleUp">⇈</string>
+    <string id="SingleUp">↑</string>
+    <string id="FortyFiveUp">↗</string>
+    <string id="Flat">→</string>
+    <string id="FortyFiveDown">↘</string>
+    <string id="SingleDown">↓</string>
+    <string id="DoubleDown">⇊</string>            
+</strings>

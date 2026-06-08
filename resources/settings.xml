@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<settings>
+    <setting propertyKey="@Properties.NightscoutUrl" title="@Strings.SettingNightscoutUrl">
+        <settingConfig type="alphanumeric"/>
+    </setting>
+    <setting propertyKey="@Properties.NightscoutToken" title="@Strings.SettingNightscoutToken">
+        <settingConfig type="alphanumeric"/>
+    </setting>
+    <setting propertyKey="@Properties.FetchIntervalMin" title="@Strings.SettingFetchInterval">
+        <settingConfig type="numeric" min="5" max="15"/>
+    </setting>
+    <setting propertyKey="@Properties.CriticalMin" title="@Strings.SettingCriticalMin">
+        <settingConfig type="numeric" min="50" max="55"/>
+    </setting>
+    <setting propertyKey="@Properties.AcceptableMin" title="@Strings.SettingAcceptableMin">
+        <settingConfig type="numeric" min="60" max="70"/>
+    </setting>
+    <setting propertyKey="@Properties.NormalMin" title="@Strings.SettingNormalMin">
+        <settingConfig type="numeric" min="70" max="90"/>
+    </setting>
+    <setting propertyKey="@Properties.NormalMax" title="@Strings.SettingNormalMax">
+        <settingConfig type="numeric" min="120" max="180"/>
+    </setting>
+    <setting propertyKey="@Properties.AcceptableMax" title="@Strings.SettingAcceptableMax">
+        <settingConfig type="numeric" min="180" max="250"/>
+    </setting>
+    <setting propertyKey="@Properties.CriticalMax" title="@Strings.SettingCriticalMax">
+        <settingConfig type="numeric" min="250" max="350"/>
+    </setting>
+    <setting propertyKey="@Properties.UseMmol" title="@Strings.SettingUseMmol">
+        <settingConfig type="boolean"/>
+    </setting>
+    <setting propertyKey="@Properties.UseMonochrome" title="@Strings.SettingUseMonochrome">
+        <settingConfig type="boolean"/>
+    </setting>
+</settings>

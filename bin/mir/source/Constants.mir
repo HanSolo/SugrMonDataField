@@ -1,0 +1,17 @@
+[ @file = "/Users/hansolo/MonkeyC Projects/SugrMon/source/Constants.mc"; @line = 1; @symbol_importdef<0> = [Toybox,1,7,13]; @symbol_importdef<1> = [Graphics,1,14,22]; ]
+import Toybox.Graphics;
+[ @file = "/Users/hansolo/MonkeyC Projects/SugrMon/source/Constants.mc"; @line = 3; @position = 6; @symbol_constdef = [WHITE,3,6,11]; ]
+const WHITE = 0xFFFFFF;
+[ @file = "/Users/hansolo/MonkeyC Projects/SugrMon/source/Constants.mc"; @line = 4; @position = 6; @symbol_constdef = [GRAY,4,6,10]; ]
+const GRAY = 0xAAAAAA;
+[ @file = "/Users/hansolo/MonkeyC Projects/SugrMon/source/Constants.mc"; @line = 5; @position = 6; @symbol_constdef = [RED,5,6,9]; ]
+const RED = 0xFE0000;
+[ @file = "/Users/hansolo/MonkeyC Projects/SugrMon/source/Constants.mc"; @line = 6; @position = 6; @symbol_constdef = [ORANGE,6,6,12]; ]
+const ORANGE = 0xFF5D00;
+[ @file = "/Users/hansolo/MonkeyC Projects/SugrMon/source/Constants.mc"; @line = 7; @position = 6; @symbol_constdef = [YELLOW,7,6,12]; ]
+const YELLOW = 0xFFA800;
+[ @file = "/Users/hansolo/MonkeyC Projects/SugrMon/source/Constants.mc"; @line = 8; @position = 6; @symbol_constdef = [GREEN,8,6,11]; ]
+const GREEN = 0x00C201;
+[ @file = "/Users/hansolo/MonkeyC Projects/SugrMon/source/Constants.mc"; @line = 1; ]
+<init> {
+}

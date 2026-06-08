@@ -1,0 +1,616 @@
+[ @file = "/Users/hansolo/MonkeyC Projects/SugrMon/source/NightscoutClient.mc"; @line = 1; @symbol_importdef<0> = [Toybox,1,7,13]; @symbol_importdef<1> = [Application,1,14,25]; ]
+import Toybox.Application;
+[ @file = "/Users/hansolo/MonkeyC Projects/SugrMon/source/NightscoutClient.mc"; @line = 2; @symbol_importdef<0> = [Toybox,2,7,13]; @symbol_importdef<1> = [Background,2,14,24]; ]
+import Toybox.Background;
+[ @file = "/Users/hansolo/MonkeyC Projects/SugrMon/source/NightscoutClient.mc"; @line = 3; @symbol_importdef<0> = [Toybox,3,7,13]; @symbol_importdef<1> = [Lang,3,14,18]; ]
+import Toybox.Lang;
+[ @file = "/Users/hansolo/MonkeyC Projects/SugrMon/source/NightscoutClient.mc"; @line = 4; @symbol_importdef<0> = [Toybox,4,7,13]; @symbol_importdef<1> = [Time,4,14,18]; ]
+import Toybox.Time;
+[ @file = "/Users/hansolo/MonkeyC Projects/SugrMon/source/NightscoutClient.mc"; @line = 11; @symbol_classdef = [NightscoutClient,11,6,22]; ]
+class NightscoutClient {
+    [ @file = "/Users/hansolo/MonkeyC Projects/SugrMon/source/NightscoutClient.mc"; @line = 11; ]
+    <init> {
+[ "/Users/hansolo/MonkeyC Projects/SugrMon/source/NightscoutClient.mc" 15 16 ]
+        symbol [ TREND_UNKNOWN %tmp.2 15 46 59 ];
+        %tmp.2 = getv ? :TREND_UNKNOWN;
+        putv self :mGlucoseTrend %tmp.2;
+    }
+    [ @file = "/Users/hansolo/MonkeyC Projects/SugrMon/source/NightscoutClient.mc"; @line = 11; ]
+    static
+    <init> {
+    }
+    [ @file = "/Users/hansolo/MonkeyC Projects/SugrMon/source/NightscoutClient.mc"; @line = 13; @position = 16; @symbol_vardef = [mGlucoseValue,13,16,29]; @symbol_type<0> = [Number,13,36,42]; ]
+    private
+    var mGlucoseValue as Number = 0;
+    [ @file = "/Users/hansolo/MonkeyC Projects/SugrMon/source/NightscoutClient.mc"; @line = 14; @position = 16; @symbol_vardef = [mGlucoseDelta,14,16,29]; @symbol_type<0> = [Number,14,36,42]; ]
+    private
+    var mGlucoseDelta as Number = 0;
+    [ @file = "/Users/hansolo/MonkeyC Projects/SugrMon/source/NightscoutClient.mc"; @line = 15; @position = 16; @symbol_vardef = [mGlucoseTrend,15,16,29]; @symbol_type<0> = [String,15,36,42]; ]
+    private
+    var mGlucoseTrend as String;
+    [ @file = "/Users/hansolo/MonkeyC Projects/SugrMon/source/NightscoutClient.mc"; @line = 16; @position = 16; @symbol_vardef = [mLastReadingTime,16,16,32]; @symbol_type<0> = [Number,16,36,42]; ]
+    private
+    var mLastReadingTime as Number = 0;
+    [ @file = "/Users/hansolo/MonkeyC Projects/SugrMon/source/NightscoutClient.mc"; @line = 17; @position = 16; @symbol_vardef = [mHasData,17,16,24]; @symbol_type<0> = [Boolean,17,36,43]; ]
+    private
+    var mHasData as Boolean = false;
+    [ @file = "/Users/hansolo/MonkeyC Projects/SugrMon/source/NightscoutClient.mc"; @line = 19; @symbol_functiondef = [initialize,19,13,23]; ]
+    function initialize() as Void {
+    }
+    [ @file = "/Users/hansolo/MonkeyC Projects/SugrMon/source/NightscoutClient.mc"; @line = 23; @symbol_functiondef = [onBackgroundData,23,13,29]; @symbol_param<0> = [data,23,30,34]; @symbol_param<0>_type<0> = [Application,23,38,49]; @symbol_param<0>_type<1> = [PersistableType,23,50,65]; ]
+    function onBackgroundData(data as Application.PersistableType) as Void {
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_23_75_25_4_start:
+[ "/Users/hansolo/MonkeyC Projects/SugrMon/source/NightscoutClient.mc" 24 8 ]
+        %tmp.1 = self;
+        symbol [ parseResponse %tmp.2 24 8 21 ];
+        %tmp.2 = getv function %tmp.1 :parseResponse;
+        %tmp.3 = lgetv %data;
+        symbol [ data %tmp.3 24 22 26 ];
+        %tmp.4 = as %tmp.3 Lang.Object or Null;
+        symbol [ Lang %tmp.4 24 30 34 ];
+        symbol [ Object %tmp.4 24 35 41 ];
+        invoke %tmp.1 %tmp.2(%tmp.4);
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_23_75_25_4_stop:
+    }
+    [ @file = "/Users/hansolo/MonkeyC Projects/SugrMon/source/NightscoutClient.mc"; @line = 27; @symbol_functiondef = [parseResponse,27,21,34]; @symbol_param<0> = [data,27,35,39]; @symbol_param<0>_type<0> = [Lang,27,43,47]; @symbol_param<0>_type<1> = [Object,27,48,54]; ]
+    private
+    function parseResponse(data as Lang.Object or Null) as Void {
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_27_72_51_4_start:
+[ "/Users/hansolo/MonkeyC Projects/SugrMon/source/NightscoutClient.mc" 28 8 ]
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_28_8_28_36_if_stmt:
+        %tmp.1 = lgetv %data;
+        symbol [ data %tmp.1 28 12 16 ];
+        %tmp.2 = null;
+        %tmp.3 = eq %tmp.1 %tmp.2;
+        bf %tmp.3 @_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_28_8_28_36_if_end;
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_28_8_28_36_if_true:
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_28_26_28_36_start:
+[ "/Users/hansolo/MonkeyC Projects/SugrMon/source/NightscoutClient.mc" 28 28 ]
+        ret ?;
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_28_26_28_36_stop:
+        goto @_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_28_8_28_36_if_end;
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_28_8_28_36_if_end:
+[ "/Users/hansolo/MonkeyC Projects/SugrMon/source/NightscoutClient.mc" 30 8 ]
+        [ "_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_27_72_51_4_start" "_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_27_72_51_4_stop" ]
+        %entry0.1 = local;
+        symbol [ entry0 %entry0.1 30 12 18 ];
+        %tmp.4 = self;
+        symbol [ getArrayElement %tmp.5 30 21 36 ];
+        %tmp.5 = getv function %tmp.4 :getArrayElement;
+        %tmp.6 = lgetv %data;
+        symbol [ data %tmp.6 30 37 41 ];
+        %tmp.7 = 0;
+        %tmp.8 = invoke %tmp.4 %tmp.5(%tmp.6, %tmp.7);
+        lputv %entry0.1 %tmp.8;
+        symbol [ entry0 %entry0.1 30 12 18 ];
+[ "/Users/hansolo/MonkeyC Projects/SugrMon/source/NightscoutClient.mc" 31 8 ]
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_31_8_31_38_if_stmt:
+        %tmp.9 = lgetv %entry0.1;
+        symbol [ entry0 %tmp.9 31 12 18 ];
+        %tmp.10 = null;
+        %tmp.11 = eq %tmp.9 %tmp.10;
+        bf %tmp.11 @_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_31_8_31_38_if_end;
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_31_8_31_38_if_true:
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_31_28_31_38_start:
+[ "/Users/hansolo/MonkeyC Projects/SugrMon/source/NightscoutClient.mc" 31 30 ]
+        ret ?;
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_31_28_31_38_stop:
+        goto @_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_31_8_31_38_if_end;
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_31_8_31_38_if_end:
+[ "/Users/hansolo/MonkeyC Projects/SugrMon/source/NightscoutClient.mc" 33 8 ]
+        [ "_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_27_72_51_4_start" "_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_27_72_51_4_stop" ]
+        %dict.2 = local;
+        symbol [ dict %dict.2 33 12 16 ];
+        %tmp.12 = lgetv %entry0.1;
+        symbol [ entry0 %tmp.12 33 24 30 ];
+        %tmp.13 = as %tmp.12 Lang.Dictionary;
+        symbol [ Lang %tmp.13 33 34 38 ];
+        symbol [ Dictionary %tmp.13 33 39 49 ];
+        lputv %dict.2 %tmp.13;
+        symbol [ dict %dict.2 33 12 16 ];
+[ "/Users/hansolo/MonkeyC Projects/SugrMon/source/NightscoutClient.mc" 34 8 ]
+        [ "_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_27_72_51_4_start" "_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_27_72_51_4_stop" ]
+        %sgv.3 = local;
+        symbol [ sgv %sgv.3 34 12 15 ];
+        %tmp.14 = lgetv %dict.2;
+        symbol [ dict %tmp.14 34 24 28 ];
+        symbol [ get %tmp.15 34 29 32 ];
+        %tmp.15 = getv function %tmp.14 :get;
+        %tmp.16 = "sgv";
+        %tmp.17 = invoke %tmp.14 %tmp.15(%tmp.16);
+        lputv %sgv.3 %tmp.17;
+        symbol [ sgv %sgv.3 34 12 15 ];
+[ "/Users/hansolo/MonkeyC Projects/SugrMon/source/NightscoutClient.mc" 35 8 ]
+        [ "_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_27_72_51_4_start" "_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_27_72_51_4_stop" ]
+        %date.4 = local;
+        symbol [ date %date.4 35 12 16 ];
+        %tmp.18 = lgetv %dict.2;
+        symbol [ dict %tmp.18 35 24 28 ];
+        symbol [ get %tmp.19 35 29 32 ];
+        %tmp.19 = getv function %tmp.18 :get;
+        %tmp.20 = "date";
+        %tmp.21 = invoke %tmp.18 %tmp.19(%tmp.20);
+        lputv %date.4 %tmp.21;
+        symbol [ date %date.4 35 12 16 ];
+[ "/Users/hansolo/MonkeyC Projects/SugrMon/source/NightscoutClient.mc" 36 8 ]
+        [ "_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_27_72_51_4_start" "_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_27_72_51_4_stop" ]
+        %direction.5 = local;
+        symbol [ direction %direction.5 36 12 21 ];
+        %tmp.22 = lgetv %dict.2;
+        symbol [ dict %tmp.22 36 24 28 ];
+        symbol [ get %tmp.23 36 29 32 ];
+        %tmp.23 = getv function %tmp.22 :get;
+        %tmp.24 = "direction";
+        %tmp.25 = invoke %tmp.22 %tmp.23(%tmp.24);
+        lputv %direction.5 %tmp.25;
+        symbol [ direction %direction.5 36 12 21 ];
+[ "/Users/hansolo/MonkeyC Projects/SugrMon/source/NightscoutClient.mc" 38 8 ]
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_38_27_38_91_begin:
+        %tmp.26 = lgetv %sgv.3;
+        symbol [ sgv %tmp.26 38 27 30 ];
+        %tmp.27 = null;
+        %tmp.28 = ne %tmp.26 %tmp.27;
+        bf %tmp.28 @_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_38_27_38_91_else_false;
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_38_27_38_91_true:
+        %tmp.29 = lgetv %sgv.3;
+        symbol [ sgv %tmp.29 38 48 51 ];
+        %tmp.30 = as %tmp.29 { (!Null) };
+        %tmp.31 = as %tmp.30 Lang.Number;
+        symbol [ Lang %tmp.31 38 56 60 ];
+        symbol [ Number %tmp.31 38 61 67 ];
+        symbol [ toNumber %tmp.32 38 69 77 ];
+        %tmp.32 = getv function %tmp.31 :toNumber;
+        %tmp.33 = invoke %tmp.31 %tmp.32();
+        push %tmp.33;
+        goto @_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_38_27_38_91_end;
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_38_27_38_91_else_false:
+        %tmp.34 = 0;
+        push %tmp.34;
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_38_27_38_91_end:
+        %tmp.35 = phi [%tmp.28 @_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_38_27_38_91_begin] [%tmp.33 @_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_38_27_38_91_true] [%tmp.34 @_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_38_27_38_91_else_false] [%tmp.35 @_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_38_27_38_91_end];
+        symbol [ mGlucoseValue ? 38 8 21 ];
+        putv self :mGlucoseValue %tmp.35;
+[ "/Users/hansolo/MonkeyC Projects/SugrMon/source/NightscoutClient.mc" 39 8 ]
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_39_27_39_91_begin:
+        %tmp.36 = lgetv %date.4;
+        symbol [ date %tmp.36 39 27 31 ];
+        %tmp.37 = null;
+        %tmp.38 = ne %tmp.36 %tmp.37;
+        bf %tmp.38 @_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_39_27_39_91_else_false;
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_39_27_39_91_true:
+        %tmp.39 = lgetv %date.4;
+        symbol [ date %tmp.39 39 49 53 ];
+        %tmp.40 = as %tmp.39 { (!Null) };
+        %tmp.41 = as %tmp.40 Lang.Number;
+        symbol [ Lang %tmp.41 39 57 61 ];
+        symbol [ Number %tmp.41 39 62 68 ];
+        %tmp.42 = 1000;
+        %tmp.43 = div %tmp.41 %tmp.42;
+        symbol [ toNumber %tmp.44 39 78 86 ];
+        %tmp.44 = getv function %tmp.43 :toNumber;
+        %tmp.45 = invoke %tmp.43 %tmp.44();
+        push %tmp.45;
+        goto @_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_39_27_39_91_end;
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_39_27_39_91_else_false:
+        %tmp.46 = 0;
+        push %tmp.46;
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_39_27_39_91_end:
+        %tmp.47 = phi [%tmp.38 @_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_39_27_39_91_begin] [%tmp.45 @_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_39_27_39_91_true] [%tmp.46 @_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_39_27_39_91_else_false] [%tmp.47 @_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_39_27_39_91_end];
+        symbol [ mLastReadingTime ? 39 8 24 ];
+        putv self :mLastReadingTime %tmp.47;
+[ "/Users/hansolo/MonkeyC Projects/SugrMon/source/NightscoutClient.mc" 40 8 ]
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_40_27_40_92_begin:
+        %tmp.48 = lgetv %direction.5;
+        symbol [ direction %tmp.48 40 27 36 ];
+        %tmp.49 = null;
+        %tmp.50 = ne %tmp.48 %tmp.49;
+        bf %tmp.50 @_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_40_27_40_92_else_false;
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_40_27_40_92_true:
+        %tmp.51 = self;
+        symbol [ mapTrend %tmp.52 40 47 55 ];
+        %tmp.52 = getv function %tmp.51 :mapTrend;
+        %tmp.53 = lgetv %direction.5;
+        symbol [ direction %tmp.53 40 56 65 ];
+        %tmp.54 = as %tmp.53 { (!Null) };
+        %tmp.55 = as %tmp.54 String;
+        symbol [ String %tmp.55 40 69 75 ];
+        %tmp.56 = invoke %tmp.51 %tmp.52(%tmp.55);
+        push %tmp.56;
+        goto @_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_40_27_40_92_end;
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_40_27_40_92_else_false:
+        symbol [ TREND_UNKNOWN %tmp.58 40 92 105 ];
+        %tmp.58 = getv ? :TREND_UNKNOWN;
+        push %tmp.58;
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_40_27_40_92_end:
+        %tmp.59 = phi [%tmp.50 @_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_40_27_40_92_begin] [%tmp.56 @_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_40_27_40_92_true] [%tmp.58 @_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_40_27_40_92_else_false] [%tmp.59 @_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_40_27_40_92_end];
+        symbol [ mGlucoseTrend ? 40 8 21 ];
+        putv self :mGlucoseTrend %tmp.59;
+[ "/Users/hansolo/MonkeyC Projects/SugrMon/source/NightscoutClient.mc" 42 8 ]
+        [ "_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_27_72_51_4_start" "_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_27_72_51_4_stop" ]
+        %entry1.6 = local;
+        symbol [ entry1 %entry1.6 42 12 18 ];
+        %tmp.60 = self;
+        symbol [ getArrayElement %tmp.61 42 21 36 ];
+        %tmp.61 = getv function %tmp.60 :getArrayElement;
+        %tmp.62 = lgetv %data;
+        symbol [ data %tmp.62 42 37 41 ];
+        %tmp.63 = 1;
+        %tmp.64 = invoke %tmp.60 %tmp.61(%tmp.62, %tmp.63);
+        lputv %entry1.6 %tmp.64;
+        symbol [ entry1 %entry1.6 42 12 18 ];
+[ "/Users/hansolo/MonkeyC Projects/SugrMon/source/NightscoutClient.mc" 43 8 ]
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_43_8_48_8_if_stmt:
+        %tmp.65 = lgetv %entry1.6;
+        symbol [ entry1 %tmp.65 43 12 18 ];
+        %tmp.66 = null;
+        %tmp.67 = ne %tmp.65 %tmp.66;
+        bf %tmp.67 @_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_43_8_48_8_if_end;
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_43_8_48_8_if_true:
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_43_28_48_8_start:
+[ "/Users/hansolo/MonkeyC Projects/SugrMon/source/NightscoutClient.mc" 44 12 ]
+        [ "_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_43_28_48_8_start" "_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_43_28_48_8_stop" ]
+        %prev.7 = local;
+        symbol [ prev %prev.7 44 16 20 ];
+        %tmp.68 = lgetv %entry1.6;
+        symbol [ entry1 %tmp.68 44 27 33 ];
+        %tmp.69 = as %tmp.68 { (!Null) };
+        %tmp.70 = as %tmp.69 Lang.Dictionary;
+        symbol [ Lang %tmp.70 44 37 41 ];
+        symbol [ Dictionary %tmp.70 44 42 52 ];
+        lputv %prev.7 %tmp.70;
+        symbol [ prev %prev.7 44 16 20 ];
+[ "/Users/hansolo/MonkeyC Projects/SugrMon/source/NightscoutClient.mc" 45 12 ]
+        [ "_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_43_28_48_8_start" "_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_43_28_48_8_stop" ]
+        %prevSgv.8 = local;
+        symbol [ prevSgv %prevSgv.8 45 16 23 ];
+        %tmp.71 = lgetv %prev.7;
+        symbol [ prev %tmp.71 45 27 31 ];
+        symbol [ get %tmp.72 45 32 35 ];
+        %tmp.72 = getv function %tmp.71 :get;
+        %tmp.73 = "sgv";
+        %tmp.74 = invoke %tmp.71 %tmp.72(%tmp.73);
+        lputv %prevSgv.8 %tmp.74;
+        symbol [ prevSgv %prevSgv.8 45 16 23 ];
+[ "/Users/hansolo/MonkeyC Projects/SugrMon/source/NightscoutClient.mc" 46 12 ]
+        [ "_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_43_28_48_8_start" "_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_43_28_48_8_stop" ]
+        %prevVal.9 = local;
+        symbol [ prevVal %prevVal.9 46 16 23 ];
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_46_27_46_83_begin:
+        %tmp.75 = lgetv %prevSgv.8;
+        symbol [ prevSgv %tmp.75 46 27 34 ];
+        %tmp.76 = null;
+        %tmp.77 = ne %tmp.75 %tmp.76;
+        bf %tmp.77 @_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_46_27_46_83_else_false;
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_46_27_46_83_true:
+        %tmp.78 = lgetv %prevSgv.8;
+        symbol [ prevSgv %tmp.78 46 46 53 ];
+        %tmp.79 = as %tmp.78 { (!Null) };
+        %tmp.80 = as %tmp.79 Lang.Number;
+        symbol [ Lang %tmp.80 46 57 61 ];
+        symbol [ Number %tmp.80 46 62 68 ];
+        symbol [ toNumber %tmp.81 46 70 78 ];
+        %tmp.81 = getv function %tmp.80 :toNumber;
+        %tmp.82 = invoke %tmp.80 %tmp.81();
+        push %tmp.82;
+        goto @_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_46_27_46_83_end;
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_46_27_46_83_else_false:
+        symbol [ mGlucoseValue %tmp.84 46 83 96 ];
+        %tmp.84 = getv ? :mGlucoseValue;
+        push %tmp.84;
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_46_27_46_83_end:
+        %tmp.85 = phi [%tmp.77 @_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_46_27_46_83_begin] [%tmp.82 @_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_46_27_46_83_true] [%tmp.84 @_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_46_27_46_83_else_false] [%tmp.85 @_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_46_27_46_83_end];
+        lputv %prevVal.9 %tmp.85;
+        symbol [ prevVal %prevVal.9 46 16 23 ];
+[ "/Users/hansolo/MonkeyC Projects/SugrMon/source/NightscoutClient.mc" 47 12 ]
+        symbol [ mGlucoseValue %tmp.87 47 28 41 ];
+        %tmp.87 = getv ? :mGlucoseValue;
+        %tmp.88 = lgetv %prevVal.9;
+        symbol [ prevVal %tmp.88 47 44 51 ];
+        %tmp.89 = sub %tmp.87 %tmp.88;
+        symbol [ mGlucoseDelta ? 47 12 25 ];
+        putv self :mGlucoseDelta %tmp.89;
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_43_28_48_8_stop:
+        goto @_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_43_8_48_8_if_end;
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_43_8_48_8_if_end:
+[ "/Users/hansolo/MonkeyC Projects/SugrMon/source/NightscoutClient.mc" 50 8 ]
+        %tmp.90 = true;
+        symbol [ mHasData ? 50 8 16 ];
+        putv self :mHasData %tmp.90;
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_27_72_51_4_stop:
+    }
+    [ @file = "/Users/hansolo/MonkeyC Projects/SugrMon/source/NightscoutClient.mc"; @line = 53; @symbol_functiondef = [getArrayElement,53,21,36]; @symbol_param<0> = [data,53,37,41]; @symbol_param<0>_type<0> = [Lang,53,45,49]; @symbol_param<0>_type<1> = [Object,53,50,56]; @symbol_param<1> = [index,53,66,71]; @symbol_param<1>_type<0> = [Number,53,75,81]; @symbol_return<0> = [Lang,53,86,90]; @symbol_return<1> = [Object,53,91,97]; ]
+    private
+    function getArrayElement(data as Lang.Object or Null, index as Number) as Lang.Object or Null {
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_53_106_59_4_start:
+[ "/Users/hansolo/MonkeyC Projects/SugrMon/source/NightscoutClient.mc" 54 8 ]
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_54_8_54_58_if_stmt:
+        %tmp.1 = lgetv %data;
+        symbol [ data %tmp.1 54 12 16 ];
+        %tmp.2 = null;
+        %tmp.3 = eq %tmp.1 %tmp.2;
+        bf %tmp.3 @_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_54_8_54_58_if_end;
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_54_8_54_58_if_true:
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_54_43_54_58_start:
+[ "/Users/hansolo/MonkeyC Projects/SugrMon/source/NightscoutClient.mc" 54 45 ]
+        %tmp.4 = null;
+        ret %tmp.4;
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_54_43_54_58_stop:
+        goto @_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_54_8_54_58_if_end;
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_54_8_54_58_if_end:
+[ "/Users/hansolo/MonkeyC Projects/SugrMon/source/NightscoutClient.mc" 55 8 ]
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_55_8_55_58_if_stmt:
+        %tmp.5 = lgetv %data;
+        symbol [ data %tmp.5 55 14 18 ];
+        symbol [ Lang %tmp.6 55 30 34 ];
+        %tmp.6 = getm $.Toybox.Lang;
+        symbol [ Array %tmp.7 55 35 40 ];
+        %tmp.7 = getv %tmp.6 :Array;
+        %tmp.8 = isa %tmp.5 %tmp.7;
+        %tmp.9 = not %tmp.8;
+        bf %tmp.9 @_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_55_8_55_58_if_end;
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_55_8_55_58_if_true:
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_55_43_55_58_start:
+[ "/Users/hansolo/MonkeyC Projects/SugrMon/source/NightscoutClient.mc" 55 45 ]
+        %tmp.10 = null;
+        ret %tmp.10;
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_55_43_55_58_stop:
+        goto @_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_55_8_55_58_if_end;
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_55_8_55_58_if_end:
+[ "/Users/hansolo/MonkeyC Projects/SugrMon/source/NightscoutClient.mc" 56 8 ]
+        [ "_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_53_106_59_4_start" "_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_53_106_59_4_stop" ]
+        %arr.1 = local;
+        symbol [ arr %arr.1 56 12 15 ];
+        %tmp.11 = lgetv %data;
+        symbol [ data %tmp.11 56 18 22 ];
+        %tmp.12 = as %tmp.11 Lang.Array;
+        symbol [ Lang %tmp.12 56 26 30 ];
+        symbol [ Array %tmp.12 56 31 36 ];
+        lputv %arr.1 %tmp.12;
+        symbol [ arr %arr.1 56 12 15 ];
+[ "/Users/hansolo/MonkeyC Projects/SugrMon/source/NightscoutClient.mc" 57 8 ]
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_57_8_57_58_if_stmt:
+        %tmp.13 = lgetv %index;
+        symbol [ index %tmp.13 57 12 17 ];
+        %tmp.14 = lgetv %arr.1;
+        symbol [ arr %tmp.14 57 21 24 ];
+        symbol [ size %tmp.15 57 25 29 ];
+        %tmp.15 = getv function %tmp.14 :size;
+        %tmp.16 = invoke %tmp.14 %tmp.15();
+        %tmp.17 = gte %tmp.13 %tmp.16;
+        bf %tmp.17 @_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_57_8_57_58_if_end;
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_57_8_57_58_if_true:
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_57_43_57_58_start:
+[ "/Users/hansolo/MonkeyC Projects/SugrMon/source/NightscoutClient.mc" 57 45 ]
+        %tmp.18 = null;
+        ret %tmp.18;
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_57_43_57_58_stop:
+        goto @_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_57_8_57_58_if_end;
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_57_8_57_58_if_end:
+[ "/Users/hansolo/MonkeyC Projects/SugrMon/source/NightscoutClient.mc" 58 8 ]
+        %tmp.19 = lgetv %arr.1;
+        symbol [ arr %tmp.19 58 15 18 ];
+        %tmp.20 = lgetv %index;
+        symbol [ index %tmp.20 58 19 24 ];
+        %tmp.21 = agetv %tmp.19 %tmp.20;
+        ret %tmp.21;
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_53_106_59_4_stop:
+    }
+    [ @file = "/Users/hansolo/MonkeyC Projects/SugrMon/source/NightscoutClient.mc"; @line = 61; @symbol_functiondef = [mapTrend,61,21,29]; @symbol_param<0> = [direction,61,30,39]; @symbol_param<0>_type<0> = [String,61,43,49]; @symbol_return<0> = [String,61,54,60]; ]
+    private
+    function mapTrend(direction as String) as String {
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_61_61_70_4_start:
+[ "/Users/hansolo/MonkeyC Projects/SugrMon/source/NightscoutClient.mc" 62 8 ]
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_62_8_62_80_if_stmt:
+        %tmp.1 = lgetv %direction;
+        symbol [ direction %tmp.1 62 12 21 ];
+        symbol [ equals %tmp.2 62 22 28 ];
+        %tmp.2 = getv function %tmp.1 :equals;
+        %tmp.3 = "DoubleUp";
+        %tmp.4 = invoke %tmp.1 %tmp.2(%tmp.3);
+        bf %tmp.4 @_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_62_8_62_80_if_end;
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_62_8_62_80_if_true:
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_62_48_62_80_start:
+[ "/Users/hansolo/MonkeyC Projects/SugrMon/source/NightscoutClient.mc" 62 50 ]
+        symbol [ TREND_DOUBLE_UP %tmp.6 62 57 72 ];
+        %tmp.6 = getv ? :TREND_DOUBLE_UP;
+        ret %tmp.6;
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_62_48_62_80_stop:
+        goto @_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_62_8_62_80_if_end;
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_62_8_62_80_if_end:
+[ "/Users/hansolo/MonkeyC Projects/SugrMon/source/NightscoutClient.mc" 63 8 ]
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_63_8_63_80_if_stmt:
+        %tmp.7 = lgetv %direction;
+        symbol [ direction %tmp.7 63 12 21 ];
+        symbol [ equals %tmp.8 63 22 28 ];
+        %tmp.8 = getv function %tmp.7 :equals;
+        %tmp.9 = "SingleUp";
+        %tmp.10 = invoke %tmp.7 %tmp.8(%tmp.9);
+        bf %tmp.10 @_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_63_8_63_80_if_end;
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_63_8_63_80_if_true:
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_63_48_63_80_start:
+[ "/Users/hansolo/MonkeyC Projects/SugrMon/source/NightscoutClient.mc" 63 50 ]
+        symbol [ TREND_SINGLE_UP %tmp.12 63 57 72 ];
+        %tmp.12 = getv ? :TREND_SINGLE_UP;
+        ret %tmp.12;
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_63_48_63_80_stop:
+        goto @_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_63_8_63_80_if_end;
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_63_8_63_80_if_end:
+[ "/Users/hansolo/MonkeyC Projects/SugrMon/source/NightscoutClient.mc" 64 8 ]
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_64_8_64_80_if_stmt:
+        %tmp.13 = lgetv %direction;
+        symbol [ direction %tmp.13 64 12 21 ];
+        symbol [ equals %tmp.14 64 22 28 ];
+        %tmp.14 = getv function %tmp.13 :equals;
+        %tmp.15 = "FortyFiveUp";
+        %tmp.16 = invoke %tmp.13 %tmp.14(%tmp.15);
+        bf %tmp.16 @_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_64_8_64_80_if_end;
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_64_8_64_80_if_true:
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_64_48_64_80_start:
+[ "/Users/hansolo/MonkeyC Projects/SugrMon/source/NightscoutClient.mc" 64 50 ]
+        symbol [ TREND_FORTY_FIVE_UP %tmp.18 64 57 76 ];
+        %tmp.18 = getv ? :TREND_FORTY_FIVE_UP;
+        ret %tmp.18;
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_64_48_64_80_stop:
+        goto @_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_64_8_64_80_if_end;
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_64_8_64_80_if_end:
+[ "/Users/hansolo/MonkeyC Projects/SugrMon/source/NightscoutClient.mc" 65 8 ]
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_65_8_65_80_if_stmt:
+        %tmp.19 = lgetv %direction;
+        symbol [ direction %tmp.19 65 12 21 ];
+        symbol [ equals %tmp.20 65 22 28 ];
+        %tmp.20 = getv function %tmp.19 :equals;
+        %tmp.21 = "Flat";
+        %tmp.22 = invoke %tmp.19 %tmp.20(%tmp.21);
+        bf %tmp.22 @_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_65_8_65_80_if_end;
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_65_8_65_80_if_true:
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_65_48_65_80_start:
+[ "/Users/hansolo/MonkeyC Projects/SugrMon/source/NightscoutClient.mc" 65 50 ]
+        symbol [ TREND_FLAT %tmp.24 65 57 67 ];
+        %tmp.24 = getv ? :TREND_FLAT;
+        ret %tmp.24;
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_65_48_65_80_stop:
+        goto @_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_65_8_65_80_if_end;
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_65_8_65_80_if_end:
+[ "/Users/hansolo/MonkeyC Projects/SugrMon/source/NightscoutClient.mc" 66 8 ]
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_66_8_66_80_if_stmt:
+        %tmp.25 = lgetv %direction;
+        symbol [ direction %tmp.25 66 12 21 ];
+        symbol [ equals %tmp.26 66 22 28 ];
+        %tmp.26 = getv function %tmp.25 :equals;
+        %tmp.27 = "FortyFiveDown";
+        %tmp.28 = invoke %tmp.25 %tmp.26(%tmp.27);
+        bf %tmp.28 @_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_66_8_66_80_if_end;
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_66_8_66_80_if_true:
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_66_48_66_80_start:
+[ "/Users/hansolo/MonkeyC Projects/SugrMon/source/NightscoutClient.mc" 66 50 ]
+        symbol [ TREND_FORTY_FIVE_DOWN %tmp.30 66 57 78 ];
+        %tmp.30 = getv ? :TREND_FORTY_FIVE_DOWN;
+        ret %tmp.30;
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_66_48_66_80_stop:
+        goto @_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_66_8_66_80_if_end;
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_66_8_66_80_if_end:
+[ "/Users/hansolo/MonkeyC Projects/SugrMon/source/NightscoutClient.mc" 67 8 ]
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_67_8_67_80_if_stmt:
+        %tmp.31 = lgetv %direction;
+        symbol [ direction %tmp.31 67 12 21 ];
+        symbol [ equals %tmp.32 67 22 28 ];
+        %tmp.32 = getv function %tmp.31 :equals;
+        %tmp.33 = "SingleDown";
+        %tmp.34 = invoke %tmp.31 %tmp.32(%tmp.33);
+        bf %tmp.34 @_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_67_8_67_80_if_end;
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_67_8_67_80_if_true:
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_67_48_67_80_start:
+[ "/Users/hansolo/MonkeyC Projects/SugrMon/source/NightscoutClient.mc" 67 50 ]
+        symbol [ TREND_SINGLE_DOWN %tmp.36 67 57 74 ];
+        %tmp.36 = getv ? :TREND_SINGLE_DOWN;
+        ret %tmp.36;
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_67_48_67_80_stop:
+        goto @_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_67_8_67_80_if_end;
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_67_8_67_80_if_end:
+[ "/Users/hansolo/MonkeyC Projects/SugrMon/source/NightscoutClient.mc" 68 8 ]
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_68_8_68_80_if_stmt:
+        %tmp.37 = lgetv %direction;
+        symbol [ direction %tmp.37 68 12 21 ];
+        symbol [ equals %tmp.38 68 22 28 ];
+        %tmp.38 = getv function %tmp.37 :equals;
+        %tmp.39 = "DoubleDown";
+        %tmp.40 = invoke %tmp.37 %tmp.38(%tmp.39);
+        bf %tmp.40 @_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_68_8_68_80_if_end;
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_68_8_68_80_if_true:
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_68_48_68_80_start:
+[ "/Users/hansolo/MonkeyC Projects/SugrMon/source/NightscoutClient.mc" 68 50 ]
+        symbol [ TREND_DOUBLE_DOWN %tmp.42 68 57 74 ];
+        %tmp.42 = getv ? :TREND_DOUBLE_DOWN;
+        ret %tmp.42;
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_68_48_68_80_stop:
+        goto @_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_68_8_68_80_if_end;
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_68_8_68_80_if_end:
+[ "/Users/hansolo/MonkeyC Projects/SugrMon/source/NightscoutClient.mc" 69 8 ]
+        symbol [ TREND_UNKNOWN %tmp.44 69 15 28 ];
+        %tmp.44 = getv ? :TREND_UNKNOWN;
+        ret %tmp.44;
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_61_61_70_4_stop:
+    }
+    [ @file = "/Users/hansolo/MonkeyC Projects/SugrMon/source/NightscoutClient.mc"; @line = 73; @symbol_functiondef = [getGlucoseValue,73,13,28]; @symbol_return<0> = [Number,73,37,43]; ]
+    function getGlucoseValue() as Number {
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_73_45_73_72_start:
+[ "/Users/hansolo/MonkeyC Projects/SugrMon/source/NightscoutClient.mc" 73 47 ]
+        symbol [ mGlucoseValue %tmp.2 73 54 67 ];
+        %tmp.2 = getv ? :mGlucoseValue;
+        ret %tmp.2;
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_73_45_73_72_stop:
+    }
+    [ @file = "/Users/hansolo/MonkeyC Projects/SugrMon/source/NightscoutClient.mc"; @line = 74; @symbol_functiondef = [getGlucoseDelta,74,13,28]; @symbol_return<0> = [Number,74,37,43]; ]
+    function getGlucoseDelta() as Number {
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_74_45_74_72_start:
+[ "/Users/hansolo/MonkeyC Projects/SugrMon/source/NightscoutClient.mc" 74 47 ]
+        symbol [ mGlucoseDelta %tmp.2 74 54 67 ];
+        %tmp.2 = getv ? :mGlucoseDelta;
+        ret %tmp.2;
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_74_45_74_72_stop:
+    }
+    [ @file = "/Users/hansolo/MonkeyC Projects/SugrMon/source/NightscoutClient.mc"; @line = 75; @symbol_functiondef = [getGlucoseTrend,75,13,28]; @symbol_return<0> = [String,75,37,43]; ]
+    function getGlucoseTrend() as String {
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_75_45_75_72_start:
+[ "/Users/hansolo/MonkeyC Projects/SugrMon/source/NightscoutClient.mc" 75 47 ]
+        symbol [ mGlucoseTrend %tmp.2 75 54 67 ];
+        %tmp.2 = getv ? :mGlucoseTrend;
+        ret %tmp.2;
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_75_45_75_72_stop:
+    }
+    [ @file = "/Users/hansolo/MonkeyC Projects/SugrMon/source/NightscoutClient.mc"; @line = 76; @symbol_functiondef = [getLastReadingTime,76,13,31]; @symbol_return<0> = [Number,76,37,43]; ]
+    function getLastReadingTime() as Number {
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_76_45_76_72_start:
+[ "/Users/hansolo/MonkeyC Projects/SugrMon/source/NightscoutClient.mc" 76 47 ]
+        symbol [ mLastReadingTime %tmp.2 76 54 70 ];
+        %tmp.2 = getv ? :mLastReadingTime;
+        ret %tmp.2;
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_76_45_76_72_stop:
+    }
+    [ @file = "/Users/hansolo/MonkeyC Projects/SugrMon/source/NightscoutClient.mc"; @line = 77; @symbol_functiondef = [hasData,77,13,20]; @symbol_return<0> = [Boolean,77,37,44]; ]
+    function hasData() as Boolean {
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_77_45_77_72_start:
+[ "/Users/hansolo/MonkeyC Projects/SugrMon/source/NightscoutClient.mc" 77 47 ]
+        symbol [ mHasData %tmp.2 77 54 62 ];
+        %tmp.2 = getv ? :mHasData;
+        ret %tmp.2;
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_77_45_77_72_stop:
+    }
+    [ @file = "/Users/hansolo/MonkeyC Projects/SugrMon/source/NightscoutClient.mc"; @line = 79; @symbol_functiondef = [isStale,79,13,20]; @symbol_return<0> = [Boolean,79,26,33]; ]
+    function isStale() as Boolean {
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_79_34_82_4_start:
+[ "/Users/hansolo/MonkeyC Projects/SugrMon/source/NightscoutClient.mc" 80 8 ]
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_80_8_80_39_if_stmt:
+        symbol [ mHasData %tmp.2 80 13 21 ];
+        %tmp.2 = getv ? :mHasData;
+        %tmp.3 = not %tmp.2;
+        bf %tmp.3 @_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_80_8_80_39_if_end;
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_80_8_80_39_if_true:
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_80_23_80_39_start:
+[ "/Users/hansolo/MonkeyC Projects/SugrMon/source/NightscoutClient.mc" 80 25 ]
+        %tmp.4 = false;
+        ret %tmp.4;
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_80_23_80_39_stop:
+        goto @_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_80_8_80_39_if_end;
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_80_8_80_39_if_end:
+[ "/Users/hansolo/MonkeyC Projects/SugrMon/source/NightscoutClient.mc" 81 8 ]
+        symbol [ Time %tmp.5 81 16 20 ];
+        %tmp.5 = getm $.Toybox.Time;
+        symbol [ now %tmp.6 81 21 24 ];
+        %tmp.6 = getv function %tmp.5 :now;
+        %tmp.7 = invoke %tmp.5 %tmp.6();
+        symbol [ value %tmp.8 81 27 32 ];
+        %tmp.8 = getv function %tmp.7 :value;
+        %tmp.9 = invoke %tmp.7 %tmp.8();
+        symbol [ mLastReadingTime %tmp.11 81 37 53 ];
+        %tmp.11 = getv ? :mLastReadingTime;
+        %tmp.12 = sub %tmp.9 %tmp.11;
+        %tmp.13 = 900;
+        %tmp.14 = gt %tmp.12 %tmp.13;
+        ret %tmp.14;
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_NightscoutClient_mc_79_34_82_4_stop:
+    }
+}
+[ @file = "/Users/hansolo/MonkeyC Projects/SugrMon/source/NightscoutClient.mc"; @line = 1; ]
+<init> {
+}

@@ -1,0 +1,13 @@
+# monkey.jungle -> build configuration for SugrMon
+#
+# This file tells the Monkey C compiler which source files and resources
+# to include, and which devices to build for.
+#
+# Usage:
+#   monkeyc -f monkey.jungle -d fenix8 -o bin/SugrMon.prg -y developer.key
+
+project.manifest = manifest.xml
+
+# Source files common to all targets
+base.sourcePath   = source
+base.resourcePath = resources

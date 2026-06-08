@@ -1,0 +1,640 @@
+[ @file = "/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonFetcher.mc"; @line = 1; @symbol_importdef<0> = [Toybox,1,7,13]; @symbol_importdef<1> = [Communications,1,14,28]; ]
+import Toybox.Communications;
+[ @file = "/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonFetcher.mc"; @line = 2; @symbol_importdef<0> = [Toybox,2,7,13]; @symbol_importdef<1> = [Lang,2,14,18]; ]
+import Toybox.Lang;
+[ @file = "/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonFetcher.mc"; @line = 3; @symbol_importdef<0> = [Toybox,3,7,13]; @symbol_importdef<1> = [System,3,14,20]; ]
+import Toybox.System;
+[ @file = "/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonFetcher.mc"; @line = 4; @symbol_importdef<0> = [Toybox,4,7,13]; @symbol_importdef<1> = [Time,4,14,18]; ]
+import Toybox.Time;
+[ @file = "/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonFetcher.mc"; @line = 13; @symbol_classdef = [SugrMonFetcher,13,6,20]; ]
+class SugrMonFetcher {
+    [ @file = "/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonFetcher.mc"; @line = 13; ]
+    <init> {
+    }
+    [ @file = "/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonFetcher.mc"; @line = 13; ]
+    static
+    <init> {
+    }
+    [ @file = "/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonFetcher.mc"; @line = 15; @position = 16; @symbol_vardef = [_model,15,16,22]; @symbol_type<0> = [BgModel,15,29,36]; ]
+    private
+    var _model as BgModel;
+    [ @file = "/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonFetcher.mc"; @line = 16; @position = 16; @symbol_vardef = [_callback,16,16,25]; @symbol_type<0> = [SugrMonView,16,29,40]; ]
+    private
+    var _callback as SugrMonView;
+    [ @file = "/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonFetcher.mc"; @line = 18; @symbol_functiondef = [initialize,18,13,23]; @symbol_param<0> = [model,18,24,29]; @symbol_param<0>_type<0> = [BgModel,18,33,40]; @symbol_param<1> = [callback,18,42,50]; @symbol_param<1>_type<0> = [SugrMonView,18,54,65]; ]
+    function initialize(model as BgModel, callback as SugrMonView) as Void {
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_18_67_21_4_start:
+[ "/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonFetcher.mc" 19 8 ]
+        %tmp.1 = lgetv %model;
+        symbol [ model %tmp.1 19 20 25 ];
+        symbol [ _model ? 19 8 14 ];
+        putv self :_model %tmp.1;
+[ "/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonFetcher.mc" 20 8 ]
+        %tmp.2 = lgetv %callback;
+        symbol [ callback %tmp.2 20 20 28 ];
+        symbol [ _callback ? 20 8 17 ];
+        putv self :_callback %tmp.2;
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_18_67_21_4_stop:
+    }
+    [ @file = "/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonFetcher.mc"; @line = 26; @symbol_functiondef = [fetch,26,13,18]; ]
+    function fetch() as Void {
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_26_29_63_4_start:
+[ "/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonFetcher.mc" 27 8 ]
+        [ "_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_26_29_63_4_start" "_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_26_29_63_4_stop" ]
+        %url.1 = local;
+        symbol [ url %url.1 27 12 15 ];
+        symbol [ _model %tmp.2 27 18 24 ];
+        %tmp.2 = getv ? :_model;
+        symbol [ nightscoutUrl %tmp.3 27 25 38 ];
+        %tmp.3 = getv %tmp.2 :nightscoutUrl;
+        lputv %url.1 %tmp.3;
+        symbol [ url %url.1 27 12 15 ];
+[ "/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonFetcher.mc" 30 8 ]
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_30_8_34_8_if_stmt:
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_30_12_30_40_begin:
+        %tmp.4 = lgetv %url.1;
+        symbol [ url %tmp.4 30 12 15 ];
+        %tmp.5 = null;
+        %tmp.6 = eq %tmp.4 %tmp.5;
+        bt %tmp.6 @_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_30_8_34_8_if_true;
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_30_27_30_40_false:
+        %tmp.7 = lgetv %url.1;
+        symbol [ url %tmp.7 30 27 30 ];
+        %tmp.8 = as %tmp.7 { (!Null) };
+        symbol [ equals %tmp.9 30 31 37 ];
+        %tmp.9 = getv function %tmp.8 :equals;
+        %tmp.10 = "";
+        %tmp.11 = invoke %tmp.8 %tmp.9(%tmp.10);
+        push %tmp.11;
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_30_27_30_40_end:
+        %tmp.12 = phi [%tmp.6 @_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_30_12_30_40_begin] [%tmp.11 @_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_30_27_30_40_false] [%tmp.12 @_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_30_27_30_40_end];
+        bf %tmp.12 @_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_30_8_34_8_if_end;
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_30_8_34_8_if_true:
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_30_43_34_8_start:
+[ "/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonFetcher.mc" 31 12 ]
+        symbol [ _model %tmp.13 31 12 18 ];
+        %tmp.13 = getv self :_model;
+        %tmp.14 = false;
+        symbol [ isLoading ? 31 19 28 ];
+        putv %tmp.13 :isLoading %tmp.14;
+[ "/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonFetcher.mc" 32 12 ]
+        symbol [ _callback %tmp.16 32 12 21 ];
+        %tmp.16 = getv ? :_callback;
+        symbol [ onNoUrl %tmp.17 32 22 29 ];
+        %tmp.17 = getv function %tmp.16 :onNoUrl;
+        invoke %tmp.16 %tmp.17();
+[ "/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonFetcher.mc" 33 12 ]
+        ret ?;
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_30_43_34_8_stop:
+        goto @_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_30_8_34_8_if_end;
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_30_8_34_8_if_end:
+[ "/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonFetcher.mc" 38 8 ]
+        [ "_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_26_29_63_4_start" "_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_26_29_63_4_stop" ]
+        %fullUrl.2 = local;
+        symbol [ fullUrl %fullUrl.2 38 12 19 ];
+        %tmp.18 = lgetv %url.1;
+        symbol [ url %tmp.18 38 22 25 ];
+        %tmp.19 = "/api/v1/entries.json?count=2";
+        %tmp.20 = add %tmp.18 %tmp.19;
+        lputv %fullUrl.2 %tmp.20;
+        symbol [ fullUrl %fullUrl.2 38 12 19 ];
+[ "/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonFetcher.mc" 41 8 ]
+        [ "_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_26_29_63_4_start" "_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_26_29_63_4_stop" ]
+        %token.3 = local;
+        symbol [ token %token.3 41 12 17 ];
+        symbol [ _model %tmp.22 41 20 26 ];
+        %tmp.22 = getv ? :_model;
+        symbol [ nightscoutToken %tmp.23 41 27 42 ];
+        %tmp.23 = getv %tmp.22 :nightscoutToken;
+        lputv %token.3 %tmp.23;
+        symbol [ token %token.3 41 12 17 ];
+[ "/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonFetcher.mc" 42 8 ]
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_42_8_44_8_if_stmt:
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_42_12_42_45_begin:
+        %tmp.24 = lgetv %token.3;
+        symbol [ token %tmp.24 42 12 17 ];
+        %tmp.25 = null;
+        %tmp.26 = ne %tmp.24 %tmp.25;
+        bf %tmp.26 @_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_42_8_44_8_if_end;
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_42_29_42_45_true:
+        %tmp.27 = lgetv %token.3;
+        symbol [ token %tmp.27 42 30 35 ];
+        %tmp.28 = as %tmp.27 { (!Null) };
+        symbol [ equals %tmp.29 42 36 42 ];
+        %tmp.29 = getv function %tmp.28 :equals;
+        %tmp.30 = "";
+        %tmp.31 = invoke %tmp.28 %tmp.29(%tmp.30);
+        %tmp.32 = not %tmp.31;
+        push %tmp.32;
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_42_29_42_45_end:
+        %tmp.33 = phi [%tmp.26 @_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_42_12_42_45_begin] [%tmp.32 @_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_42_29_42_45_true] [%tmp.33 @_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_42_29_42_45_end];
+        bf %tmp.33 @_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_42_8_44_8_if_end;
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_42_8_44_8_if_true:
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_42_48_44_8_start:
+[ "/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonFetcher.mc" 43 12 ]
+        %tmp.34 = lgetv %fullUrl.2;
+        symbol [ fullUrl %tmp.34 43 22 29 ];
+        %tmp.35 = "&token=";
+        %tmp.36 = add %tmp.34 %tmp.35;
+        %tmp.37 = lgetv %token.3;
+        symbol [ token %tmp.37 43 44 49 ];
+        %tmp.38 = as %tmp.37 { (!Null) };
+        %tmp.39 = add %tmp.36 %tmp.38;
+        lputv %fullUrl.2 %tmp.39;
+        symbol [ fullUrl %fullUrl.2 43 12 19 ];
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_42_48_44_8_stop:
+        goto @_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_42_8_44_8_if_end;
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_42_8_44_8_if_end:
+[ "/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonFetcher.mc" 46 8 ]
+        [ "_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_26_29_63_4_start" "_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_26_29_63_4_stop" ]
+        %options.4 = local;
+        symbol [ options %options.4 46 12 19 ];
+        %tmp.40 = newd 3;
+        %tmp.42 = const :method;
+        symbol [ method %tmp.42 47 13 19 const ];
+        symbol [ Communications %tmp.43 47 24 38 ];
+        %tmp.43 = getm $.Toybox.Communications;
+        symbol [ HTTP_REQUEST_METHOD_GET %tmp.44 47 39 62 ];
+        %tmp.44 = getv %tmp.43 :HTTP_REQUEST_METHOD_GET;
+        %tmp.45 = dup %tmp.40;
+        %tmp.46 = aputv %tmp.45 %tmp.42 %tmp.44;
+        %tmp.48 = const :headers;
+        symbol [ headers %tmp.48 48 13 20 const ];
+        %tmp.49 = newd 1;
+        %tmp.50 = "Accept";
+        %tmp.51 = "application/json";
+        %tmp.52 = dup %tmp.49;
+        %tmp.53 = aputv %tmp.52 %tmp.50 %tmp.51;
+        %tmp.54 = dup %tmp.46;
+        %tmp.55 = aputv %tmp.54 %tmp.48 %tmp.53;
+        %tmp.57 = const :responseType;
+        symbol [ responseType %tmp.57 51 13 25 const ];
+        symbol [ Communications %tmp.58 51 29 43 ];
+        %tmp.58 = getm $.Toybox.Communications;
+        symbol [ HTTP_RESPONSE_CONTENT_TYPE_JSON %tmp.59 51 44 75 ];
+        %tmp.59 = getv %tmp.58 :HTTP_RESPONSE_CONTENT_TYPE_JSON;
+        %tmp.60 = dup %tmp.55;
+        %tmp.61 = aputv %tmp.60 %tmp.57 %tmp.59;
+        lputv %options.4 %tmp.61;
+        symbol [ options %options.4 46 12 19 ];
+[ "/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonFetcher.mc" 54 8 ]
+        symbol [ _model %tmp.62 54 8 14 ];
+        %tmp.62 = getv self :_model;
+        %tmp.63 = true;
+        symbol [ isLoading ? 54 15 24 ];
+        putv %tmp.62 :isLoading %tmp.63;
+[ "/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonFetcher.mc" 55 8 ]
+        symbol [ _model %tmp.64 55 8 14 ];
+        %tmp.64 = getv self :_model;
+        %tmp.65 = false;
+        symbol [ hasError ? 55 15 23 ];
+        putv %tmp.64 :hasError %tmp.65;
+[ "/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonFetcher.mc" 57 8 ]
+        symbol [ Communications %tmp.66 57 8 22 ];
+        %tmp.66 = getm $.Toybox.Communications;
+        symbol [ makeWebRequest %tmp.67 57 23 37 ];
+        %tmp.67 = getv function %tmp.66 :makeWebRequest;
+        %tmp.68 = lgetv %fullUrl.2;
+        symbol [ fullUrl %tmp.68 58 12 19 ];
+        %tmp.69 = null;
+        %tmp.70 = lgetv %options.4;
+        symbol [ options %tmp.70 60 12 19 ];
+        %tmp.71 = self;
+        symbol [ method %tmp.72 61 12 18 ];
+        %tmp.72 = getv function %tmp.71 :method;
+        %tmp.74 = const :onResponse;
+        symbol [ onResponse %tmp.74 61 20 30 const ];
+        %tmp.75 = invoke %tmp.71 %tmp.72(%tmp.74);
+        invoke %tmp.66 %tmp.67(%tmp.68, %tmp.69, %tmp.70, %tmp.75);
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_26_29_63_4_stop:
+    }
+    [ @file = "/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonFetcher.mc"; @line = 68; @symbol_functiondef = [onResponse,68,13,23]; @symbol_param<0> = [responseCode,68,24,36]; @symbol_param<0>_type<0> = [Number,68,40,46]; @symbol_param<1> = [data,68,48,52]; @symbol_param<1>_type<0> = [Dictionary,68,56,66]; ]
+    function onResponse(responseCode as Number, data as Dictionary or Null) as Void {
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_68_77_124_4_start:
+[ "/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonFetcher.mc" 69 8 ]
+        symbol [ _model %tmp.1 69 8 14 ];
+        %tmp.1 = getv self :_model;
+        %tmp.2 = false;
+        symbol [ isLoading ? 69 15 24 ];
+        putv %tmp.1 :isLoading %tmp.2;
+[ "/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonFetcher.mc" 71 8 ]
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_71_8_74_8_if_stmt:
+        %tmp.3 = lgetv %responseCode;
+        symbol [ responseCode %tmp.3 71 12 24 ];
+        %tmp.4 = 200;
+        %tmp.5 = ne %tmp.3 %tmp.4;
+        bf %tmp.5 @_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_71_8_74_8_if_end;
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_71_8_74_8_if_true:
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_71_33_74_8_start:
+[ "/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonFetcher.mc" 72 12 ]
+        symbol [ _callback %tmp.7 72 12 21 ];
+        %tmp.7 = getv ? :_callback;
+        symbol [ onError %tmp.8 72 22 29 ];
+        %tmp.8 = getv function %tmp.7 :onError;
+        %tmp.9 = "HTTP ";
+        %tmp.10 = lgetv %responseCode;
+        symbol [ responseCode %tmp.10 72 40 52 ];
+        symbol [ toString %tmp.11 72 53 61 ];
+        %tmp.11 = getv function %tmp.10 :toString;
+        %tmp.12 = invoke %tmp.10 %tmp.11();
+        %tmp.13 = add %tmp.9 %tmp.12;
+        invoke %tmp.7 %tmp.8(%tmp.13);
+[ "/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonFetcher.mc" 73 12 ]
+        ret ?;
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_71_33_74_8_stop:
+        goto @_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_71_8_74_8_if_end;
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_71_8_74_8_if_end:
+[ "/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonFetcher.mc" 76 8 ]
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_76_8_79_8_if_stmt:
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_76_12_76_71_begin:
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_76_12_76_51_begin:
+        %tmp.14 = lgetv %data;
+        symbol [ data %tmp.14 76 12 16 ];
+        %tmp.15 = null;
+        %tmp.16 = eq %tmp.14 %tmp.15;
+        bt %tmp.16 @_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_76_8_79_8_if_true;
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_76_28_76_51_false:
+        %tmp.17 = lgetv %data;
+        symbol [ data %tmp.17 76 30 34 ];
+        %tmp.18 = as %tmp.17 { (!Null) };
+        symbol [ Array %tmp.20 76 46 51 ];
+        %tmp.20 = getv ? :Array;
+        %tmp.21 = isa %tmp.18 %tmp.20;
+        %tmp.22 = not %tmp.21;
+        push %tmp.22;
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_76_28_76_51_end:
+        %tmp.23 = phi [%tmp.16 @_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_76_12_76_51_begin] [%tmp.22 @_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_76_28_76_51_false] [%tmp.23 @_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_76_28_76_51_end];
+        bt %tmp.23 @_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_76_8_79_8_if_true;
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_76_56_76_71_false:
+        %tmp.24 = lgetv %data;
+        symbol [ data %tmp.24 76 56 60 ];
+        %tmp.25 = as %tmp.24 { (Array) && (!Null) };
+        symbol [ size %tmp.26 76 61 65 ];
+        %tmp.26 = getv function %tmp.25 :size;
+        %tmp.27 = invoke %tmp.25 %tmp.26();
+        %tmp.28 = 0;
+        %tmp.29 = eq %tmp.27 %tmp.28;
+        push %tmp.29;
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_76_56_76_71_end:
+        %tmp.30 = phi [%tmp.23 @_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_76_12_76_71_begin] [%tmp.29 @_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_76_56_76_71_false] [%tmp.30 @_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_76_56_76_71_end];
+        bf %tmp.30 @_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_76_8_79_8_if_end;
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_76_8_79_8_if_true:
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_76_74_79_8_start:
+[ "/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonFetcher.mc" 77 12 ]
+        symbol [ _callback %tmp.32 77 12 21 ];
+        %tmp.32 = getv ? :_callback;
+        symbol [ onError %tmp.33 77 22 29 ];
+        %tmp.33 = getv function %tmp.32 :onError;
+        %tmp.34 = "No data";
+        invoke %tmp.32 %tmp.33(%tmp.34);
+[ "/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonFetcher.mc" 78 12 ]
+        ret ?;
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_76_74_79_8_stop:
+        goto @_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_76_8_79_8_if_end;
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_76_8_79_8_if_end:
+[ "/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonFetcher.mc" 81 8 ]
+        try @_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_81_8_123_8_beginTry @_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_81_8_123_8_endTry @_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_81_8_123_8_catch @_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_81_8_123_8_finally;
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_81_8_123_8_beginTry:
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_81_12_121_8_start:
+[ "/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonFetcher.mc" 82 12 ]
+        [ "_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_81_12_121_8_start" "_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_81_12_121_8_stop" ]
+        %latest.1 = local;
+        symbol [ latest %latest.1 82 16 22 ];
+        %tmp.35 = lgetv %data;
+        symbol [ data %tmp.35 82 25 29 ];
+        %tmp.36 = 0;
+        %tmp.37 = agetv %tmp.35 %tmp.36;
+        %tmp.38 = as %tmp.37 Dictionary;
+        symbol [ Dictionary %tmp.38 82 36 46 ];
+        lputv %latest.1 %tmp.38;
+        symbol [ latest %latest.1 82 16 22 ];
+[ "/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonFetcher.mc" 85 12 ]
+        [ "_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_81_12_121_8_start" "_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_81_12_121_8_stop" ]
+        %sgv.2 = local;
+        symbol [ sgv %sgv.2 85 16 19 ];
+        %tmp.39 = lgetv %latest.1;
+        symbol [ latest %tmp.39 85 22 28 ];
+        %tmp.40 = "sgv";
+        %tmp.41 = agetv %tmp.39 %tmp.40;
+        lputv %sgv.2 %tmp.41;
+        symbol [ sgv %sgv.2 85 16 19 ];
+[ "/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonFetcher.mc" 86 12 ]
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_86_12_89_12_if_stmt:
+        %tmp.42 = lgetv %sgv.2;
+        symbol [ sgv %tmp.42 86 18 21 ];
+        symbol [ Number %tmp.44 86 33 39 ];
+        %tmp.44 = getv ? :Number;
+        %tmp.45 = isa %tmp.42 %tmp.44;
+        %tmp.46 = not %tmp.45;
+        bf %tmp.46 @_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_86_12_89_12_if_end;
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_86_12_89_12_if_true:
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_86_42_89_12_start:
+[ "/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonFetcher.mc" 87 16 ]
+        symbol [ _callback %tmp.48 87 16 25 ];
+        %tmp.48 = getv ? :_callback;
+        symbol [ onError %tmp.49 87 26 33 ];
+        %tmp.49 = getv function %tmp.48 :onError;
+        %tmp.50 = "Bad SGV";
+        invoke %tmp.48 %tmp.49(%tmp.50);
+[ "/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonFetcher.mc" 88 16 ]
+        jsr @_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_81_8_123_8_finally;
+        ret ?;
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_86_42_89_12_stop:
+        goto @_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_86_12_89_12_if_end;
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_86_12_89_12_if_end:
+[ "/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonFetcher.mc" 90 12 ]
+        [ "_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_81_12_121_8_start" "_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_81_12_121_8_stop" ]
+        %valueMgdl.3 = local;
+        symbol [ valueMgdl %valueMgdl.3 90 16 25 ];
+        %tmp.51 = lgetv %sgv.2;
+        symbol [ sgv %tmp.51 90 28 31 ];
+        symbol [ toFloat %tmp.52 90 32 39 ];
+        %tmp.52 = getv function %tmp.51 :toFloat;
+        %tmp.53 = invoke %tmp.51 %tmp.52();
+        lputv %valueMgdl.3 %tmp.53;
+        symbol [ valueMgdl %valueMgdl.3 90 16 25 ];
+[ "/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonFetcher.mc" 93 12 ]
+        [ "_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_81_12_121_8_start" "_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_81_12_121_8_stop" ]
+        %dir.4 = local;
+        symbol [ dir %dir.4 93 16 19 ];
+        %tmp.54 = lgetv %latest.1;
+        symbol [ latest %tmp.54 93 28 34 ];
+        %tmp.55 = "direction";
+        %tmp.56 = agetv %tmp.54 %tmp.55;
+        lputv %dir.4 %tmp.56;
+        symbol [ dir %dir.4 93 16 19 ];
+[ "/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonFetcher.mc" 94 12 ]
+        [ "_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_81_12_121_8_start" "_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_81_12_121_8_stop" ]
+        %direction.5 = local;
+        symbol [ direction %direction.5 94 16 25 ];
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_94_28_94_60_begin:
+        %tmp.57 = lgetv %dir.4;
+        symbol [ dir %tmp.57 94 29 32 ];
+        symbol [ String %tmp.59 94 44 50 ];
+        %tmp.59 = getv ? :String;
+        %tmp.60 = isa %tmp.57 %tmp.59;
+        bf %tmp.60 @_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_94_28_94_60_else_false;
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_94_28_94_60_true:
+        %tmp.61 = lgetv %dir.4;
+        symbol [ dir %tmp.61 94 54 57 ];
+        %tmp.62 = as %tmp.61 { (String) };
+        push %tmp.62;
+        goto @_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_94_28_94_60_end;
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_94_28_94_60_else_false:
+        %tmp.63 = "NONE";
+        push %tmp.63;
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_94_28_94_60_end:
+        %tmp.64 = phi [%tmp.60 @_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_94_28_94_60_begin] [%tmp.62 @_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_94_28_94_60_true] [%tmp.63 @_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_94_28_94_60_else_false] [%tmp.64 @_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_94_28_94_60_end];
+        lputv %direction.5 %tmp.64;
+        symbol [ direction %direction.5 94 16 25 ];
+[ "/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonFetcher.mc" 97 12 ]
+        [ "_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_81_12_121_8_start" "_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_81_12_121_8_stop" ]
+        %delta.6 = local;
+        symbol [ delta %delta.6 97 16 21 ];
+        %tmp.65 = 0.0f;
+        lputv %delta.6 %tmp.65;
+        symbol [ delta %delta.6 97 16 21 ];
+[ "/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonFetcher.mc" 98 12 ]
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_98_12_104_12_if_stmt:
+        %tmp.66 = lgetv %data;
+        symbol [ data %tmp.66 98 16 20 ];
+        symbol [ size %tmp.67 98 21 25 ];
+        %tmp.67 = getv function %tmp.66 :size;
+        %tmp.68 = invoke %tmp.66 %tmp.67();
+        %tmp.69 = 2;
+        %tmp.70 = gte %tmp.68 %tmp.69;
+        bf %tmp.70 @_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_98_12_104_12_if_end;
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_98_12_104_12_if_true:
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_98_34_104_12_start:
+[ "/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonFetcher.mc" 99 16 ]
+        [ "_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_98_34_104_12_start" "_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_98_34_104_12_stop" ]
+        %prev.7 = local;
+        symbol [ prev %prev.7 99 20 24 ];
+        %tmp.71 = lgetv %data;
+        symbol [ data %tmp.71 99 27 31 ];
+        %tmp.72 = 1;
+        %tmp.73 = agetv %tmp.71 %tmp.72;
+        %tmp.74 = as %tmp.73 Dictionary;
+        symbol [ Dictionary %tmp.74 99 38 48 ];
+        lputv %prev.7 %tmp.74;
+        symbol [ prev %prev.7 99 20 24 ];
+[ "/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonFetcher.mc" 100 16 ]
+        [ "_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_98_34_104_12_start" "_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_98_34_104_12_stop" ]
+        %prevSgv.8 = local;
+        symbol [ prevSgv %prevSgv.8 100 20 27 ];
+        %tmp.75 = lgetv %prev.7;
+        symbol [ prev %tmp.75 100 30 34 ];
+        %tmp.76 = "sgv";
+        %tmp.77 = agetv %tmp.75 %tmp.76;
+        lputv %prevSgv.8 %tmp.77;
+        symbol [ prevSgv %prevSgv.8 100 20 27 ];
+[ "/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonFetcher.mc" 101 16 ]
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_101_16_103_16_if_stmt:
+        %tmp.78 = lgetv %prevSgv.8;
+        symbol [ prevSgv %tmp.78 101 20 27 ];
+        symbol [ Number %tmp.80 101 39 45 ];
+        %tmp.80 = getv ? :Number;
+        %tmp.81 = isa %tmp.78 %tmp.80;
+        bf %tmp.81 @_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_101_16_103_16_if_end;
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_101_16_103_16_if_true:
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_101_47_103_16_start:
+[ "/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonFetcher.mc" 102 20 ]
+        %tmp.82 = lgetv %valueMgdl.3;
+        symbol [ valueMgdl %tmp.82 102 28 37 ];
+        %tmp.83 = lgetv %prevSgv.8;
+        symbol [ prevSgv %tmp.83 102 40 47 ];
+        %tmp.84 = as %tmp.83 { (Number) };
+        symbol [ toFloat %tmp.85 102 48 55 ];
+        %tmp.85 = getv function %tmp.84 :toFloat;
+        %tmp.86 = invoke %tmp.84 %tmp.85();
+        %tmp.87 = sub %tmp.82 %tmp.86;
+        lputv %delta.6 %tmp.87;
+        symbol [ delta %delta.6 102 20 25 ];
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_101_47_103_16_stop:
+        goto @_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_101_16_103_16_if_end;
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_101_16_103_16_if_end:
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_98_34_104_12_stop:
+        goto @_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_98_12_104_12_if_end;
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_98_12_104_12_if_end:
+[ "/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonFetcher.mc" 107 12 ]
+        [ "_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_81_12_121_8_start" "_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_81_12_121_8_stop" ]
+        %nowSec.9 = local;
+        symbol [ nowSec %nowSec.9 107 16 22 ];
+        symbol [ Time %tmp.88 107 26 30 ];
+        %tmp.88 = getm $.Toybox.Time;
+        symbol [ now %tmp.89 107 31 34 ];
+        %tmp.89 = getv function %tmp.88 :now;
+        %tmp.90 = invoke %tmp.88 %tmp.89();
+        symbol [ value %tmp.91 107 37 42 ];
+        %tmp.91 = getv function %tmp.90 :value;
+        %tmp.92 = invoke %tmp.90 %tmp.91();
+        lputv %nowSec.9 %tmp.92;
+        symbol [ nowSec %nowSec.9 107 16 22 ];
+[ "/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonFetcher.mc" 108 12 ]
+        [ "_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_81_12_121_8_start" "_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_81_12_121_8_stop" ]
+        %readSec.10 = local;
+        symbol [ readSec %readSec.10 108 16 23 ];
+        %tmp.93 = lgetv %nowSec.9;
+        symbol [ nowSec %tmp.93 108 26 32 ];
+        lputv %readSec.10 %tmp.93;
+        symbol [ readSec %readSec.10 108 16 23 ];
+[ "/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonFetcher.mc" 109 12 ]
+        [ "_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_81_12_121_8_start" "_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_81_12_121_8_stop" ]
+        %dateVal.11 = local;
+        symbol [ dateVal %dateVal.11 109 16 23 ];
+        %tmp.94 = lgetv %latest.1;
+        symbol [ latest %tmp.94 109 26 32 ];
+        %tmp.95 = "date";
+        %tmp.96 = agetv %tmp.94 %tmp.95;
+        lputv %dateVal.11 %tmp.96;
+        symbol [ dateVal %dateVal.11 109 16 23 ];
+[ "/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonFetcher.mc" 110 12 ]
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_110_12_114_12_if_stmt:
+        %tmp.97 = lgetv %dateVal.11;
+        symbol [ dateVal %tmp.97 110 16 23 ];
+        symbol [ Number %tmp.99 110 35 41 ];
+        %tmp.99 = getv ? :Number;
+        %tmp.100 = isa %tmp.97 %tmp.99;
+        bf %tmp.100 @_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_110_12_114_12_if_false;
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_110_12_114_12_if_true:
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_110_43_112_12_start:
+[ "/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonFetcher.mc" 111 16 ]
+        %tmp.101 = lgetv %dateVal.11;
+        symbol [ dateVal %tmp.101 111 27 34 ];
+        %tmp.102 = as %tmp.101 { (Number) };
+        %tmp.103 = 1000;
+        %tmp.104 = div %tmp.102 %tmp.103;
+        symbol [ toNumber %tmp.105 111 43 51 ];
+        %tmp.105 = getv function %tmp.104 :toNumber;
+        %tmp.106 = invoke %tmp.104 %tmp.105();
+        lputv %readSec.10 %tmp.106;
+        symbol [ readSec %readSec.10 111 16 23 ];
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_110_43_112_12_stop:
+        goto @_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_110_12_114_12_if_end;
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_110_12_114_12_if_false:
+[ "/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonFetcher.mc" 112 19 ]
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_112_19_114_12_if_stmt:
+        %tmp.107 = lgetv %dateVal.11;
+        symbol [ dateVal %tmp.107 112 23 30 ];
+        %tmp.108 = as %tmp.107 { (!Number) };
+        symbol [ Long %tmp.110 112 42 46 ];
+        %tmp.110 = getv ? :Long;
+        %tmp.111 = isa %tmp.108 %tmp.110;
+        bf %tmp.111 @_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_112_19_114_12_if_end;
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_112_19_114_12_if_true:
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_112_48_114_12_start:
+[ "/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonFetcher.mc" 113 16 ]
+        %tmp.112 = lgetv %dateVal.11;
+        symbol [ dateVal %tmp.112 113 27 34 ];
+        %tmp.113 = as %tmp.112 { (!Number) && (Long) };
+        %tmp.114 = 1000l;
+        %tmp.115 = div %tmp.113 %tmp.114;
+        symbol [ toNumber %tmp.116 113 44 52 ];
+        %tmp.116 = getv function %tmp.115 :toNumber;
+        %tmp.117 = invoke %tmp.115 %tmp.116();
+        lputv %readSec.10 %tmp.117;
+        symbol [ readSec %readSec.10 113 16 23 ];
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_112_48_114_12_stop:
+        goto @_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_112_19_114_12_if_end;
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_112_19_114_12_if_end:
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_110_12_114_12_if_end:
+[ "/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonFetcher.mc" 115 12 ]
+        [ "_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_81_12_121_8_start" "_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_81_12_121_8_stop" ]
+        %age.12 = local;
+        symbol [ age %age.12 115 16 19 ];
+        %tmp.118 = lgetv %nowSec.9;
+        symbol [ nowSec %tmp.118 115 23 29 ];
+        %tmp.119 = lgetv %readSec.10;
+        symbol [ readSec %tmp.119 115 32 39 ];
+        %tmp.120 = sub %tmp.118 %tmp.119;
+        symbol [ toNumber %tmp.121 115 41 49 ];
+        %tmp.121 = getv function %tmp.120 :toNumber;
+        %tmp.122 = invoke %tmp.120 %tmp.121();
+        lputv %age.12 %tmp.122;
+        symbol [ age %age.12 115 16 19 ];
+[ "/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonFetcher.mc" 116 12 ]
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_116_12_116_36_if_stmt:
+        %tmp.123 = lgetv %age.12;
+        symbol [ age %tmp.123 116 16 19 ];
+        %tmp.124 = 0;
+        %tmp.125 = lt %tmp.123 %tmp.124;
+        bf %tmp.125 @_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_116_12_116_36_if_end;
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_116_12_116_36_if_true:
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_116_25_116_36_start:
+[ "/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonFetcher.mc" 116 27 ]
+        %tmp.126 = 0;
+        lputv %age.12 %tmp.126;
+        symbol [ age %age.12 116 27 30 ];
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_116_25_116_36_stop:
+        goto @_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_116_12_116_36_if_end;
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_116_12_116_36_if_end:
+[ "/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonFetcher.mc" 118 12 ]
+        [ "_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_81_12_121_8_start" "_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_81_12_121_8_stop" ]
+        %bgData.13 = local;
+        symbol [ bgData %bgData.13 118 16 22 ];
+        symbol [ BgData %tmp.130 118 29 35 ];
+        %tmp.130 = getv ? :BgData;
+        %tmp.131 = lgetv %valueMgdl.3;
+        symbol [ valueMgdl %tmp.131 118 36 45 ];
+        %tmp.132 = lgetv %direction.5;
+        symbol [ direction %tmp.132 118 47 56 ];
+        %tmp.133 = lgetv %delta.6;
+        symbol [ delta %tmp.133 118 58 63 ];
+        %tmp.134 = lgetv %age.12;
+        symbol [ age %tmp.134 118 65 68 ];
+        %tmp.127 = newc %tmp.130 (%tmp.131, %tmp.132, %tmp.133, %tmp.134);
+        lputv %bgData.13 %tmp.127;
+        symbol [ bgData %bgData.13 118 16 22 ];
+[ "/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonFetcher.mc" 119 12 ]
+        symbol [ _callback %tmp.136 119 12 21 ];
+        %tmp.136 = getv ? :_callback;
+        symbol [ onData %tmp.137 119 22 28 ];
+        %tmp.137 = getv function %tmp.136 :onData;
+        %tmp.138 = lgetv %bgData.13;
+        symbol [ bgData %tmp.138 119 29 35 ];
+        invoke %tmp.136 %tmp.137(%tmp.138);
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_81_12_121_8_stop:
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_81_8_123_8_endTry:
+        jsr @_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_81_8_123_8_finally;
+        goto @_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_81_8_123_8_end;
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_81_8_123_8_catch:
+        %tmp.139 = exception;
+        push %tmp.139;
+[ "/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonFetcher.mc" 121 10 ]
+        %tmp.140 = dup %tmp.139;
+        symbol [ Exception %tmp.141 121 31 40 ];
+        %tmp.141 = getv self :Exception;
+        %tmp.142 = isa %tmp.140 %tmp.141;
+        bf %tmp.142 @_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_121_10_123_8_next;
+        [ "_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_81_8_123_8_catch" "_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_121_10_123_8_next" ]
+        %ex.14 = local;
+        symbol [ ex %ex.14 121 17 19 ];
+        %tmp.143 = dup %tmp.139;
+        %tmp.144 = as %tmp.143 Exception;
+        lputv %ex.14 %tmp.144;
+        symbol [ ex %ex.14 121 17 19 ];
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_121_42_123_8_start:
+[ "/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonFetcher.mc" 122 12 ]
+        symbol [ _callback %tmp.146 122 12 21 ];
+        %tmp.146 = getv ? :_callback;
+        symbol [ onError %tmp.147 122 22 29 ];
+        %tmp.147 = getv function %tmp.146 :onError;
+        %tmp.148 = "Parse error";
+        invoke %tmp.146 %tmp.147(%tmp.148);
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_121_42_123_8_stop:
+        jsr @_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_81_8_123_8_finally;
+        pop;
+        goto @_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_81_8_123_8_end;
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_121_10_123_8_next:
+        try @_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_81_8_123_8_catch @_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_121_10_123_8_next @_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_121_10_123_8_next @_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_81_8_123_8_finally;
+        jsr @_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_81_8_123_8_finally;
+        throw %tmp.139;
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_81_8_123_8_finally:
+        jsrret;
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_81_8_123_8_end:
+_Users_hansolo_MonkeyC_Projects_SugrMon_source_SugrMonFetcher_mc_68_77_124_4_stop:
+    }
+}
+[ @file = "/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonFetcher.mc"; @line = 1; ]
+<init> {
+}

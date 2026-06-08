@@ -1,0 +1,749 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<debugInfo>
+    <manifest filename="/Users/hansolo/MonkeyC Projects/SugrMon/manifest.xml"/>
+    <pcToLineNum>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonView.mc" id="1" lineNum="9" parent="globals/SugrMonView" pc="268435460" symbol="&lt;init&gt;"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonApp.mc" id="2" lineNum="31" parent="globals" pc="268435472" symbol="getApp"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonApp.mc" id="2" lineNum="32" parent="globals" pc="268435482" symbol="getApp"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonBackground.mc" id="3" lineNum="6" parent="globals/Background" pc="268435493" symbol="&lt;init&gt;"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/bin/gen/006-B4536-00/source/Rez.mcgen" id="4" lineNum="7" parent="globals/Rez" pc="268435505" symbol="&lt;init&gt;"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonApp.mc" id="5" lineNum="5" parent="globals/SugrMonApp" pc="268435525" symbol="&lt;init&gt;"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonView.mc" id="6" lineNum="51" parent="globals/SugrMonView" pc="268435537" symbol="onShow"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonView.mc" id="6" lineNum="52" parent="globals/SugrMonView" pc="268435539" symbol="onShow"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonView.mc" id="7" lineNum="65" parent="globals/SugrMonView" pc="268435552" symbol="onError"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonView.mc" id="7" lineNum="66" parent="globals/SugrMonView" pc="268435554" symbol="onError"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonView.mc" id="7" lineNum="67" parent="globals/SugrMonView" pc="268435562" symbol="onError"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonView.mc" id="7" lineNum="68" parent="globals/SugrMonView" pc="268435570" symbol="onError"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonView.mc" id="7" lineNum="69" parent="globals/SugrMonView" pc="268435582" symbol="onError"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonView.mc" id="7" lineNum="70" parent="globals/SugrMonView" pc="268435595" symbol="onError"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonView.mc" id="8" lineNum="171" parent="globals/SugrMonView" pc="268435607" symbol="&lt;globals/SugrMonView/&lt;&gt;drawCentred&gt;"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonView.mc" id="8" lineNum="172" parent="globals/SugrMonView" pc="268435609" symbol="&lt;globals/SugrMonView/&lt;&gt;drawCentred&gt;"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonView.mc" id="8" lineNum="173" parent="globals/SugrMonView" pc="268435623" symbol="&lt;globals/SugrMonView/&lt;&gt;drawCentred&gt;"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonView.mc" id="9" lineNum="73" parent="globals/SugrMonView" pc="268435647" symbol="onNoUrl"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonView.mc" id="9" lineNum="74" parent="globals/SugrMonView" pc="268435649" symbol="onNoUrl"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonView.mc" id="9" lineNum="75" parent="globals/SugrMonView" pc="268435657" symbol="onNoUrl"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonView.mc" id="9" lineNum="76" parent="globals/SugrMonView" pc="268435665" symbol="onNoUrl"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonView.mc" id="9" lineNum="77" parent="globals/SugrMonView" pc="268435677" symbol="onNoUrl"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonView.mc" id="10" lineNum="80" parent="globals/SugrMonView" pc="268435689" symbol="compute"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonView.mc" id="10" lineNum="81" parent="globals/SugrMonView" pc="268435692" symbol="compute"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonView.mc" id="10" lineNum="82" parent="globals/SugrMonView" pc="268435701" symbol="compute"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonView.mc" id="10" lineNum="83" parent="globals/SugrMonView" pc="268435725" symbol="compute"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonView.mc" id="10" lineNum="84" parent="globals/SugrMonView" pc="268435740" symbol="compute"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonView.mc" id="10" lineNum="85" parent="globals/SugrMonView" pc="268435749" symbol="compute"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonView.mc" id="10" lineNum="87" parent="globals/SugrMonView" pc="268435762" symbol="compute"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonView.mc" id="10" lineNum="88" parent="globals/SugrMonView" pc="268435772" symbol="compute"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonView.mc" id="10" lineNum="89" parent="globals/SugrMonView" pc="268435784" symbol="compute"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonView.mc" id="10" lineNum="90" parent="globals/SugrMonView" pc="268435792" symbol="compute"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonView.mc" id="10" lineNum="93" parent="globals/SugrMonView" pc="268435810" symbol="compute"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonView.mc" id="11" lineNum="55" parent="globals/SugrMonView" pc="268435812" symbol="onData"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonView.mc" id="11" lineNum="56" parent="globals/SugrMonView" pc="268435814" symbol="onData"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonView.mc" id="11" lineNum="57" parent="globals/SugrMonView" pc="268435822" symbol="onData"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonView.mc" id="11" lineNum="58" parent="globals/SugrMonView" pc="268435830" symbol="onData"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonView.mc" id="11" lineNum="59" parent="globals/SugrMonView" pc="268435843" symbol="onData"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonView.mc" id="11" lineNum="60" parent="globals/SugrMonView" pc="268435855" symbol="onData"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonView.mc" id="11" lineNum="61" parent="globals/SugrMonView" pc="268435871" symbol="onData"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonView.mc" id="11" lineNum="62" parent="globals/SugrMonView" pc="268435900" symbol="onData"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonView.mc" id="12" lineNum="178" parent="globals/SugrMonView" pc="268435912" symbol="&lt;globals/SugrMonView/&lt;&gt;formatAge&gt;"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonView.mc" id="12" lineNum="179" parent="globals/SugrMonView" pc="268435915" symbol="&lt;globals/SugrMonView/&lt;&gt;formatAge&gt;"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonView.mc" id="12" lineNum="179" parent="globals/SugrMonView" pc="268435923" symbol="&lt;globals/SugrMonView/&lt;&gt;formatAge&gt;"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonView.mc" id="12" lineNum="181" parent="globals/SugrMonView" pc="268435940" symbol="&lt;globals/SugrMonView/&lt;&gt;formatAge&gt;"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonView.mc" id="12" lineNum="182" parent="globals/SugrMonView" pc="268435953" symbol="&lt;globals/SugrMonView/&lt;&gt;formatAge&gt;"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonView.mc" id="12" lineNum="182" parent="globals/SugrMonView" pc="268435961" symbol="&lt;globals/SugrMonView/&lt;&gt;formatAge&gt;"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonView.mc" id="12" lineNum="184" parent="globals/SugrMonView" pc="268435978" symbol="&lt;globals/SugrMonView/&lt;&gt;formatAge&gt;"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonView.mc" id="12" lineNum="185" parent="globals/SugrMonView" pc="268435991" symbol="&lt;globals/SugrMonView/&lt;&gt;formatAge&gt;"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonView.mc" id="13" lineNum="30" parent="globals/SugrMonView" pc="268436005" symbol="initialize"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonView.mc" id="13" lineNum="31" parent="globals/SugrMonView" pc="268436007" symbol="initialize"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonView.mc" id="13" lineNum="33" parent="globals/SugrMonView" pc="268436019" symbol="initialize"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonView.mc" id="13" lineNum="34" parent="globals/SugrMonView" pc="268436044" symbol="initialize"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonView.mc" id="13" lineNum="36" parent="globals/SugrMonView" pc="268436056" symbol="initialize"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonView.mc" id="13" lineNum="43" parent="globals/SugrMonView" pc="268436087" symbol="initialize"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonView.mc" id="13" lineNum="44" parent="globals/SugrMonView" pc="268436125" symbol="initialize"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonView.mc" id="14" lineNum="96" parent="globals/SugrMonView" pc="268436164" symbol="onUpdate"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonView.mc" id="14" lineNum="97" parent="globals/SugrMonView" pc="268436167" symbol="onUpdate"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonView.mc" id="14" lineNum="98" parent="globals/SugrMonView" pc="268436176" symbol="onUpdate"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonView.mc" id="14" lineNum="101" parent="globals/SugrMonView" pc="268436185" symbol="onUpdate"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonView.mc" id="14" lineNum="102" parent="globals/SugrMonView" pc="268436198" symbol="onUpdate"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonView.mc" id="14" lineNum="105" parent="globals/SugrMonView" pc="268436206" symbol="onUpdate"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonView.mc" id="14" lineNum="106" parent="globals/SugrMonView" pc="268436214" symbol="onUpdate"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonView.mc" id="14" lineNum="107" parent="globals/SugrMonView" pc="268436243" symbol="onUpdate"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonView.mc" id="14" lineNum="110" parent="globals/SugrMonView" pc="268436247" symbol="onUpdate"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonView.mc" id="14" lineNum="111" parent="globals/SugrMonView" pc="268436274" symbol="onUpdate"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonView.mc" id="14" lineNum="112" parent="globals/SugrMonView" pc="268436303" symbol="onUpdate"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonView.mc" id="14" lineNum="115" parent="globals/SugrMonView" pc="268436307" symbol="onUpdate"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonView.mc" id="14" lineNum="116" parent="globals/SugrMonView" pc="268436334" symbol="onUpdate"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonView.mc" id="14" lineNum="117" parent="globals/SugrMonView" pc="268436368" symbol="onUpdate"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonView.mc" id="14" lineNum="120" parent="globals/SugrMonView" pc="268436372" symbol="onUpdate"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonView.mc" id="14" lineNum="121" parent="globals/SugrMonView" pc="268436384" symbol="onUpdate"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonView.mc" id="14" lineNum="122" parent="globals/SugrMonView" pc="268436390" symbol="onUpdate"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonView.mc" id="14" lineNum="123" parent="globals/SugrMonView" pc="268436419" symbol="onUpdate"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonView.mc" id="14" lineNum="126" parent="globals/SugrMonView" pc="268436423" symbol="onUpdate"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonView.mc" id="14" lineNum="127" parent="globals/SugrMonView" pc="268436444" symbol="onUpdate"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonView.mc" id="14" lineNum="129" parent="globals/SugrMonView" pc="268436461" symbol="onUpdate"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonView.mc" id="14" lineNum="130" parent="globals/SugrMonView" pc="268436477" symbol="onUpdate"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonView.mc" id="14" lineNum="133" parent="globals/SugrMonView" pc="268436493" symbol="onUpdate"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonView.mc" id="14" lineNum="134" parent="globals/SugrMonView" pc="268436514" symbol="onUpdate"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonView.mc" id="14" lineNum="135" parent="globals/SugrMonView" pc="268436535" symbol="onUpdate"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonView.mc" id="14" lineNum="137" parent="globals/SugrMonView" pc="268436548" symbol="onUpdate"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonView.mc" id="14" lineNum="138" parent="globals/SugrMonView" pc="268436562" symbol="onUpdate"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonView.mc" id="14" lineNum="140" parent="globals/SugrMonView" pc="268436588" symbol="onUpdate"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonView.mc" id="14" lineNum="141" parent="globals/SugrMonView" pc="268436609" symbol="onUpdate"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonView.mc" id="14" lineNum="142" parent="globals/SugrMonView" pc="268436622" symbol="onUpdate"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonView.mc" id="14" lineNum="144" parent="globals/SugrMonView" pc="268436635" symbol="onUpdate"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonView.mc" id="14" lineNum="146" parent="globals/SugrMonView" pc="268436645" symbol="onUpdate"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonView.mc" id="14" lineNum="149" parent="globals/SugrMonView" pc="268436662" symbol="onUpdate"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonView.mc" id="14" lineNum="150" parent="globals/SugrMonView" pc="268436669" symbol="onUpdate"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonView.mc" id="14" lineNum="152" parent="globals/SugrMonView" pc="268436685" symbol="onUpdate"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonView.mc" id="14" lineNum="153" parent="globals/SugrMonView" pc="268436698" symbol="onUpdate"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonView.mc" id="14" lineNum="154" parent="globals/SugrMonView" pc="268436705" symbol="onUpdate"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonView.mc" id="14" lineNum="157" parent="globals/SugrMonView" pc="268436718" symbol="onUpdate"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonView.mc" id="14" lineNum="158" parent="globals/SugrMonView" pc="268436731" symbol="onUpdate"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonView.mc" id="14" lineNum="159" parent="globals/SugrMonView" pc="268436741" symbol="onUpdate"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonView.mc" id="14" lineNum="162" parent="globals/SugrMonView" pc="268436751" symbol="onUpdate"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonView.mc" id="14" lineNum="165" parent="globals/SugrMonView" pc="268436765" symbol="onUpdate"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonView.mc" id="14" lineNum="167" parent="globals/SugrMonView" pc="268436778" symbol="onUpdate"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/BgModel.mc" id="15" lineNum="22" parent="globals/BgData" pc="268436805" symbol="initialize"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/BgModel.mc" id="15" lineNum="23" parent="globals/BgData" pc="268436807" symbol="initialize"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/BgModel.mc" id="15" lineNum="24" parent="globals/BgData" pc="268436816" symbol="initialize"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/BgModel.mc" id="15" lineNum="25" parent="globals/BgData" pc="268436825" symbol="initialize"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/BgModel.mc" id="15" lineNum="26" parent="globals/BgData" pc="268436834" symbol="initialize"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonBackground.mc" id="16" lineNum="22" parent="globals/Background" pc="268436844" symbol="setColor"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonBackground.mc" id="16" lineNum="23" parent="globals/Background" pc="268436846" symbol="setColor"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonBackground.mc" id="17" lineNum="11" parent="globals/Background" pc="268436856" symbol="initialize"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonBackground.mc" id="17" lineNum="12" parent="globals/Background" pc="268436859" symbol="initialize"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonBackground.mc" id="17" lineNum="16" parent="globals/Background" pc="268436877" symbol="initialize"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonBackground.mc" id="17" lineNum="18" parent="globals/Background" pc="268436893" symbol="initialize"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonBackground.mc" id="18" lineNum="26" parent="globals/Background" pc="268436906" symbol="draw"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonBackground.mc" id="18" lineNum="27" parent="globals/Background" pc="268436908" symbol="draw"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonBackground.mc" id="18" lineNum="28" parent="globals/Background" pc="268436925" symbol="draw"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonApp.mc" id="19" lineNum="16" parent="globals/SugrMonApp" pc="268436934" symbol="onStart"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonApp.mc" id="20" lineNum="24" parent="globals/SugrMonApp" pc="268436937" symbol="getInitialView"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonApp.mc" id="20" lineNum="25" parent="globals/SugrMonApp" pc="268436939" symbol="getInitialView"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonApp.mc" id="20" lineNum="26" parent="globals/SugrMonApp" pc="268436964" symbol="getInitialView"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonApp.mc" id="21" lineNum="10" parent="globals/SugrMonApp" pc="268436977" symbol="initialize"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonApp.mc" id="21" lineNum="11" parent="globals/SugrMonApp" pc="268436979" symbol="initialize"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/SugrMonApp.mc" id="22" lineNum="20" parent="globals/SugrMonApp" pc="268436992" symbol="onStop"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/BgModel.mc" id="23" lineNum="158" parent="globals/BgModel" pc="268436995" symbol="directionToArrow"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/BgModel.mc" id="23" lineNum="159" parent="globals/BgModel" pc="268436997" symbol="directionToArrow"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/BgModel.mc" id="23" lineNum="159" parent="globals/BgModel" pc="268437014" symbol="directionToArrow"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/BgModel.mc" id="23" lineNum="160" parent="globals/BgModel" pc="268437081" symbol="directionToArrow"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/BgModel.mc" id="23" lineNum="160" parent="globals/BgModel" pc="268437098" symbol="directionToArrow"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/BgModel.mc" id="23" lineNum="161" parent="globals/BgModel" pc="268437133" symbol="directionToArrow"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/BgModel.mc" id="23" lineNum="161" parent="globals/BgModel" pc="268437150" symbol="directionToArrow"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/BgModel.mc" id="23" lineNum="162" parent="globals/BgModel" pc="268437185" symbol="directionToArrow"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/BgModel.mc" id="23" lineNum="162" parent="globals/BgModel" pc="268437202" symbol="directionToArrow"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/BgModel.mc" id="23" lineNum="163" parent="globals/BgModel" pc="268437237" symbol="directionToArrow"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/BgModel.mc" id="23" lineNum="163" parent="globals/BgModel" pc="268437254" symbol="directionToArrow"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/BgModel.mc" id="23" lineNum="164" parent="globals/BgModel" pc="268437289" symbol="directionToArrow"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/BgModel.mc" id="23" lineNum="164" parent="globals/BgModel" pc="268437306" symbol="directionToArrow"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/BgModel.mc" id="23" lineNum="165" parent="globals/BgModel" pc="268437341" symbol="directionToArrow"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/BgModel.mc" id="23" lineNum="165" parent="globals/BgModel" pc="268437358" symbol="directionToArrow"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/BgModel.mc" id="23" lineNum="166" parent="globals/BgModel" pc="268437425" symbol="directionToArrow"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/BgModel.mc" id="24" lineNum="134" parent="globals/BgModel" pc="268437431" symbol="formatValue"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/BgModel.mc" id="24" lineNum="135" parent="globals/BgModel" pc="268437434" symbol="formatValue"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/BgModel.mc" id="24" lineNum="136" parent="globals/BgModel" pc="268437442" symbol="formatValue"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/BgModel.mc" id="24" lineNum="138" parent="globals/BgModel" pc="268437454" symbol="formatValue"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/BgModel.mc" id="24" lineNum="139" parent="globals/BgModel" pc="268437463" symbol="formatValue"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/BgModel.mc" id="24" lineNum="140" parent="globals/BgModel" pc="268437485" symbol="formatValue"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/BgModel.mc" id="24" lineNum="142" parent="globals/BgModel" pc="268437510" symbol="formatValue"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/BgModel.mc" id="25" lineNum="109" parent="globals/BgModel" pc="268437525" symbol="getColorForLevel"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/BgModel.mc" id="25" lineNum="110" parent="globals/BgModel" pc="268437527" symbol="getColorForLevel"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/BgModel.mc" id="25" lineNum="111" parent="globals/BgModel" pc="268437535" symbol="getColorForLevel"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/BgModel.mc" id="25" lineNum="113" parent="globals/BgModel" pc="268437544" symbol="getColorForLevel"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/BgModel.mc" id="25" lineNum="114" parent="globals/BgModel" pc="268437546" symbol="getColorForLevel"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/BgModel.mc" id="25" lineNum="116" parent="globals/BgModel" pc="268437562" symbol="getColorForLevel"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/BgModel.mc" id="25" lineNum="117" parent="globals/BgModel" pc="268437578" symbol="getColorForLevel"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/BgModel.mc" id="25" lineNum="119" parent="globals/BgModel" pc="268437594" symbol="getColorForLevel"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/BgModel.mc" id="25" lineNum="120" parent="globals/BgModel" pc="268437610" symbol="getColorForLevel"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/BgModel.mc" id="25" lineNum="122" parent="globals/BgModel" pc="268437626" symbol="getColorForLevel"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/BgModel.mc" id="25" lineNum="123" parent="globals/BgModel" pc="268437641" symbol="getColorForLevel"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/BgModel.mc" id="25" lineNum="124" parent="globals/BgModel" pc="268437657" symbol="getColorForLevel"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/BgModel.mc" id="25" lineNum="115" parent="globals/BgModel" pc="268437660" symbol="getColorForLevel"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/BgModel.mc" id="25" lineNum="118" parent="globals/BgModel" pc="268437665" symbol="getColorForLevel"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/BgModel.mc" id="25" lineNum="121" parent="globals/BgModel" pc="268437671" symbol="getColorForLevel"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/BgModel.mc" id="25" lineNum="125" parent="globals/BgModel" pc="268437677" symbol="getColorForLevel"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/BgModel.mc" id="26" lineNum="130" parent="globals/BgModel" pc="268437685" symbol="toMmol"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/BgModel.mc" id="26" lineNum="131" parent="globals/BgModel" pc="268437687" symbol="toMmol"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/BgModel.mc" id="27" lineNum="146" parent="globals/BgModel" pc="268437720" symbol="formatDelta"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/BgModel.mc" id="27" lineNum="147" parent="globals/BgModel" pc="268437723" symbol="formatDelta"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/BgModel.mc" id="27" lineNum="148" parent="globals/BgModel" pc="268437745" symbol="formatDelta"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/BgModel.mc" id="27" lineNum="149" parent="globals/BgModel" pc="268437753" symbol="formatDelta"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/BgModel.mc" id="27" lineNum="150" parent="globals/BgModel" pc="268437791" symbol="formatDelta"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/BgModel.mc" id="27" lineNum="151" parent="globals/BgModel" pc="268437800" symbol="formatDelta"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/BgModel.mc" id="27" lineNum="152" parent="globals/BgModel" pc="268437832" symbol="formatDelta"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/BgModel.mc" id="27" lineNum="154" parent="globals/BgModel" pc="268437860" symbol="formatDelta"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/BgModel.mc" id="28" lineNum="63" parent="globals/BgModel" pc="268437878" symbol="loadSettings"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/BgModel.mc" id="28" lineNum="64" parent="globals/BgModel" pc="268437881" symbol="loadSettings"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/BgModel.mc" id="28" lineNum="65" parent="globals/BgModel" pc="268437900" symbol="loadSettings"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/BgModel.mc" id="28" lineNum="65" parent="globals/BgModel" pc="268437915" symbol="loadSettings"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/BgModel.mc" id="28" lineNum="67" parent="globals/BgModel" pc="268437927" symbol="loadSettings"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/BgModel.mc" id="28" lineNum="68" parent="globals/BgModel" pc="268437946" symbol="loadSettings"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/BgModel.mc" id="28" lineNum="68" parent="globals/BgModel" pc="268437961" symbol="loadSettings"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/BgModel.mc" id="28" lineNum="70" parent="globals/BgModel" pc="268437973" symbol="loadSettings"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/BgModel.mc" id="28" lineNum="71" parent="globals/BgModel" pc="268437992" symbol="loadSettings"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/BgModel.mc" id="28" lineNum="71" parent="globals/BgModel" pc="268438007" symbol="loadSettings"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/BgModel.mc" id="28" lineNum="73" parent="globals/BgModel" pc="268438019" symbol="loadSettings"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/BgModel.mc" id="28" lineNum="74" parent="globals/BgModel" pc="268438038" symbol="loadSettings"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/BgModel.mc" id="28" lineNum="74" parent="globals/BgModel" pc="268438053" symbol="loadSettings"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/BgModel.mc" id="28" lineNum="76" parent="globals/BgModel" pc="268438065" symbol="loadSettings"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/BgModel.mc" id="28" lineNum="77" parent="globals/BgModel" pc="268438084" symbol="loadSettings"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/BgModel.mc" id="28" lineNum="77" parent="globals/BgModel" pc="268438099" symbol="loadSettings"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/BgModel.mc" id="28" lineNum="79" parent="globals/BgModel" pc="268438111" symbol="loadSettings"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/BgModel.mc" id="28" lineNum="80" parent="globals/BgModel" pc="268438130" symbol="loadSettings"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/BgModel.mc" id="28" lineNum="80" parent="globals/BgModel" pc="268438145" symbol="loadSettings"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/BgModel.mc" id="28" lineNum="82" parent="globals/BgModel" pc="268438157" symbol="loadSettings"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/BgModel.mc" id="28" lineNum="83" parent="globals/BgModel" pc="268438176" symbol="loadSettings"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/BgModel.mc" id="28" lineNum="83" parent="globals/BgModel" pc="268438191" symbol="loadSettings"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/BgModel.mc" id="28" lineNum="85" parent="globals/BgModel" pc="268438203" symbol="loadSettings"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/BgModel.mc" id="28" lineNum="86" parent="globals/BgModel" pc="268438222" symbol="loadSettings"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/BgModel.mc" id="28" lineNum="86" parent="globals/BgModel" pc="268438237" symbol="loadSettings"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/BgModel.mc" id="28" lineNum="88" parent="globals/BgModel" pc="268438249" symbol="loadSettings"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/BgModel.mc" id="28" lineNum="89" parent="globals/BgModel" pc="268438268" symbol="loadSettings"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/BgModel.mc" id="28" lineNum="89" parent="globals/BgModel" pc="268438283" symbol="loadSettings"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/BgModel.mc" id="28" lineNum="91" parent="globals/BgModel" pc="268438295" symbol="loadSettings"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/BgModel.mc" id="28" lineNum="92" parent="globals/BgModel" pc="268438314" symbol="loadSettings"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/BgModel.mc" id="28" lineNum="92" parent="globals/BgModel" pc="268438329" symbol="loadSettings"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/BgModel.mc" id="28" lineNum="94" parent="globals/BgModel" pc="268438341" symbol="loadSettings"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/BgModel.mc" id="28" lineNum="95" parent="globals/BgModel" pc="268438360" symbol="loadSettings"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/BgModel.mc" id="28" lineNum="95" parent="globals/BgModel" pc="268438375" symbol="loadSettings"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/BgModel.mc" id="29" lineNum="99" parent="globals/BgModel" pc="268438388" symbol="getLevel"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/BgModel.mc" id="29" lineNum="100" parent="globals/BgModel" pc="268438390" symbol="getLevel"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/BgModel.mc" id="29" lineNum="100" parent="globals/BgModel" pc="268438401" symbol="getLevel"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/BgModel.mc" id="29" lineNum="101" parent="globals/BgModel" pc="268438406" symbol="getLevel"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/BgModel.mc" id="29" lineNum="101" parent="globals/BgModel" pc="268438417" symbol="getLevel"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/BgModel.mc" id="29" lineNum="102" parent="globals/BgModel" pc="268438423" symbol="getLevel"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/BgModel.mc" id="29" lineNum="102" parent="globals/BgModel" pc="268438434" symbol="getLevel"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/BgModel.mc" id="29" lineNum="103" parent="globals/BgModel" pc="268438440" symbol="getLevel"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/BgModel.mc" id="29" lineNum="103" parent="globals/BgModel" pc="268438451" symbol="getLevel"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/BgModel.mc" id="29" lineNum="104" parent="globals/BgModel" pc="268438457" symbol="getLevel"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/BgModel.mc" id="29" lineNum="104" parent="globals/BgModel" pc="268438468" symbol="getLevel"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/BgModel.mc" id="29" lineNum="105" parent="globals/BgModel" pc="268438474" symbol="getLevel"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/BgModel.mc" id="29" lineNum="105" parent="globals/BgModel" pc="268438485" symbol="getLevel"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/BgModel.mc" id="29" lineNum="106" parent="globals/BgModel" pc="268438491" symbol="getLevel"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/NightscoutFetcher.mc" id="31" lineNum="48" parent="globals/NightscoutFetcher" pc="268438494" symbol="onResponse"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/NightscoutFetcher.mc" id="31" lineNum="49" parent="globals/NightscoutFetcher" pc="268438497" symbol="onResponse"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/NightscoutFetcher.mc" id="31" lineNum="51" parent="globals/NightscoutFetcher" pc="268438509" symbol="onResponse"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/NightscoutFetcher.mc" id="31" lineNum="52" parent="globals/NightscoutFetcher" pc="268438518" symbol="onResponse"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/NightscoutFetcher.mc" id="31" lineNum="53" parent="globals/NightscoutFetcher" pc="268438545" symbol="onResponse"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/NightscoutFetcher.mc" id="31" lineNum="56" parent="globals/NightscoutFetcher" pc="268438549" symbol="onResponse"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/NightscoutFetcher.mc" id="31" lineNum="57" parent="globals/NightscoutFetcher" pc="268438553" symbol="onResponse"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/NightscoutFetcher.mc" id="31" lineNum="58" parent="globals/NightscoutFetcher" pc="268438571" symbol="onResponse"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/NightscoutFetcher.mc" id="31" lineNum="59" parent="globals/NightscoutFetcher" pc="268438590" symbol="onResponse"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/NightscoutFetcher.mc" id="31" lineNum="62" parent="globals/NightscoutFetcher" pc="268438594" symbol="onResponse"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/NightscoutFetcher.mc" id="31" lineNum="65" parent="globals/NightscoutFetcher" pc="268438600" symbol="onResponse"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/NightscoutFetcher.mc" id="31" lineNum="66" parent="globals/NightscoutFetcher" pc="268438610" symbol="onResponse"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/NightscoutFetcher.mc" id="31" lineNum="67" parent="globals/NightscoutFetcher" pc="268438626" symbol="onResponse"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/NightscoutFetcher.mc" id="31" lineNum="68" parent="globals/NightscoutFetcher" pc="268438645" symbol="onResponse"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/NightscoutFetcher.mc" id="31" lineNum="70" parent="globals/NightscoutFetcher" pc="268438649" symbol="onResponse"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/NightscoutFetcher.mc" id="31" lineNum="73" parent="globals/NightscoutFetcher" pc="268438658" symbol="onResponse"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/NightscoutFetcher.mc" id="31" lineNum="74" parent="globals/NightscoutFetcher" pc="268438668" symbol="onResponse"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/NightscoutFetcher.mc" id="31" lineNum="77" parent="globals/NightscoutFetcher" pc="268438695" symbol="onResponse"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/NightscoutFetcher.mc" id="31" lineNum="78" parent="globals/NightscoutFetcher" pc="268438698" symbol="onResponse"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/NightscoutFetcher.mc" id="31" lineNum="79" parent="globals/NightscoutFetcher" pc="268438711" symbol="onResponse"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/NightscoutFetcher.mc" id="31" lineNum="80" parent="globals/NightscoutFetcher" pc="268438718" symbol="onResponse"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/NightscoutFetcher.mc" id="31" lineNum="81" parent="globals/NightscoutFetcher" pc="268438728" symbol="onResponse"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/NightscoutFetcher.mc" id="31" lineNum="82" parent="globals/NightscoutFetcher" pc="268438743" symbol="onResponse"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/NightscoutFetcher.mc" id="31" lineNum="87" parent="globals/NightscoutFetcher" pc="268438762" symbol="onResponse"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/NightscoutFetcher.mc" id="31" lineNum="88" parent="globals/NightscoutFetcher" pc="268438780" symbol="onResponse"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/NightscoutFetcher.mc" id="31" lineNum="89" parent="globals/NightscoutFetcher" pc="268438784" symbol="onResponse"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/NightscoutFetcher.mc" id="31" lineNum="90" parent="globals/NightscoutFetcher" pc="268438794" symbol="onResponse"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/NightscoutFetcher.mc" id="31" lineNum="91" parent="globals/NightscoutFetcher" pc="268438809" symbol="onResponse"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/NightscoutFetcher.mc" id="31" lineNum="92" parent="globals/NightscoutFetcher" pc="268438826" symbol="onResponse"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/NightscoutFetcher.mc" id="31" lineNum="93" parent="globals/NightscoutFetcher" pc="268438841" symbol="onResponse"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/NightscoutFetcher.mc" id="31" lineNum="95" parent="globals/NightscoutFetcher" pc="268438864" symbol="onResponse"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/NightscoutFetcher.mc" id="31" lineNum="96" parent="globals/NightscoutFetcher" pc="268438877" symbol="onResponse"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/NightscoutFetcher.mc" id="31" lineNum="96" parent="globals/NightscoutFetcher" pc="268438884" symbol="onResponse"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/NightscoutFetcher.mc" id="31" lineNum="98" parent="globals/NightscoutFetcher" pc="268438890" symbol="onResponse"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/NightscoutFetcher.mc" id="31" lineNum="99" parent="globals/NightscoutFetcher" pc="268438918" symbol="onResponse"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/NightscoutFetcher.mc" id="32" lineNum="18" parent="globals/NightscoutFetcher" pc="268438935" symbol="fetch"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/NightscoutFetcher.mc" id="32" lineNum="20" parent="globals/NightscoutFetcher" pc="268438938" symbol="fetch"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/NightscoutFetcher.mc" id="32" lineNum="22" parent="globals/NightscoutFetcher" pc="268438945" symbol="fetch"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/NightscoutFetcher.mc" id="32" lineNum="23" parent="globals/NightscoutFetcher" pc="268438969" symbol="fetch"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/NightscoutFetcher.mc" id="32" lineNum="24" parent="globals/NightscoutFetcher" pc="268438981" symbol="fetch"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/NightscoutFetcher.mc" id="32" lineNum="25" parent="globals/NightscoutFetcher" pc="268438993" symbol="fetch"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/NightscoutFetcher.mc" id="32" lineNum="28" parent="globals/NightscoutFetcher" pc="268438997" symbol="fetch"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/NightscoutFetcher.mc" id="32" lineNum="29" parent="globals/NightscoutFetcher" pc="268439007" symbol="fetch"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/NightscoutFetcher.mc" id="32" lineNum="30" parent="globals/NightscoutFetcher" pc="268439019" symbol="fetch"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/NightscoutFetcher.mc" id="32" lineNum="31" parent="globals/NightscoutFetcher" pc="268439044" symbol="fetch"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/NightscoutFetcher.mc" id="32" lineNum="34" parent="globals/NightscoutFetcher" pc="268439060" symbol="fetch"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/NightscoutFetcher.mc" id="32" lineNum="42" parent="globals/NightscoutFetcher" pc="268439093" symbol="fetch"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/NightscoutFetcher.mc" id="32" lineNum="43" parent="globals/NightscoutFetcher" pc="268439105" symbol="fetch"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/NightscoutFetcher.mc" id="32" lineNum="45" parent="globals/NightscoutFetcher" pc="268439117" symbol="fetch"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/NightscoutFetcher.mc" id="33" lineNum="12" parent="globals/NightscoutFetcher" pc="268439149" symbol="initialize"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/NightscoutFetcher.mc" id="33" lineNum="13" parent="globals/NightscoutFetcher" pc="268439151" symbol="initialize"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/source/NightscoutFetcher.mc" id="33" lineNum="14" parent="globals/NightscoutFetcher" pc="268439160" symbol="initialize"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/bin/gen/006-B4536-00/source/Rez.mcgen" id="34" lineNum="62" parent="globals/Rez/Layouts" pc="268439170" symbol="BottomRightLayout"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/bin/gen/006-B4536-00/source/Rez.mcgen" id="34" lineNum="63" parent="globals/Rez/Layouts" pc="268439181" symbol="BottomRightLayout"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/bin/gen/006-B4536-00/source/Rez.mcgen" id="34" lineNum="65" parent="globals/Rez/Layouts" pc="268439205" symbol="BottomRightLayout"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/bin/gen/006-B4536-00/source/Rez.mcgen" id="34" lineNum="67" parent="globals/Rez/Layouts" pc="268439288" symbol="BottomRightLayout"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/bin/gen/006-B4536-00/source/Rez.mcgen" id="34" lineNum="69" parent="globals/Rez/Layouts" pc="268439371" symbol="BottomRightLayout"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/bin/gen/006-B4536-00/source/Rez.mcgen" id="35" lineNum="42" parent="globals/Rez/Layouts" pc="268439391" symbol="TopRightLayout"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/bin/gen/006-B4536-00/source/Rez.mcgen" id="35" lineNum="43" parent="globals/Rez/Layouts" pc="268439402" symbol="TopRightLayout"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/bin/gen/006-B4536-00/source/Rez.mcgen" id="35" lineNum="45" parent="globals/Rez/Layouts" pc="268439426" symbol="TopRightLayout"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/bin/gen/006-B4536-00/source/Rez.mcgen" id="35" lineNum="47" parent="globals/Rez/Layouts" pc="268439509" symbol="TopRightLayout"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/bin/gen/006-B4536-00/source/Rez.mcgen" id="35" lineNum="49" parent="globals/Rez/Layouts" pc="268439592" symbol="TopRightLayout"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/bin/gen/006-B4536-00/source/Rez.mcgen" id="36" lineNum="52" parent="globals/Rez/Layouts" pc="268439612" symbol="BottomLeftLayout"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/bin/gen/006-B4536-00/source/Rez.mcgen" id="36" lineNum="53" parent="globals/Rez/Layouts" pc="268439623" symbol="BottomLeftLayout"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/bin/gen/006-B4536-00/source/Rez.mcgen" id="36" lineNum="55" parent="globals/Rez/Layouts" pc="268439647" symbol="BottomLeftLayout"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/bin/gen/006-B4536-00/source/Rez.mcgen" id="36" lineNum="57" parent="globals/Rez/Layouts" pc="268439729" symbol="BottomLeftLayout"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/bin/gen/006-B4536-00/source/Rez.mcgen" id="36" lineNum="59" parent="globals/Rez/Layouts" pc="268439811" symbol="BottomLeftLayout"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/bin/gen/006-B4536-00/source/Rez.mcgen" id="37" lineNum="32" parent="globals/Rez/Layouts" pc="268439831" symbol="TopLeftLayout"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/bin/gen/006-B4536-00/source/Rez.mcgen" id="37" lineNum="33" parent="globals/Rez/Layouts" pc="268439842" symbol="TopLeftLayout"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/bin/gen/006-B4536-00/source/Rez.mcgen" id="37" lineNum="35" parent="globals/Rez/Layouts" pc="268439866" symbol="TopLeftLayout"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/bin/gen/006-B4536-00/source/Rez.mcgen" id="37" lineNum="37" parent="globals/Rez/Layouts" pc="268439948" symbol="TopLeftLayout"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/bin/gen/006-B4536-00/source/Rez.mcgen" id="37" lineNum="39" parent="globals/Rez/Layouts" pc="268440030" symbol="TopLeftLayout"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/bin/gen/006-B4536-00/source/Rez.mcgen" id="38" lineNum="18" parent="globals/Rez/Layouts" pc="268440050" symbol="MainLayout"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/bin/gen/006-B4536-00/source/Rez.mcgen" id="38" lineNum="19" parent="globals/Rez/Layouts" pc="268440061" symbol="MainLayout"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/bin/gen/006-B4536-00/source/Rez.mcgen" id="38" lineNum="21" parent="globals/Rez/Layouts" pc="268440070" symbol="MainLayout"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/bin/gen/006-B4536-00/source/Rez.mcgen" id="38" lineNum="23" parent="globals/Rez/Layouts" pc="268440079" symbol="MainLayout"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/bin/gen/006-B4536-00/source/Rez.mcgen" id="38" lineNum="25" parent="globals/Rez/Layouts" pc="268440103" symbol="MainLayout"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/bin/gen/006-B4536-00/source/Rez.mcgen" id="38" lineNum="27" parent="globals/Rez/Layouts" pc="268440210" symbol="MainLayout"/>
+        <entry filename="/Users/hansolo/MonkeyC Projects/SugrMon/bin/gen/006-B4536-00/source/Rez.mcgen" id="38" lineNum="29" parent="globals/Rez/Layouts" pc="268440317" symbol="MainLayout"/>
+    </pcToLineNum>
+    <symbolTable>
+        <entry field="true" id="72" symbol="SettingCriticalMax"/>
+        <entry id="8388639" module="true" symbol="Graphics"/>
+        <entry field="true" id="74" symbol="SettingFetchInterval"/>
+        <entry field="true" id="26" symbol="&lt;globals/SugrMonApp/&lt;&gt;_view&gt;"/>
+        <entry field="true" id="58" symbol="SugrFontSuperMini"/>
+        <entry id="8388632" method="true" symbol="&lt;init&gt;"/>
+        <entry field="true" id="68" symbol="NoData"/>
+        <entry field="true" id="78" symbol="SettingNormalMin"/>
+        <entry id="55" method="true" symbol="MainLayout"/>
+        <entry field="true" id="77" symbol="SettingNormalMax"/>
+        <entry field="true" id="64" symbol="Flat"/>
+        <entry id="51" method="true" symbol="fetch"/>
+        <entry field="true" id="62" symbol="DoubleUp"/>
+        <entry field="true" id="82" symbol="SingleUp"/>
+        <entry field="true" id="8388611" module="true" symbol="Toybox"/>
+        <entry id="8389108" method="true" symbol="onResponse"/>
+        <entry field="true" id="39" symbol="hasError"/>
+        <entry field="true" id="60" symbol="AppName"/>
+        <entry id="6" module="true" symbol="globals/Rez/Strings"/>
+        <entry id="8389594" symbol="headers"/>
+        <entry id="8388772" module="true" object="true" symbol="Fonts"/>
+        <entry field="true" id="23" symbol="age"/>
+        <entry field="true" id="47" symbol="useMmol"/>
+        <entry id="8388631" module="true" symbol="Activity"/>
+        <entry field="true" id="8388947" method="true" symbol="value"/>
+        <entry id="8388648" module="true" symbol="WatchUi"/>
+        <entry field="true" id="48" symbol="useMonochrome"/>
+        <entry field="true" id="75" symbol="SettingNightscoutToken"/>
+        <entry id="2" module="true" symbol="globals/Rez"/>
+        <entry id="19" method="true" symbol="&lt;globals/SugrMonView/&lt;&gt;drawCentred&gt;"/>
+        <entry field="true" id="17" symbol="&lt;globals/SugrMonView/&lt;&gt;_model&gt;"/>
+        <entry id="8389124" method="true" symbol="onUpdate"/>
+        <entry field="true" id="8389065" symbol="locY"/>
+        <entry field="true" id="8389064" symbol="locX"/>
+        <entry id="10" object="true" symbol="SugrMonApp"/>
+        <entry id="8388771" module="true" object="true" symbol="Drawables"/>
+        <entry id="8389348" symbol="font"/>
+        <entry id="8389275" method="true" symbol="getApp"/>
+        <entry id="5" module="true" symbol="globals/Rez/Layouts"/>
+        <entry field="true" id="50" symbol="&lt;globals/NightscoutFetcher/&lt;&gt;_model&gt;"/>
+        <entry id="11" object="true" symbol="SugrMonView"/>
+        <entry id="46" method="true" symbol="toMmol"/>
+        <entry id="35" method="true" symbol="formatDelta"/>
+        <entry field="true" id="79" symbol="SettingUseMmol"/>
+        <entry id="20" method="true" symbol="&lt;globals/SugrMonView/&lt;&gt;formatAge&gt;"/>
+        <entry field="true" id="30" symbol="criticalMin"/>
+        <entry field="true" id="66" symbol="FortyFiveUp"/>
+        <entry field="true" id="8389063" symbol="identifier"/>
+        <entry id="8389349" symbol="justification"/>
+        <entry id="8389137" method="true" symbol="compute"/>
+        <entry field="true" id="49" symbol="&lt;globals/NightscoutFetcher/&lt;&gt;_callback&gt;"/>
+        <entry field="true" id="76" symbol="SettingNightscoutUrl"/>
+        <entry field="true" id="29" symbol="criticalMax"/>
+        <entry field="true" id="69" symbol="NoUrl"/>
+        <entry id="8389131" method="true" symbol="setColor"/>
+        <entry id="21" method="true" symbol="onData"/>
+        <entry id="8388637" module="true" symbol="Communications"/>
+        <entry id="3" module="true" symbol="globals/Rez/Drawables"/>
+        <entry field="true" id="63" symbol="ErrorShort"/>
+        <entry id="8388828" method="true" symbol="onError"/>
+        <entry field="true" id="45" symbol="normalMin"/>
+        <entry id="8389844" symbol="responseType"/>
+        <entry field="true" id="71" symbol="SettingAcceptableMin"/>
+        <entry id="22" method="true" symbol="onNoUrl"/>
+        <entry field="true" id="13" symbol="&lt;globals/SugrMonView/&lt;&gt;_fetcher&gt;"/>
+        <entry id="56" method="true" symbol="TopLeftLayout"/>
+        <entry field="true" id="18" symbol="&lt;globals/SugrMonView/&lt;&gt;_noUrl&gt;"/>
+        <entry field="true" id="44" symbol="normalMax"/>
+        <entry field="true" id="70" symbol="SettingAcceptableMax"/>
+        <entry id="8388786" method="true" symbol="method"/>
+        <entry id="8388644" module="true" symbol="System"/>
+        <entry id="8388645" module="true" symbol="Time"/>
+        <entry id="8388769" module="true" object="true" symbol="Rez"/>
+        <entry field="true" id="33" symbol="errorMsg"/>
+        <entry id="53" method="true" symbol="BottomLeftLayout"/>
+        <entry id="8" object="true" symbol="BgModel"/>
+        <entry field="true" id="81" symbol="SingleDown"/>
+        <entry id="54" method="true" symbol="BottomRightLayout"/>
+        <entry id="8388640" module="true" symbol="Lang"/>
+        <entry id="38" method="true" symbol="getLevel"/>
+        <entry field="true" id="8389130" symbol="mColor"/>
+        <entry id="8389068" method="true" symbol="draw"/>
+        <entry field="true" id="15" symbol="&lt;globals/SugrMonView/&lt;&gt;_fontXTiny&gt;"/>
+        <entry field="true" id="52" symbol="LauncherIcon"/>
+        <entry id="8388610" symbol="statics"/>
+        <entry id="8389123" method="true" symbol="onShow"/>
+        <entry field="true" id="14" symbol="&lt;globals/SugrMonView/&lt;&gt;_fontSuperMini&gt;"/>
+        <entry id="8389350" module="true" symbol="globals"/>
+        <entry id="8388770" module="true" object="true" symbol="Strings"/>
+        <entry id="8390146" module="true" object="true" symbol="Background"/>
+        <entry field="true" id="28" symbol="acceptableMin"/>
+        <entry id="37" method="true" symbol="getColorForLevel"/>
+        <entry id="36" method="true" symbol="formatValue"/>
+        <entry id="8388702" method="true" symbol="initialize"/>
+        <entry id="8389279" method="true" symbol="onStart"/>
+        <entry field="true" id="61" symbol="DoubleDown"/>
+        <entry field="true" id="27" symbol="acceptableMax"/>
+        <entry id="8388641" module="true" symbol="Math"/>
+        <entry id="8389280" method="true" symbol="getInitialView"/>
+        <entry id="8389281" method="true" symbol="onStop"/>
+        <entry id="32" method="true" symbol="directionToArrow"/>
+        <entry field="true" id="8389347" symbol="color"/>
+        <entry field="true" id="40" symbol="isLoading"/>
+        <entry field="true" id="42" symbol="nightscoutToken"/>
+        <entry field="true" id="59" symbol="SugrFontXTiny"/>
+        <entry id="9" object="true" symbol="NightscoutFetcher"/>
+        <entry id="25" module="true" symbol="Layouts"/>
+        <entry field="true" id="80" symbol="SettingUseMonochrome"/>
+        <entry id="41" method="true" symbol="loadSettings"/>
+        <entry field="true" id="43" symbol="nightscoutUrl"/>
+        <entry field="true" id="31" symbol="current"/>
+        <entry field="true" id="12" symbol="&lt;globals/SugrMonView/&lt;&gt;_fetchInFlight&gt;"/>
+        <entry field="true" id="67" symbol="Loading"/>
+        <entry field="true" id="16" symbol="&lt;globals/SugrMonView/&lt;&gt;_lastFetchSec&gt;"/>
+        <entry id="4" module="true" symbol="globals/Rez/Fonts"/>
+        <entry field="true" id="34" symbol="fetchIntervalMin"/>
+        <entry id="7" object="true" symbol="BgData"/>
+        <entry field="true" id="8392203" symbol="direction"/>
+        <entry field="true" id="73" symbol="SettingCriticalMin"/>
+        <entry id="8388635" module="true" symbol="Application"/>
+        <entry field="true" id="24" symbol="delta"/>
+        <entry id="57" method="true" symbol="TopRightLayout"/>
+        <entry field="true" id="65" symbol="FortyFiveDown"/>
+    </symbolTable>
+    <localVars>
+        <entry arg="true" endPc="268435606" name="msg" stackId="1" startPc="268435552"/>
+        <entry arg="true" endPc="268435646" name="dc" stackId="1" startPc="268435607"/>
+        <entry arg="true" endPc="268435646" name="w" stackId="2" startPc="268435607"/>
+        <entry arg="true" endPc="268435646" name="y" stackId="3" startPc="268435607"/>
+        <entry arg="true" endPc="268435646" name="text" stackId="4" startPc="268435607"/>
+        <entry arg="true" endPc="268435646" name="color" stackId="5" startPc="268435607"/>
+        <entry arg="true" endPc="268435646" name="font" stackId="6" startPc="268435607"/>
+        <entry arg="true" endPc="268435811" name="info" stackId="1" startPc="268435689"/>
+        <entry endPc="268435806" name="nowSec" stackId="2" startPc="268435701"/>
+        <entry endPc="268435806" name="intervalSec" stackId="3" startPc="268435701"/>
+        <entry endPc="268435806" name="firstFetch" stackId="4" startPc="268435701"/>
+        <entry endPc="268435806" name="due" stackId="5" startPc="268435701"/>
+        <entry arg="true" endPc="268435911" name="data" stackId="1" startPc="268435812"/>
+        <entry arg="true" endPc="268436004" name="ageSeconds" stackId="1" startPc="268435912"/>
+        <entry endPc="268436004" name="mins" stackId="2" startPc="268435915"/>
+        <entry endPc="268436004" name="hrs" stackId="3" startPc="268435915"/>
+        <entry arg="true" endPc="268436804" name="dc" stackId="1" startPc="268436164"/>
+        <entry endPc="268436803" name="w" stackId="2" startPc="268436167"/>
+        <entry endPc="268436803" name="h" stackId="3" startPc="268436167"/>
+        <entry endPc="268436803" name="bg" stackId="4" startPc="268436167"/>
+        <entry endPc="268436803" name="level" stackId="5" startPc="268436167"/>
+        <entry endPc="268436803" name="fgColor" stackId="6" startPc="268436167"/>
+        <entry endPc="268436803" name="row0Y" stackId="7" startPc="268436167"/>
+        <entry endPc="268436803" name="row1Y" stackId="8" startPc="268436167"/>
+        <entry endPc="268436803" name="valueStr" stackId="9" startPc="268436167"/>
+        <entry endPc="268436803" name="arrowStr" stackId="10" startPc="268436167"/>
+        <entry endPc="268436803" name="mainStr" stackId="11" startPc="268436167"/>
+        <entry endPc="268436803" name="deltaStr" stackId="12" startPc="268436167"/>
+        <entry endPc="268436803" name="ageColor" stackId="13" startPc="268436167"/>
+        <entry endPc="268436803" name="ageStr" stackId="14" startPc="268436167"/>
+        <entry endPc="268436803" name="infoStr" stackId="15" startPc="268436167"/>
+        <entry arg="true" endPc="268436843" name="value" stackId="1" startPc="268436805"/>
+        <entry arg="true" endPc="268436843" name="direction" stackId="2" startPc="268436805"/>
+        <entry arg="true" endPc="268436843" name="delta" stackId="3" startPc="268436805"/>
+        <entry arg="true" endPc="268436843" name="age" stackId="4" startPc="268436805"/>
+        <entry arg="true" endPc="268436855" name="color" stackId="1" startPc="268436844"/>
+        <entry endPc="268436904" name="dictionary" stackId="1" startPc="268436859"/>
+        <entry arg="true" endPc="268436933" name="dc" stackId="1" startPc="268436906"/>
+        <entry arg="true" endPc="268437430" name="direction" stackId="1" startPc="268436995"/>
+        <entry arg="true" endPc="268437524" name="mgdl" stackId="1" startPc="268437431"/>
+        <entry endPc="268437506" name="mmol" stackId="2" startPc="268437442"/>
+        <entry endPc="268437506" name="whole" stackId="3" startPc="268437442"/>
+        <entry endPc="268437506" name="frac" stackId="4" startPc="268437442"/>
+        <entry arg="true" endPc="268437684" name="level" stackId="1" startPc="268437525"/>
+        <entry arg="true" endPc="268437719" name="mgdl" stackId="1" startPc="268437685"/>
+        <entry arg="true" endPc="268437877" name="delta" stackId="1" startPc="268437720"/>
+        <entry endPc="268437876" name="prefix" stackId="2" startPc="268437723"/>
+        <entry endPc="268437856" name="mmolDelta" stackId="3" startPc="268437753"/>
+        <entry endPc="268437856" name="whole" stackId="4" startPc="268437753"/>
+        <entry endPc="268437856" name="frac" stackId="5" startPc="268437753"/>
+        <entry endPc="268438386" name="url" stackId="1" startPc="268437881"/>
+        <entry endPc="268438386" name="token" stackId="2" startPc="268437881"/>
+        <entry endPc="268438386" name="iv" stackId="3" startPc="268437881"/>
+        <entry endPc="268438386" name="cMin" stackId="4" startPc="268437881"/>
+        <entry endPc="268438386" name="aMin" stackId="5" startPc="268437881"/>
+        <entry endPc="268438386" name="nMin" stackId="6" startPc="268437881"/>
+        <entry endPc="268438386" name="nMax" stackId="7" startPc="268437881"/>
+        <entry endPc="268438386" name="aMax" stackId="8" startPc="268437881"/>
+        <entry endPc="268438386" name="cMax" stackId="9" startPc="268437881"/>
+        <entry endPc="268438386" name="mm" stackId="10" startPc="268437881"/>
+        <entry endPc="268438386" name="um" stackId="11" startPc="268437881"/>
+        <entry arg="true" endPc="268438493" name="mgdl" stackId="1" startPc="268438388"/>
+        <entry arg="true" endPc="268438934" name="responseCode" stackId="1" startPc="268438494"/>
+        <entry arg="true" endPc="268438934" name="data" stackId="2" startPc="268438494"/>
+        <entry endPc="268438933" name="dataArray" stackId="3" startPc="268438497"/>
+        <entry endPc="268438933" name="latest" stackId="4" startPc="268438497"/>
+        <entry endPc="268438933" name="sgv" stackId="5" startPc="268438497"/>
+        <entry endPc="268438933" name="valueMgdl" stackId="6" startPc="268438497"/>
+        <entry endPc="268438933" name="dir" stackId="7" startPc="268438497"/>
+        <entry endPc="268438933" name="direction" stackId="8" startPc="268438497"/>
+        <entry endPc="268438933" name="delta" stackId="9" startPc="268438497"/>
+        <entry endPc="268438758" name="prev" stackId="10" startPc="268438711"/>
+        <entry endPc="268438758" name="prevSgv" stackId="11" startPc="268438711"/>
+        <entry endPc="268438933" name="nowSec" stackId="12" startPc="268438497"/>
+        <entry endPc="268438933" name="readSec" stackId="13" startPc="268438497"/>
+        <entry endPc="268438933" name="dateVal" stackId="14" startPc="268438497"/>
+        <entry endPc="268438933" name="age" stackId="15" startPc="268438497"/>
+        <entry endPc="268438933" name="bgData" stackId="16" startPc="268438497"/>
+        <entry endPc="268439147" name="url" stackId="1" startPc="268438938"/>
+        <entry endPc="268439147" name="fullUrl" stackId="2" startPc="268438938"/>
+        <entry endPc="268439147" name="token" stackId="3" startPc="268438938"/>
+        <entry endPc="268439147" name="options" stackId="4" startPc="268438938"/>
+        <entry arg="true" endPc="268439169" name="model" stackId="1" startPc="268439149"/>
+        <entry arg="true" endPc="268439169" name="callback" stackId="2" startPc="268439149"/>
+        <entry arg="true" endPc="268439390" name="dc" stackId="1" startPc="268439170"/>
+        <entry endPc="268439390" name="rez_cmp_local_custom_drawable_16187860511068497434" stackId="2" startPc="268439181"/>
+        <entry endPc="268439390" name="rez_cmp_local_text_label" stackId="3" startPc="268439181"/>
+        <entry endPc="268439390" name="rez_cmp_local_text_value" stackId="4" startPc="268439181"/>
+        <entry arg="true" endPc="268439611" name="dc" stackId="1" startPc="268439391"/>
+        <entry endPc="268439611" name="rez_cmp_local_custom_drawable_11824933295158922413" stackId="2" startPc="268439402"/>
+        <entry endPc="268439611" name="rez_cmp_local_text_label" stackId="3" startPc="268439402"/>
+        <entry endPc="268439611" name="rez_cmp_local_text_value" stackId="4" startPc="268439402"/>
+        <entry arg="true" endPc="268439830" name="dc" stackId="1" startPc="268439612"/>
+        <entry endPc="268439830" name="rez_cmp_local_custom_drawable_16380678501279751870" stackId="2" startPc="268439623"/>
+        <entry endPc="268439830" name="rez_cmp_local_text_label" stackId="3" startPc="268439623"/>
+        <entry endPc="268439830" name="rez_cmp_local_text_value" stackId="4" startPc="268439623"/>
+        <entry arg="true" endPc="268440049" name="dc" stackId="1" startPc="268439831"/>
+        <entry endPc="268440049" name="rez_cmp_local_custom_drawable_83741574912206153191" stackId="2" startPc="268439842"/>
+        <entry endPc="268440049" name="rez_cmp_local_text_label" stackId="3" startPc="268439842"/>
+        <entry endPc="268440049" name="rez_cmp_local_text_value" stackId="4" startPc="268439842"/>
+        <entry arg="true" endPc="268440336" name="dc" stackId="1" startPc="268440050"/>
+        <entry endPc="268440336" name="rez_cmp_local_var_dc_getHeight" stackId="2" startPc="268440061"/>
+        <entry endPc="268440336" name="rez_cmp_local_var_dc_getWidth" stackId="3" startPc="268440061"/>
+        <entry endPc="268440336" name="rez_cmp_local_custom_drawable_11939594661139614796" stackId="4" startPc="268440061"/>
+        <entry endPc="268440336" name="rez_cmp_local_text_label" stackId="5" startPc="268440061"/>
+        <entry endPc="268440336" name="rez_cmp_local_text_value" stackId="6" startPc="268440061"/>
+    </localVars>
+    <deviceInfo deviceVersion="45fe3cbb0de8ea0a70e12628d2697915f1272301" partNumber="006-B4536-00"/>
+    <annotations>
+        <annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="LauncherIcon"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="SingleUp"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="SettingNightscoutUrl"/>
+        <annotationEntry annotation="initialized" class="Fonts" module="globals/Rez" symbol="SugrFontXTiny"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="ErrorShort"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="FortyFiveDown"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="SettingNormalMin"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="FortyFiveUp"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="SettingFetchInterval"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="AppName"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="SettingNightscoutToken"/>
+        <annotationEntry annotation="initialized" class="Fonts" module="globals/Rez" symbol="SugrFontSuperMini"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="Loading"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="SettingAcceptableMin"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="SettingUseMonochrome"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="SettingCriticalMax"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="SingleDown"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="DoubleUp"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="Flat"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="SettingAcceptableMax"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="SettingUseMmol"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="DoubleDown"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="SettingCriticalMin"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="NoUrl"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="NoData"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="SettingNormalMax"/>
+    </annotations>
+    <dataEntryOffsetMappings>
+        <dataEntry label="globals" offset="67" parentId="" symbolId="globals" type="module"/>
+        <dataEntry label="globals/SugrMonView" offset="170" parentId="globals" symbolId="SugrMonView" type="class"/>
+        <dataEntry label="globals/BgData" offset="349" parentId="globals" symbolId="BgData" type="class"/>
+        <dataEntry label="globals/Background" offset="429" parentId="globals" symbolId="Background" type="class"/>
+        <dataEntry label="globals/Rez" offset="500" parentId="globals" symbolId="Rez" type="module"/>
+        <dataEntry label="globals/SugrMonApp" offset="562" parentId="globals" symbolId="SugrMonApp" type="class"/>
+        <dataEntry label="globals/BgModel" offset="642" parentId="globals" symbolId="BgModel" type="class"/>
+        <dataEntry label="globals/NightscoutFetcher" offset="884" parentId="globals" symbolId="NightscoutFetcher" type="class"/>
+        <dataEntry label="globals/Rez/Drawables" offset="964" parentId="Rez" symbolId="Drawables" type="module"/>
+        <dataEntry label="globals/Rez/Layouts" offset="999" parentId="Rez" symbolId="Layouts" type="module"/>
+        <dataEntry label="globals/Rez/Fonts" offset="1070" parentId="Rez" symbolId="Fonts" type="module"/>
+        <dataEntry label="globals/Rez/Strings" offset="1114" parentId="Rez" symbolId="Strings" type="module"/>
+    </dataEntryOffsetMappings>
+    <functions>
+        <functionEntry accessMode="public" endPc="268435471" name="&lt;init&gt;" parent="SugrMonView" startPc="268435460">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435492" name="getApp" startPc="268435472">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="BgData">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435504" name="&lt;init&gt;" parent="Background" startPc="268435493">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435524" name="&lt;init&gt;" parent="Rez" startPc="268435505">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435536" name="&lt;init&gt;" parent="SugrMonApp" startPc="268435525">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="BgModel">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="NightscoutFetcher">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435551" name="onShow" parent="SugrMonView" startPc="268435537">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435606" name="onError" parent="SugrMonView" startPc="268435552">
+            <param id="msg"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="private" endPc="268435646" name="&lt;globals/SugrMonView/&lt;&gt;drawCentred&gt;" parent="SugrMonView" startPc="268435607">
+            <param id="dc"/>
+            <param id="w"/>
+            <param id="y"/>
+            <param id="text"/>
+            <param id="color"/>
+            <param id="font"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435688" name="onNoUrl" parent="SugrMonView" startPc="268435647">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435811" name="compute" parent="SugrMonView" startPc="268435689">
+            <param id="info"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435911" name="onData" parent="SugrMonView" startPc="268435812">
+            <param id="data"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="private" endPc="268436004" name="&lt;globals/SugrMonView/&lt;&gt;formatAge&gt;" parent="SugrMonView" startPc="268435912">
+            <param id="ageSeconds"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436163" name="initialize" parent="SugrMonView" startPc="268436005">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436804" name="onUpdate" parent="SugrMonView" startPc="268436164">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436843" name="initialize" parent="BgData" startPc="268436805">
+            <param id="value"/>
+            <param id="direction"/>
+            <param id="delta"/>
+            <param id="age"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436855" name="setColor" parent="Background" startPc="268436844">
+            <param id="color"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436905" name="initialize" parent="Background" startPc="268436856">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436933" name="draw" parent="Background" startPc="268436906">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="Drawables">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="Layouts">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="Fonts">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="Strings">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436936" name="onStart" parent="SugrMonApp" startPc="268436934">
+            <param id="state"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436976" name="getInitialView" parent="SugrMonApp" startPc="268436937">
+            <documentation><![CDATA[<div class="description"> Return the initial view of your application here<br/></div>]]></documentation>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436991" name="initialize" parent="SugrMonApp" startPc="268436977">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436994" name="onStop" parent="SugrMonApp" startPc="268436992">
+            <param id="state"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437430" name="directionToArrow" parent="BgModel" startPc="268436995">
+            <param id="direction"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437524" name="formatValue" parent="BgModel" startPc="268437431">
+            <param id="mgdl"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437684" name="getColorForLevel" parent="BgModel" startPc="268437525">
+            <param id="level"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437719" name="toMmol" parent="BgModel" startPc="268437685">
+            <param id="mgdl"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437877" name="formatDelta" parent="BgModel" startPc="268437720">
+            <param id="delta"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268438387" name="loadSettings" parent="BgModel" startPc="268437878">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268438493" name="getLevel" parent="BgModel" startPc="268438388">
+            <param id="mgdl"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="initialize" parent="BgModel">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268438934" name="onResponse" parent="NightscoutFetcher" startPc="268438494">
+            <param id="responseCode"/>
+            <param id="data"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268439148" name="fetch" parent="NightscoutFetcher" startPc="268438935">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268439169" name="initialize" parent="NightscoutFetcher" startPc="268439149">
+            <param id="model"/>
+            <param id="callback"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268439390" name="BottomRightLayout" parent="Layouts" startPc="268439170">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268439611" name="TopRightLayout" parent="Layouts" startPc="268439391">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268439830" name="BottomLeftLayout" parent="Layouts" startPc="268439612">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268440049" name="TopLeftLayout" parent="Layouts" startPc="268439831">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268440336" name="MainLayout" parent="Layouts" startPc="268440050">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+    </functions>
+</debugInfo>
