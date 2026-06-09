@@ -10,8 +10,7 @@ module Rez {
     } // Drawables
 
     module Fonts {
-        (:initialized) var SugrFontXTiny as ResourceId;
-        (:initialized) var SugrFontSuperMini as ResourceId;
+        (:initialized) var SugrFontMini as ResourceId;
     } // Fonts
 
     module Layouts {

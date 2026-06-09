@@ -13,38 +13,19 @@ class SugrMonView extends WatchUi.DataField {
     private var _fetcher       as NightscoutFetcher;    
     private var _lastFetchSec  as Number = 0;        // Epoch-seconds timestamp of the last completed fetch (0 = never).    
     private var _fetchInFlight as Boolean = false;   // True while an HTTP request is already in flight, to avoid overlap.    
-    private var _noUrl         as Boolean = false;   // Set when the URL is not yet configured.
-    //private var _fontLarge     as Graphics.FontType?;
-    //private var _fontMedium    as Graphics.FontType?;
-    //private var _fontSmall     as Graphics.FontType?;
-    //private var _fontTiny      as Graphics.FontType?;
-    //private var _fontMini      as Graphics.FontType?;
-    private var _fontSuperMini as Graphics.FontType?;
-    private var _fontXTiny     as Graphics.FontType?;
-    //private var _fontNumMild   as Graphics.FontType?;
-    //private var _fontNumMedium as Graphics.FontType?;
-    //private var _fontNumHot    as Graphics.FontType?;
-
+    private var _noUrl         as Boolean = false;   // Set when the URL is not yet configured.    
+    private var _fontMini      as Graphics.FontType?;
     
 
     function initialize() {
         DataField.initialize();
 
-        _model   = new BgModel();
+        _model    = new BgModel();
         _model.loadSettings();
 
-        _fetcher = new NightscoutFetcher(_model, self);
-
-       // _fontLarge     = WatchUi.loadResource(Rez.Fonts.SugrFontLarge)     as Graphics.FontType;
-       // _fontMedium    = WatchUi.loadResource(Rez.Fonts.SugrFontMedium)    as Graphics.FontType;
-       // _fontSmall     = WatchUi.loadResource(Rez.Fonts.SugrFontSmall)     as Graphics.FontType;
-       // _fontTiny      = WatchUi.loadResource(Rez.Fonts.SugrFontTiny)      as Graphics.FontType;
-        //_fontMini      = WatchUi.loadResource(Rez.Fonts.SugrFontMini)      as Graphics.FontType;
-        _fontSuperMini = WatchUi.loadResource(Rez.Fonts.SugrFontSuperMini) as Graphics.FontType;
-        _fontXTiny     = WatchUi.loadResource(Rez.Fonts.SugrFontXTiny)     as Graphics.FontType;
-        //_fontNumMild   = WatchUi.loadResource(Rez.Fonts.SugrFontNumMild)   as Graphics.FontType;
-        //_fontNumMedium = WatchUi.loadResource(Rez.Fonts.SugrFontNumMedium) as Graphics.FontType;
-        //_fontNumHot    = WatchUi.loadResource(Rez.Fonts.SugrFontNumHot)    as Graphics.FontType;
+        _fetcher  = new NightscoutFetcher(_model, self);
+       
+        _fontMini = WatchUi.loadResource(Rez.Fonts.SugrFontMini)  as Graphics.FontType;        
     }
 
     
@@ -127,15 +108,15 @@ class SugrMonView extends WatchUi.DataField {
         var fgColor = _model.getColorForLevel(level);
 
         var row0Y = (h * 0.45).toNumber();
-        var row1Y = (h * 0.54).toNumber();
-        //var row2Y = (h * 0.62).toNumber();
+        var row1Y = row0Y + 20;
+        //var row2Y = row1Y + 18;
         
         var valueStr = _model.formatValue(bg.value);
         var arrowStr = _model.directionToArrow(bg.direction);
         var mainStr  = valueStr + " " + arrowStr;
 
         dc.setColor(fgColor, Graphics.COLOR_TRANSPARENT);
-        dc.drawText(w / 2, row0Y, _fontXTiny, mainStr, Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
+        dc.drawText(w / 2, row0Y, _fontMini, mainStr, Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
         
         var deltaStr = _model.formatDelta(bg.delta);
         if (_model.useMmol) {
@@ -144,8 +125,9 @@ class SugrMonView extends WatchUi.DataField {
             deltaStr = deltaStr + " mg/dL";
         }
         dc.setColor(GRAY, Graphics.COLOR_TRANSPARENT);
-        //dc.drawText(w / 2, row1Y, _fontSuperMini, deltaStr, Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
+        dc.drawText(w / 2, row1Y, _fontMini, deltaStr, Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
         
+        /*
         var ageColor = GRAY;
         var ageStr   = formatAge(bg.age);
 
@@ -160,11 +142,8 @@ class SugrMonView extends WatchUi.DataField {
         }        
 
         dc.setColor(ageColor, Graphics.COLOR_TRANSPARENT);
-        //dc.drawText(w / 2, row2Y, _fontSuperMini, ageStr, Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
-
-        var infoStr = deltaStr + " " + ageStr;
-
-        dc.drawText(w / 2, row1Y, _fontSuperMini, infoStr, Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
+        dc.drawText(w / 2, row2Y, _fontMini, ageStr, Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
+        */
     }
 
     

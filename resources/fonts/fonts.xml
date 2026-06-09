@@ -1,17 +1,4 @@
 <?xml version="1.0"?>
-<resources>
-    <!-- 
-    <font id="SugrFontLarge" filename="sugrfnt_large.fnt" antialias="false" />
-    <font id="SugrFontMedium" filename="sugrfnt_medium.fnt" antialias="false" />
-    <font id="SugrFontSmall" filename="sugrfnt_small.fnt" antialias="false" />
+<resources>    
     <font id="SugrFontMini" filename="sugrfnt_mini.fnt" antialias="false" />
-    <font id="SugrFontSuperMini" filename="sugrfnt_super_mini.fnt" antialias="false" />    
-    <font id="SugrFontTiny" filename="sugrfnt_tiny.fnt" antialias="false" />
-    <font id="SugrFontXTiny" filename="sugrfnt_xtiny.fnt" antialias="false" />
-    <font id="SugrFontNumMild" filename="sugrfnt_num_mild.fnt" antialias="false" />
-    <font id="SugrFontNumMedium" filename="sugrfnt_num_medium.fnt" antialias="false" />
-    <font id="SugrFontNumHot" filename="sugrfnt_num_hot.fnt" antialias="false" />
-    -->    
-    <font id="SugrFontXTiny" filename="sugrfnt_xtiny.fnt" antialias="false" />
-    <font id="SugrFontSuperMini" filename="sugrfnt_super_mini.fnt" antialias="false" />        
 </resources>
